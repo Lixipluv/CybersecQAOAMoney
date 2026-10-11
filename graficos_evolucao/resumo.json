@@ -1,0 +1,57 @@
+[
+  {
+    "estrategia": "Inicial p=1",
+    "Popt": 0.009707401319375066,
+    "Pfeas": 0.7762419147411233,
+    "qubits": 11,
+    "CX": 245.33333333333334,
+    "profundidade": 154.66666666666666,
+    "melhor_valor": 1.8556756683234625,
+    "valor_otimo": 1.8556756683234625,
+    "avaliacoes": 300
+  },
+  {
+    "estrategia": "Warm start p=1",
+    "Popt": 0.017375901357403988,
+    "Pfeas": 0.6867117271451779,
+    "qubits": 11,
+    "CX": 245.33333333333334,
+    "profundidade": 155.66666666666666,
+    "melhor_valor": 1.8556756683234625,
+    "valor_otimo": 1.8556756683234625,
+    "avaliacoes": 277.6666666666667
+  },
+  {
+    "estrategia": "Mixer factível p=1",
+    "Popt": 0.042810396054749615,
+    "Pfeas": 0.9999999999999997,
+    "qubits": 7,
+    "CX": 1298,
+    "profundidade": 2280,
+    "melhor_valor": 1.8556756683234625,
+    "valor_otimo": 1.8556756683234625,
+    "avaliacoes": 300
+  },
+  {
+    "estrategia": "Mixer factível p=3",
+    "Popt": 0.05855337657120823,
+    "Pfeas": 0.9999999999999993,
+    "qubits": 7,
+    "CX": 3244,
+    "profundidade": 5582,
+    "melhor_valor": 1.8556756683234625,
+    "valor_otimo": 1.8556756683234625,
+    "avaliacoes": 300
+  },
+  {
+    "estrategia": "Atual presolve p=1",
+    "Popt": 0.013868117593535186,
+    "Pfeas": 0.8793688864780018,
+    "qubits": 10,
+    "CX": 200.66666666666666,
+    "profundidade": 144,
+    "melhor_valor": 1.8556756683234625,
+    "valor_otimo": 1.8556756683234625,
+    "avaliacoes": 165
+  }
+]

@@ -94,3 +94,13 @@ O presolve verifica desigualdades entre limites fracionários e portfólios fact
 RQAOA e QIRO usam correlações estimadas por shots ideais para reduções heurísticas, com cauda clássica exata. QIRO é uma adaptação para mochila com guarda de orçamento e backtracking limitado, sem garantia global. O agrupamento escolhe representantes por valor/custo e pode eliminar controles necessários ao ótimo. Esses três métodos são experimentais: as perdas observadas ficam explícitas no relatório. Não se aplica dominância simples entre controles que podem ser selecionados juntos.
 
 Validação: 22 testes, incluindo 120 mochilas aleatórias com empates, verificação de limites, energia/reconstrução Ising, orçamento zero, certificados adulterados e ruído no núcleo. A auditoria das 150 execuções confirmou 138 fixações certificadas e 30 reconstruções RQAOA. Nessa amostra, o pipeline certificado obteve o ótimo em 30/30 execuções, sendo 21 resolvidas classicamente pelo presolve. Dados sintéticos; sem alegação de vantagem quântica.
+
+## Gráficos da evolução
+
+A [galeria comparativa](graficos_evolucao/README.md) reúne cinco gráficos em PNG e SVG: evolução histórica, antes/depois sob ruído, recursos por tamanho, sucesso das reduções e contribuição clássica. Os dados usados estão disponíveis em CSV e JSON.
+
+```bash
+python graficos_evolucao.py
+```
+
+Os gráficos distinguem probabilidades por medição, melhor solução encontrada e sucesso por execução. A comparação histórica identifica diferenças de configuração; o antes/depois do presolve usa configurações controladas.
