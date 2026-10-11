@@ -1,0 +1,125 @@
+{
+  "controles": 7,
+  "auxiliares": 4,
+  "qubits": 11,
+  "restricoes_qubo": 1,
+  "p": 1,
+  "seed": 44,
+  "shots": 2048,
+  "ambiente": "ideal",
+  "rho": 5.162105824784869,
+  "escala_hamiltoniano": 3485.421431729787,
+  "E_otima": -1.8556756683234625,
+  "valor_otimo": 1.8556756683234625,
+  "E_melhor_medido": -1.8556756683234625,
+  "Popt": 0.0087890625,
+  "Pfeas": 0.78173828125,
+  "Paceitavel": 0.08251953125,
+  "Popt_exata_ideal": 0.009796138642157032,
+  "Pfeas_exata_ideal": 0.7689999992120735,
+  "energia_esperada_ideal": 94.17104160961438,
+  "otimizacao_s": 0.4170611829904374,
+  "classico": {
+    "bitstring": "00001000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": 3.3064301564614067
+  },
+  "melhor_medido": {
+    "bitstring": "00011000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": -1.8556756683234625
+  },
+  "melhor_factivel": {
+    "bitstring": "00001000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": 3.3064301564614067
+  },
+  "mais_frequente": {
+    "bitstring": "00000100000",
+    "controles": [
+      "CIS-9: Proteção de e-mail e navegador"
+    ],
+    "custo": 2.0,
+    "valor": 0.5610386554621849,
+    "cobertura": 0.2794117647058823,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": 185.27477103679308
+  },
+  "menor_energia_e_mais_frequente": false,
+  "aceitabilidade_possivel": true,
+  "termos_lineares": 11,
+  "interacoes_ZZ": 55,
+  "logico": {
+    "qubits": 11,
+    "profundidade": 22,
+    "gates": 88,
+    "gates_2q": 55
+  },
+  "transpilado": {
+    "qubits": 11,
+    "profundidade": 147,
+    "gates": 362,
+    "gates_2q": 219
+  },
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        0.8108861395016167
+      ],
+      "finais": [
+        5.860860265615991,
+        2.651992259773389
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 737.006061032553,
+      "energia_final": 96.17161693588668,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        2.549532675129298,
+        3.044781171467667
+      ],
+      "finais": [
+        6.041577072248637,
+        2.6431415483924656
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 494.60080445040387,
+      "energia_final": 94.17104160961438,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "execucao_s": 0.8013628220069222
+}

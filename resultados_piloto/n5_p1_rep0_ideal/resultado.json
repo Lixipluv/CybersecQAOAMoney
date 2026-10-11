@@ -1,0 +1,108 @@
+{
+  "controles": 5,
+  "auxiliares": 3,
+  "qubits": 8,
+  "restricoes_qubo": 1,
+  "p": 1,
+  "seed": 42,
+  "shots": 512,
+  "ambiente": "ideal",
+  "rho": 3.945376260273687,
+  "escala_hamiltoniano": 884.7642823013059,
+  "E_otima": -1.2084873566561067,
+  "valor_otimo": 1.2084873566561067,
+  "E_melhor_medido": -1.2084873566561067,
+  "Popt": 0.033203125,
+  "Pfeas": 0.783203125,
+  "Paceitavel": 0.0,
+  "Popt_exata_ideal": 0.040529259825833996,
+  "Pfeas_exata_ideal": 0.7793324200673883,
+  "energia_esperada_ideal": 25.931047010319514,
+  "otimizacao_s": 0.06689990000450052,
+  "classico": {
+    "bitstring": "00010001",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-7: Gestão de vulnerabilidades"
+    ],
+    "custo": 6.0,
+    "valor": 1.2084873566561067,
+    "cobertura": 0.3529411764705882,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": -1.2084873566561067
+  },
+  "melhor_medido": {
+    "bitstring": "00010001",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-7: Gestão de vulnerabilidades"
+    ],
+    "custo": 6.0,
+    "valor": 1.2084873566561067,
+    "cobertura": 0.3529411764705882,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": -1.2084873566561067
+  },
+  "melhor_factivel": {
+    "bitstring": "00010001",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-7: Gestão de vulnerabilidades"
+    ],
+    "custo": 6.0,
+    "valor": 1.2084873566561067,
+    "cobertura": 0.3529411764705882,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": -1.2084873566561067
+  },
+  "mais_frequente": {
+    "bitstring": "00010100",
+    "controles": [
+      "CIS-4: Configuração segura",
+      "CIS-7: Gestão de vulnerabilidades"
+    ],
+    "custo": 7.0,
+    "valor": 1.1723108860678715,
+    "cobertura": 0.48529411764705876,
+    "factivel": false,
+    "aceitavel": false,
+    "energia": 2.7730653742058156
+  },
+  "menor_energia_e_mais_frequente": false,
+  "aceitabilidade_possivel": false,
+  "termos_lineares": 8,
+  "interacoes_ZZ": 28,
+  "logico": {
+    "qubits": 8,
+    "profundidade": 16,
+    "gates": 52,
+    "gates_2q": 28
+  },
+  "transpilado": {
+    "qubits": 8,
+    "profundidade": 106,
+    "gates": 207,
+    "gates_2q": 115
+  },
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        5.063577000227146,
+        2.74928708369453
+      ],
+      "avaliacoes": 60,
+      "energia_inicial": 188.99869343885675,
+      "energia_final": 25.931047010319514,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "execucao_s": 0.4556550440029241
+}

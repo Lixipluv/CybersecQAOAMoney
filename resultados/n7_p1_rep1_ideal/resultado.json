@@ -1,0 +1,125 @@
+{
+  "controles": 7,
+  "auxiliares": 4,
+  "qubits": 11,
+  "restricoes_qubo": 1,
+  "p": 1,
+  "seed": 43,
+  "shots": 2048,
+  "ambiente": "ideal",
+  "rho": 5.162105824784869,
+  "escala_hamiltoniano": 3485.421431729787,
+  "E_otima": -1.8556756683234625,
+  "valor_otimo": 1.8556756683234625,
+  "E_melhor_medido": -1.8556756683234625,
+  "Popt": 0.01318359375,
+  "Pfeas": 0.7861328125,
+  "Paceitavel": 0.09033203125,
+  "Popt_exata_ideal": 0.009796125018015862,
+  "Pfeas_exata_ideal": 0.7698799072378049,
+  "energia_esperada_ideal": 93.85522192190066,
+  "otimizacao_s": 0.41318937100004405,
+  "classico": {
+    "bitstring": "00001000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": 3.3064301564614067
+  },
+  "melhor_medido": {
+    "bitstring": "00011000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": -1.8556756683234625
+  },
+  "melhor_factivel": {
+    "bitstring": "00001000011",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "aceitavel": true,
+    "energia": 3.3064301564614067
+  },
+  "mais_frequente": {
+    "bitstring": "10000000010",
+    "controles": [
+      "CIS-2: Inventário de software"
+    ],
+    "custo": 2.0,
+    "valor": 0.5937056149313502,
+    "cobertura": 0.23529411764705882,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": 20.05471768420813
+  },
+  "menor_energia_e_mais_frequente": false,
+  "aceitabilidade_possivel": true,
+  "termos_lineares": 11,
+  "interacoes_ZZ": 55,
+  "logico": {
+    "qubits": 11,
+    "profundidade": 22,
+    "gates": 88,
+    "gates_2q": 55
+  },
+  "transpilado": {
+    "qubits": 11,
+    "profundidade": 157,
+    "gates": 399,
+    "gates_2q": 256
+  },
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.098517143286439,
+        0.13752423515278736
+      ],
+      "finais": [
+        6.077697181904975,
+        -0.49638003931425984
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 832.7499253417812,
+      "energia_final": 93.85522192190066,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        0.12584960595695643,
+        2.63646408401677
+      ],
+      "finais": [
+        5.816676800019496,
+        2.640474283940952
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 575.2867902959044,
+      "energia_final": 96.51072915417326,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "execucao_s": 0.7845474460045807
+}

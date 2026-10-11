@@ -1,0 +1,119 @@
+{
+  "controles": 3,
+  "auxiliares": 2,
+  "qubits": 5,
+  "restricoes_qubo": 1,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "ambiente": "ideal",
+  "rho": 2.770087433029345,
+  "escala_hamiltoniano": 133.96419678540855,
+  "E_otima": -0.6062791443431149,
+  "valor_otimo": 0.6062791443431149,
+  "E_melhor_medido": -0.6062791443431149,
+  "Popt": 0.19921875,
+  "Pfeas": 0.7880859375,
+  "Paceitavel": 0.0,
+  "Popt_exata_ideal": 0.20414239881891846,
+  "Pfeas_exata_ideal": 0.803353273699376,
+  "energia_esperada_ideal": 6.122633446192486,
+  "otimizacao_s": 0.33394733199384063,
+  "classico": {
+    "bitstring": "00001",
+    "controles": [
+      "CIS-1: Inventário de hardware"
+    ],
+    "custo": 2.0,
+    "valor": 0.6062791443431149,
+    "cobertura": 0.2205882352941176,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": 2.16380828868623
+  },
+  "melhor_medido": {
+    "bitstring": "01001",
+    "controles": [
+      "CIS-1: Inventário de hardware"
+    ],
+    "custo": 2.0,
+    "valor": 0.6062791443431149,
+    "cobertura": 0.2205882352941176,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": -0.6062791443431149
+  },
+  "melhor_factivel": {
+    "bitstring": "00001",
+    "controles": [
+      "CIS-1: Inventário de hardware"
+    ],
+    "custo": 2.0,
+    "valor": 0.6062791443431149,
+    "cobertura": 0.2205882352941176,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": 2.16380828868623
+  },
+  "mais_frequente": {
+    "bitstring": "00100",
+    "controles": [
+      "CIS-4: Configuração segura"
+    ],
+    "custo": 3.0,
+    "valor": 0.5701026737548797,
+    "cobertura": 0.20588235294117643,
+    "factivel": true,
+    "aceitavel": false,
+    "energia": -0.5701026737548797
+  },
+  "menor_energia_e_mais_frequente": false,
+  "aceitabilidade_possivel": false,
+  "termos_lineares": 5,
+  "interacoes_ZZ": 10,
+  "logico": {
+    "qubits": 5,
+    "profundidade": 10,
+    "gates": 25,
+    "gates_2q": 10
+  },
+  "transpilado": {
+    "qubits": 5,
+    "profundidade": 55,
+    "gates": 88,
+    "gates_2q": 38
+  },
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        3.686463320000781,
+        2.7739473956947416
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 30.915030951332536,
+      "energia_final": 6.122633446192486,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        4.34492316550656,
+        2.7895007745046536
+      ],
+      "avaliacoes": 150,
+      "energia_inicial": 29.92849324175141,
+      "energia_final": 6.954613873502542,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "execucao_s": 0.6706016120151617
+}
