@@ -57,3 +57,19 @@ ODS 16 — Paz, Justiça e Instituições Eficazes. O cenário ilustrativo prote
 Antes da entrega acadêmica, definir um critério de solução útil (por exemplo, valor próximo ao ótimo, probabilidade factível e aceitabilidade), executar uma exploração maior de tamanhos e orçamento, e discutir o limite observado. Sete controles é o limite desta base ilustrativa, não um limite demonstrado do QAOA. O piloto é uma verificação funcional; não demonstra vantagem quântica. A análise Q1–Q22 e conclusões sobre ruído, p e escalabilidade devem usar as saídas efetivamente obtidas.
 
 Referências de implementação: https://qiskit.github.io/qiskit-aer/tutorials/3_building_noise_models.html e https://quantum.cloud.ibm.com/docs/en/guides/represent-quantum-computers . Os documentos originais permanecem nas localizações fornecidas pelo usuário.
+
+## Melhorias experimentais e análise
+
+A comparação de 84 execuções está em [ANALISE_MELHORIAS.md](ANALISE_MELHORIAS.md). O baseline original permanece como padrão. Os experimentos complementares implementam penalidade menor, CVaR, escala dos coeficientes, warm start heurístico e mixer factível de Grover. O ganho ideal do mixer é acompanhado de muito mais portas e piora sob o ruído testado; ele usa uma preparação genérica exponencial.
+
+```bash
+python -m unittest discover -v
+python melhorias.py --ruido
+python mixer_factivel.py --ruido
+python analisar_resultados.py
+python classico.py
+```
+
+`classico.py` resolve a mochila exatamente por programação dinâmica. `resultados_melhorias`, `resultados_mixer` e `resultados_analise` preservam parâmetros, distribuições, métricas e circuitos. As probabilidades ideais são exatas; as de ruído são frequências de shots. As análises mantêm o ótimo clássico fora da otimização variacional.
+
+A função `modelo` também admite `rho > max(R)` para custos inteiros positivos e valores não negativos; a prova específica desta mochila está no relatório. O padrão `rho=1+sum(R)` foi preservado para reproduzir os resultados originais. O código de melhorias usa `rho=max(R)+0.05` nas variantes.

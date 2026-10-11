@@ -1,0 +1,88 @@
+{
+  "metodo": "warm_cvar",
+  "controles": 3,
+  "qubits": 5,
+  "p": 1,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 3,
+  "rho": 0.656279144343115,
+  "escala": 3.6526235291812506,
+  "alpha": 0.2,
+  "epsilon": 0.25,
+  "otimizacao_s": 0.026607863983372226,
+  "avaliacoes": 25,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        0.8108861395016167
+      ],
+      "finais": [
+        2.049521729139588,
+        -0.14928286048560568
+      ],
+      "score": -0.16598456958388336,
+      "avaliacoes": 13,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        2.549532675129298,
+        3.044781171467667
+      ],
+      "finais": [
+        3.549532675129298,
+        3.044781171467667
+      ],
+      "score": -0.16598456958388336,
+      "avaliacoes": 12,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.16598456958388336,
+  "energia_esperada": 2.3838165679055594,
+  "logico": {
+    "qubits": 5,
+    "profundidade": 12,
+    "gates": 35,
+    "gates_2q": 10
+  },
+  "transpilado": {
+    "qubits": 5,
+    "profundidade": 54,
+    "gates": 89,
+    "gates_2q": 34
+  },
+  "Popt_inicial": 0.4218749999999999,
+  "Pfeas_inicial": 0.6562499999999999,
+  "warm_probabilidades": [
+    0.75,
+    0.25,
+    0.25,
+    0.75,
+    0.25
+  ],
+  "Popt": 0.46265771463727545,
+  "Pground": 0.333487166008901,
+  "Pfeas": 0.6976750429002904,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.4482421875,
+  "Pfeas_shots": 0.69921875,
+  "valor_otimo": 0.6062791443431149,
+  "valor_greedy": 0.6062791443431149,
+  "valor_condicional_factivel": 0.5036572709289048,
+  "valor_melhor_medido": 0.6062791443431149,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.5845132598311553,
+  "P95": 0.5227863490662624,
+  "shots_para_95pct_otimo_ideal": 5
+}

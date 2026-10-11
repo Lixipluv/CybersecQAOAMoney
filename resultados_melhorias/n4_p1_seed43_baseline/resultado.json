@@ -1,0 +1,83 @@
+{
+  "metodo": "baseline",
+  "controles": 4,
+  "qubits": 7,
+  "p": 1,
+  "seed": 43,
+  "shots": 2048,
+  "orcamento": 4,
+  "rho": 3.3431680479606953,
+  "escala": 562.6522320573968,
+  "alpha": 1.0,
+  "epsilon": null,
+  "otimizacao_s": 0.3483429299958516,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.098517143286439,
+        0.13752423515278736
+      ],
+      "finais": [
+        4.811838385013858,
+        -0.44361389816330077
+      ],
+      "score": 0.03261840421545671,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        0.12584960595695643,
+        2.63646408401677
+      ],
+      "finais": [
+        4.643318131138262,
+        2.691778285861986
+      ],
+      "score": 0.03315370633000234,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "score_otimizacao": 0.03261840421545671,
+  "energia_esperada": 18.35281793797737,
+  "logico": {
+    "qubits": 7,
+    "profundidade": 14,
+    "gates": 42,
+    "gates_2q": 21
+  },
+  "transpilado": {
+    "qubits": 7,
+    "profundidade": 89,
+    "gates": 167,
+    "gates_2q": 90
+  },
+  "Popt_inicial": 0.062499999999999986,
+  "Pfeas_inicial": 0.37499999999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.06439172121880882,
+  "Pground": 0.02245730061520708,
+  "Pfeas": 0.7361711254635694,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.080078125,
+  "Pfeas_shots": 0.72119140625,
+  "valor_otimo": 1.1999847592744652,
+  "valor_greedy": 1.1999847592744652,
+  "valor_condicional_factivel": 0.48315029801509934,
+  "valor_melhor_medido": 1.1999847592744652,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "0000011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.06439172121880882,
+  "P95": 0.06439172121880882,
+  "shots_para_95pct_otimo_ideal": 46
+}

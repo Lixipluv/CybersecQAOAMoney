@@ -1,0 +1,90 @@
+{
+  "metodo": "grover_factivel",
+  "controles": 7,
+  "qubits": 7,
+  "p": 2,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 8,
+  "alpha": 0.2,
+  "escala": 4.162105824784869,
+  "otimizacao_s": 0.3313915119797457,
+  "preparacao_classica_s": 0.0004547279968392104,
+  "transpilacao_s": 0.22512448200723156,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        1.6217722790032334,
+        2.549532675129298,
+        6.089562342935334
+      ],
+      "finais": [
+        -3.3456066045379433,
+        9.73411983391868,
+        1.2765005993612284,
+        5.099618651745465
+      ],
+      "score": -0.441115226868843,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        1.0198685735563089,
+        5.38653501362992,
+        1.0244436515988316,
+        2.123477552128429
+      ],
+      "finais": [
+        5.501923904103377,
+        9.736449062575359,
+        -1.7241290909039957,
+        5.1751477875721275
+      ],
+      "score": -0.44156770327671085,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "estados_factiveis": 51,
+  "Popt_inicial": 0.019607843137254898,
+  "logico": {
+    "qubits": 7,
+    "profundidade": 13,
+    "gates": 49,
+    "gates_2q": 0
+  },
+  "transpilado": {
+    "qubits": 7,
+    "profundidade": 3933,
+    "gates": 4789,
+    "gates_2q": 2269
+  },
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_melhor_medido": 1.8556756683234625,
+  "bitstring_melhor_medido": "1000011",
+  "Popt_shots": 0.05419921875,
+  "Pfeas_shots": 1.0,
+  "aceitabilidade_possivel": true,
+  "preparacao": "StatePreparation genérica a partir de enumeração 2^n",
+  "Popt": 0.05675393370072721,
+  "Pfeas": 0.9999999999999996,
+  "Paceitavel": 0.4508015156661848,
+  "valor_esperado": 1.72542818988896,
+  "ruido": {
+    "Popt": 0.00732421875,
+    "Pfeas": 0.40966796875,
+    "Paceitavel": 0.07861328125,
+    "valor_esperado": 2.083534056502118,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.9570223008457152,
+  "P95": 0.6262023344505707,
+  "shots_para_95pct_otimo_ideal": 52
+}

@@ -1,0 +1,84 @@
+{
+  "metodo": "baseline",
+  "controles": 6,
+  "qubits": 9,
+  "p": 1,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 7,
+  "rho": 4.506414915735872,
+  "escala": 1150.1358035126475,
+  "alpha": 1.0,
+  "epsilon": null,
+  "otimizacao_s": 0.35511129500810057,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        0.8108861395016167
+      ],
+      "finais": [
+        4.8509326242377,
+        2.7503378104845675
+      ],
+      "score": 0.02866595608288057,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        2.549532675129298,
+        3.044781171467667
+      ],
+      "finais": [
+        5.041289844643316,
+        2.7569207504084683
+      ],
+      "score": 0.027706560245719946,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "score_otimizacao": 0.027706560245719946,
+  "energia_esperada": 31.866306930782685,
+  "logico": {
+    "qubits": 9,
+    "profundidade": 18,
+    "gates": 63,
+    "gates_2q": 36
+  },
+  "transpilado": {
+    "qubits": 9,
+    "profundidade": 113,
+    "gates": 246,
+    "gates_2q": 138
+  },
+  "Popt_inicial": 0.015624999999999997,
+  "Pfeas_inicial": 0.45312499999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.01758260370788432,
+  "Pground": 0.004806689714514532,
+  "Pfeas": 0.780461907655986,
+  "Paceitavel": 0.03516069194341194,
+  "Popt_shots": 0.0107421875,
+  "Pfeas_shots": 0.7705078125,
+  "valor_otimo": 1.7730653742058156,
+  "valor_greedy": 1.7610234147366501,
+  "valor_condicional_factivel": 1.0576007584910443,
+  "valor_melhor_medido": 1.7730653742058156,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "000001011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-5: Gestão de contas"
+  ],
+  "aceitabilidade_possivel": true,
+  "P90": 0.12713707586036818,
+  "P95": 0.12713707586036818,
+  "shots_para_95pct_otimo_ideal": 169
+}

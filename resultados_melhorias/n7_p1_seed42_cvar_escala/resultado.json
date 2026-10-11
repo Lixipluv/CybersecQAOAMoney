@@ -1,0 +1,92 @@
+{
+  "metodo": "cvar_escala",
+  "controles": 7,
+  "qubits": 11,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "orcamento": 8,
+  "rho": 0.7056909090489973,
+  "escala": 50.80974545152781,
+  "alpha": 0.2,
+  "epsilon": null,
+  "otimizacao_s": 0.2969601049844641,
+  "avaliacoes": 206,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        6.460320860239712,
+        2.968292896992004
+      ],
+      "score": -0.0172195558173041,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        3.934733446162233,
+        1.1912424089171987
+      ],
+      "score": -0.0038289458352511446,
+      "avaliacoes": 56,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.0172195558173041,
+  "energia_esperada": 82.05463172289517,
+  "logico": {
+    "qubits": 11,
+    "profundidade": 22,
+    "gates": 88,
+    "gates_2q": 55
+  },
+  "transpilado": {
+    "qubits": 11,
+    "profundidade": 160,
+    "gates": 404,
+    "gates_2q": 261
+  },
+  "Popt_inicial": 0.007812499999999998,
+  "Pfeas_inicial": 0.39843749999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.007634981581004402,
+  "Pground": 0.0012998125482877006,
+  "Pfeas": 0.4141136756728206,
+  "Paceitavel": 0.07169389367798296,
+  "Popt_shots": 0.01171875,
+  "Pfeas_shots": 0.42529296875,
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_condicional_factivel": 1.2928787521667204,
+  "valor_melhor_medido": 1.8556756683234625,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001000011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-10: Defesa contra malware"
+  ],
+  "aceitabilidade_possivel": true,
+  "ruido": {
+    "Popt": 0.0107421875,
+    "Pground": 0.0,
+    "Pfeas": 0.3935546875,
+    "Paceitavel": 0.0771484375,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.16783070251319349,
+  "P95": 0.09802864157977745,
+  "shots_para_95pct_otimo_ideal": 391
+}

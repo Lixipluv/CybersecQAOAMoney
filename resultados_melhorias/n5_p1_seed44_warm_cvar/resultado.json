@@ -1,0 +1,92 @@
+{
+  "metodo": "warm_cvar",
+  "controles": 5,
+  "qubits": 8,
+  "p": 1,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 6,
+  "rho": 0.656279144343115,
+  "escala": 11.813024598176069,
+  "alpha": 0.2,
+  "epsilon": 0.25,
+  "otimizacao_s": 0.3361272350011859,
+  "avaliacoes": 231,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        0.8108861395016167
+      ],
+      "finais": [
+        2.032958057250036,
+        0.703967394362867
+      ],
+      "score": -0.05019375610800843,
+      "avaliacoes": 81,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        2.549532675129298,
+        3.044781171467667
+      ],
+      "finais": [
+        2.4835606419744787,
+        2.899311214579787
+      ],
+      "score": -0.10157652780851724,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "score_otimizacao": -0.10157652780851724,
+  "energia_esperada": 10.397418582841714,
+  "logico": {
+    "qubits": 8,
+    "profundidade": 18,
+    "gates": 68,
+    "gates_2q": 28
+  },
+  "transpilado": {
+    "qubits": 8,
+    "profundidade": 105,
+    "gates": 211,
+    "gates_2q": 111
+  },
+  "Popt_inicial": 0.026367187499999993,
+  "Pfeas_inicial": 0.6093749999999997,
+  "warm_probabilidades": [
+    0.75,
+    0.75,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.75,
+    0.25
+  ],
+  "Popt": 0.026973510290088154,
+  "Pground": 0.00755473626726362,
+  "Pfeas": 0.6560016711951925,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.02978515625,
+  "Pfeas_shots": 0.66015625,
+  "valor_otimo": 1.2084873566561067,
+  "valor_greedy": 1.1999847592744652,
+  "valor_condicional_factivel": 0.9882733307862094,
+  "valor_melhor_medido": 1.2084873566561067,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00010001",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-7: Gestão de vulnerabilidades"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.45812183612628826,
+  "P95": 0.45395927909613226,
+  "shots_para_95pct_otimo_ideal": 110
+}

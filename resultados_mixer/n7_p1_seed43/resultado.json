@@ -1,0 +1,82 @@
+{
+  "metodo": "grover_factivel",
+  "controles": 7,
+  "qubits": 7,
+  "p": 1,
+  "seed": 43,
+  "shots": 2048,
+  "orcamento": 8,
+  "alpha": 0.2,
+  "escala": 4.162105824784869,
+  "otimizacao_s": 0.3132342199969571,
+  "preparacao_classica_s": 0.0005183159955777228,
+  "transpilacao_s": 0.13573216699296609,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.098517143286439,
+        0.2750484703055747
+      ],
+      "finais": [
+        7.374470545962542,
+        -1.6407719023920075
+      ],
+      "score": -0.440704149353609,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        0.12584960595695643,
+        5.27292816803354
+      ],
+      "finais": [
+        7.3723073808503665,
+        4.64246468994652
+      ],
+      "score": -0.44070414955700515,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "estados_factiveis": 51,
+  "Popt_inicial": 0.019607843137254898,
+  "logico": {
+    "qubits": 7,
+    "profundidade": 7,
+    "gates": 25,
+    "gates_2q": 0
+  },
+  "transpilado": {
+    "qubits": 7,
+    "profundidade": 2279,
+    "gates": 2766,
+    "gates_2q": 1298
+  },
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_melhor_medido": 1.8556756683234625,
+  "bitstring_melhor_medido": "1000011",
+  "Popt_shots": 0.048828125,
+  "Pfeas_shots": 1.0,
+  "aceitabilidade_possivel": true,
+  "preparacao": "StatePreparation genérica a partir de enumeração 2^n",
+  "Popt": 0.042810404451897335,
+  "Pfeas": 0.9999999999999997,
+  "Paceitavel": 0.37823113602719916,
+  "valor_esperado": 1.5849593579572954,
+  "ruido": {
+    "Popt": 0.0068359375,
+    "Pfeas": 0.42041015625,
+    "Paceitavel": 0.08203125,
+    "valor_esperado": 2.0331140938319514,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.817432294748928,
+  "P95": 0.5099171468307845,
+  "shots_para_95pct_otimo_ideal": 69
+}

@@ -68,8 +68,8 @@ def modelo(d, rho=None):
     m = B.bit_length()
     a = np.array([c['custo'] for c in d['controles']] + [2**j for j in range(m)], float)
     rho = float(R.sum()+1 if rho is None else rho)
-    if rho <= R.sum():
-        raise ValueError('Use rho > soma(R) para a garantia de factibilidade.')
+    if not np.isfinite(rho) or rho <= R.max():
+        raise ValueError('Use rho > max(R) para custos inteiros positivos e valores não negativos.')
     linear = rho*(a*a-2*B*a)
     linear[:len(R)] -= R
     Q = np.diag(linear)
@@ -97,34 +97,62 @@ def tabela(d, rho=None):
     return R,a,rho,Q,h,J,C,bits,costs,benefits,E
 
 
-def estado(params, E, n):
+def estado(params, E, n, scale=None, warm=None):
     # Energia normalizada melhora condicionamento; gamma refere-se a HC/escala.
-    scale = max(float(np.max(np.abs(E))), 1.)
+    scale = max(float(np.max(np.abs(E))), 1.) if scale is None else float(scale)
+    if not np.isfinite(scale) or scale <= 0:
+        raise ValueError('Escala deve ser finita e positiva.')
     psi = np.ones(len(E), complex)/np.sqrt(len(E))
+    if warm is not None:
+        warm = np.asarray(warm, float)
+        if warm.shape != (n,) or np.any((warm <= 0) | (warm >= 1)):
+            raise ValueError('Warm start exige n probabilidades estritamente entre 0 e 1.')
+        indices = np.arange(len(E))
+        psi = np.ones(len(E), complex)
+        for q in range(n):
+            psi *= np.where((indices >> q) & 1, np.sqrt(warm[q]), np.sqrt(1-warm[q]))
     p = len(params)//2
     for gamma,beta in zip(params[:p], params[p:]):
         psi *= np.exp(-1j*gamma*E/scale)
         for q in range(n):
             v = psi.reshape(-1,2,2**q)
             lo,hi = v[:,0,:].copy(), v[:,1,:].copy()
-            v[:,0,:] = np.cos(beta)*lo-1j*np.sin(beta)*hi
-            v[:,1,:] = np.cos(beta)*hi-1j*np.sin(beta)*lo
+            if warm is None:
+                v[:,0,:] = np.cos(beta)*lo-1j*np.sin(beta)*hi
+                v[:,1,:] = np.cos(beta)*hi-1j*np.sin(beta)*lo
+            else:
+                theta = 2*np.arcsin(np.sqrt(warm[q]))
+                v[:,0,:] = (np.cos(beta)-1j*np.sin(beta)*np.cos(theta))*lo-1j*np.sin(beta)*np.sin(theta)*hi
+                v[:,1,:] = (np.cos(beta)+1j*np.sin(beta)*np.cos(theta))*hi-1j*np.sin(beta)*np.sin(theta)*lo
     return psi
 
 
-def circuito(h,J,C,params,E):
+def circuito(h,J,C,params,E,scale=None,warm=None):
     from qiskit import QuantumCircuit
     n,p = len(h),len(params)//2
-    scale = max(float(np.max(np.abs(E))),1.)
+    scale = max(float(np.max(np.abs(E))),1.) if scale is None else float(scale)
+    if not np.isfinite(scale) or scale <= 0:
+        raise ValueError('Escala deve ser finita e positiva.')
     qc = QuantumCircuit(n)
-    qc.h(range(n))
+    if warm is None:
+        qc.h(range(n))
+    else:
+        warm = np.asarray(warm, float)
+        if warm.shape != (n,) or np.any((warm <= 0) | (warm >= 1)):
+            raise ValueError('Warm start inválido.')
+        for i in range(n): qc.ry(2*np.arcsin(np.sqrt(warm[i])), i)
     for gamma,beta in zip(params[:p],params[p:]):
         for i in range(n):
             if abs(h[i]) > 1e-12: qc.rz(2*gamma*h[i]/scale,i)
         for i in range(n):
             for j in range(i+1,n):
                 if abs(J[i,j]) > 1e-12: qc.rzz(2*gamma*J[i,j]/scale,i,j)
-        qc.rx(2*beta,range(n))
+        if warm is None:
+            qc.rx(2*beta,range(n))
+        else:
+            for i in range(n):
+                theta = 2*np.arcsin(np.sqrt(warm[i]))
+                qc.ry(-theta, i); qc.rz(2*beta, i); qc.ry(theta, i)
     qc.global_phase = -sum(params[:p])*C/scale
     return qc
 

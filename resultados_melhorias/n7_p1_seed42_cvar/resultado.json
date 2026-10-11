@@ -1,0 +1,92 @@
+{
+  "metodo": "cvar",
+  "controles": 7,
+  "qubits": 11,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "orcamento": 8,
+  "rho": 0.7056909090489973,
+  "escala": 472.88494869233733,
+  "alpha": 0.2,
+  "epsilon": null,
+  "otimizacao_s": 0.4230680780019611,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        6.008255526523394,
+        2.617475786569835
+      ],
+      "score": -0.0023540763720096424,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        6.167268253570395,
+        2.631928360026455
+      ],
+      "score": -0.002361780571732023,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "score_otimizacao": -0.002361780571732023,
+  "energia_esperada": 11.679053932158757,
+  "logico": {
+    "qubits": 11,
+    "profundidade": 22,
+    "gates": 88,
+    "gates_2q": 55
+  },
+  "transpilado": {
+    "qubits": 11,
+    "profundidade": 160,
+    "gates": 404,
+    "gates_2q": 261
+  },
+  "Popt_inicial": 0.007812499999999998,
+  "Pfeas_inicial": 0.39843749999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.009657140504296828,
+  "Pground": 0.001756002957677845,
+  "Pfeas": 0.7750477262363599,
+  "Paceitavel": 0.08047797931826103,
+  "Popt_shots": 0.0126953125,
+  "Pfeas_shots": 0.78466796875,
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_condicional_factivel": 1.0883234363757102,
+  "valor_melhor_medido": 1.8556756683234625,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001000011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-10: Defesa contra malware"
+  ],
+  "aceitabilidade_possivel": true,
+  "ruido": {
+    "Popt": 0.01171875,
+    "Pground": 0.00048828125,
+    "Pfeas": 0.61376953125,
+    "Paceitavel": 0.09375,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.1883090233440064,
+  "P95": 0.10769616759420565,
+  "shots_para_95pct_otimo_ideal": 309
+}

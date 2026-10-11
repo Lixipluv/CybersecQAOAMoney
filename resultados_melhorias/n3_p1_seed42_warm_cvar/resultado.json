@@ -1,0 +1,88 @@
+{
+  "metodo": "warm_cvar",
+  "controles": 3,
+  "qubits": 5,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "orcamento": 3,
+  "rho": 0.656279144343115,
+  "escala": 3.6526235291812506,
+  "alpha": 0.2,
+  "epsilon": 0.25,
+  "otimizacao_s": 0.037471147981705144,
+  "avaliacoes": 32,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        3.615896833750408,
+        2.847283878735601
+      ],
+      "score": -0.16598456958388336,
+      "avaliacoes": 20,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        5.3947298351621535,
+        3.190846276941291
+      ],
+      "score": -0.16598456958388336,
+      "avaliacoes": 12,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.16598456958388336,
+  "energia_esperada": 3.0937695202505417,
+  "logico": {
+    "qubits": 5,
+    "profundidade": 12,
+    "gates": 35,
+    "gates_2q": 10
+  },
+  "transpilado": {
+    "qubits": 5,
+    "profundidade": 56,
+    "gates": 93,
+    "gates_2q": 38
+  },
+  "Popt_inicial": 0.4218749999999999,
+  "Pfeas_inicial": 0.6562499999999999,
+  "warm_probabilidades": [
+    0.75,
+    0.25,
+    0.25,
+    0.75,
+    0.25
+  ],
+  "Popt": 0.3585334152042661,
+  "Pground": 0.2154454041739123,
+  "Pfeas": 0.6551972935768756,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.353515625,
+  "Pfeas_shots": 0.646484375,
+  "valor_otimo": 0.6062791443431149,
+  "valor_greedy": 0.6062791443431149,
+  "valor_condicional_factivel": 0.41441836663996034,
+  "valor_melhor_medido": 0.6062791443431149,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.45154953052941715,
+  "P95": 0.40622764047122456,
+  "shots_para_95pct_otimo_ideal": 7
+}

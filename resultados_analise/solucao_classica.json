@@ -1,0 +1,17 @@
+{
+  "valor": 1.8556756683234625,
+  "custo": 7,
+  "orcamento": 8,
+  "indices": [
+    0,
+    1,
+    6
+  ],
+  "controles": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-10: Defesa contra malware"
+  ],
+  "metodo": "programacao_dinamica_O(nB)",
+  "tempo_s": 0.0003327630111016333
+}

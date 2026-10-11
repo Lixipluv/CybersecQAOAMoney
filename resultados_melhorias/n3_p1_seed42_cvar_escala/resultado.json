@@ -1,0 +1,82 @@
+{
+  "metodo": "cvar_escala",
+  "controles": 3,
+  "qubits": 5,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "orcamento": 3,
+  "rho": 0.656279144343115,
+  "escala": 3.6526235291812506,
+  "alpha": 0.2,
+  "epsilon": null,
+  "otimizacao_s": 0.11320622102357447,
+  "avaliacoes": 104,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        5.851864518901625,
+        1.118347626110814
+      ],
+      "score": -0.15716237910532907,
+      "avaliacoes": 52,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        6.2195277474058335,
+        2.1721858197968293
+      ],
+      "score": -0.15812091818695,
+      "avaliacoes": 52,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.15812091818695,
+  "energia_esperada": 6.696946065255787,
+  "logico": {
+    "qubits": 5,
+    "profundidade": 10,
+    "gates": 25,
+    "gates_2q": 10
+  },
+  "transpilado": {
+    "qubits": 5,
+    "profundidade": 55,
+    "gates": 88,
+    "gates_2q": 38
+  },
+  "Popt_inicial": 0.12499999999999997,
+  "Pfeas_inicial": 0.4999999999999999,
+  "warm_probabilidades": null,
+  "Popt": 0.07799039356331444,
+  "Pground": 0.027274804794547785,
+  "Pfeas": 0.5166273250216767,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.08056640625,
+  "Pfeas_shots": 0.513671875,
+  "valor_otimo": 0.6062791443431149,
+  "valor_greedy": 0.6062791443431149,
+  "valor_condicional_factivel": 0.40804645188431243,
+  "valor_melhor_medido": 0.6062791443431149,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.36158213881441165,
+  "P95": 0.1562681644882458,
+  "shots_para_95pct_otimo_ideal": 37
+}

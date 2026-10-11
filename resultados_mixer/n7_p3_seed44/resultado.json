@@ -1,0 +1,98 @@
+{
+  "metodo": "grover_factivel",
+  "controles": 7,
+  "qubits": 7,
+  "p": 3,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 8,
+  "alpha": 0.2,
+  "escala": 4.162105824784869,
+  "otimizacao_s": 0.3580086290021427,
+  "preparacao_classica_s": 0.0004884699883405119,
+  "transpilacao_s": 0.31714006600668654,
+  "avaliacoes": 300,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        1.6217722790032334,
+        2.549532675129298,
+        6.089562342935334,
+        1.0198685735563089,
+        5.38653501362992
+      ],
+      "finais": [
+        4.338915515047228,
+        4.441702751132332,
+        6.849929260101839,
+        4.8737361703686,
+        -0.6846364163500412,
+        5.324243921664426
+      ],
+      "score": -0.4416419637407168,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        1.0244436515988316,
+        2.123477552128429,
+        4.258258048505741,
+        3.8737984481444907,
+        6.0000408753696295,
+        2.584907341708092
+      ],
+      "finais": [
+        5.053416354071473,
+        4.4959258016614845,
+        6.8700054795233445,
+        4.75697149040606,
+        5.767841136028587,
+        5.358702449296005
+      ],
+      "score": -0.44165644661417114,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "estados_factiveis": 51,
+  "Popt_inicial": 0.019607843137254898,
+  "logico": {
+    "qubits": 7,
+    "profundidade": 19,
+    "gates": 73,
+    "gates_2q": 0
+  },
+  "transpilado": {
+    "qubits": 7,
+    "profundidade": 5581,
+    "gates": 6812,
+    "gates_2q": 3240
+  },
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_melhor_medido": 1.8556756683234625,
+  "bitstring_melhor_medido": "1000011",
+  "Popt_shots": 0.056640625,
+  "Pfeas_shots": 1.0,
+  "aceitabilidade_possivel": true,
+  "preparacao": "StatePreparation genérica a partir de enumeração 2^n",
+  "Popt": 0.05831742248971732,
+  "Pfeas": 0.9999999999999998,
+  "Paceitavel": 0.4538004799740332,
+  "valor_esperado": 1.7316500696506862,
+  "ruido": {
+    "Popt": 0.00927734375,
+    "Pfeas": 0.3837890625,
+    "Paceitavel": 0.0751953125,
+    "valor_esperado": 2.0849268652079056,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.9597764637497411,
+  "P95": 0.6336890260966086,
+  "shots_para_95pct_otimo_ideal": 50
+}

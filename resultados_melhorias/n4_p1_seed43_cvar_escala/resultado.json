@@ -1,0 +1,83 @@
+{
+  "metodo": "cvar_escala",
+  "controles": 4,
+  "qubits": 7,
+  "p": 1,
+  "seed": 43,
+  "shots": 2048,
+  "orcamento": 4,
+  "rho": 0.656279144343115,
+  "escala": 11.81302459817607,
+  "alpha": 0.2,
+  "epsilon": null,
+  "otimizacao_s": 0.2731792429985944,
+  "avaliacoes": 246,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.098517143286439,
+        0.13752423515278736
+      ],
+      "finais": [
+        6.7263076068019005,
+        -1.6928320224208473
+      ],
+      "score": -0.02285576768323504,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    },
+    {
+      "iniciais": [
+        0.12584960595695643,
+        2.63646408401677
+      ],
+      "finais": [
+        0.7326078310268634,
+        2.75609214750436
+      ],
+      "score": -0.0539078445477211,
+      "avaliacoes": 96,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.0539078445477211,
+  "energia_esperada": 4.003597378144973,
+  "logico": {
+    "qubits": 7,
+    "profundidade": 14,
+    "gates": 42,
+    "gates_2q": 21
+  },
+  "transpilado": {
+    "qubits": 7,
+    "profundidade": 89,
+    "gates": 167,
+    "gates_2q": 90
+  },
+  "Popt_inicial": 0.062499999999999986,
+  "Pfeas_inicial": 0.37499999999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.05846561431630977,
+  "Pground": 0.024280164475659966,
+  "Pfeas": 0.744551573362471,
+  "Paceitavel": 0.0,
+  "Popt_shots": 0.0703125,
+  "Pfeas_shots": 0.7294921875,
+  "valor_otimo": 1.1999847592744652,
+  "valor_greedy": 1.1999847592744652,
+  "valor_condicional_factivel": 0.47343774120922244,
+  "valor_melhor_medido": 1.1999847592744652,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "0000011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software"
+  ],
+  "aceitabilidade_possivel": false,
+  "P90": 0.05846561431630977,
+  "P95": 0.05846561431630977,
+  "shots_para_95pct_otimo_ideal": 50
+}

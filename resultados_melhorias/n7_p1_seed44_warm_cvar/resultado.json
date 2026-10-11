@@ -1,0 +1,104 @@
+{
+  "metodo": "warm_cvar",
+  "controles": 7,
+  "qubits": 11,
+  "p": 1,
+  "seed": 44,
+  "shots": 2048,
+  "orcamento": 8,
+  "rho": 0.7056909090489973,
+  "escala": 50.80974545152781,
+  "alpha": 0.2,
+  "epsilon": 0.25,
+  "otimizacao_s": 0.45074202498653904,
+  "avaliacoes": 270,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        0.7701018095498474,
+        0.8108861395016167
+      ],
+      "finais": [
+        1.0860060567846488,
+        2.7516869001159825
+      ],
+      "score": -0.029990636450999347,
+      "avaliacoes": 120,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        2.549532675129298,
+        3.044781171467667
+      ],
+      "finais": [
+        4.297000288793386,
+        2.889263160643129
+      ],
+      "score": -0.030313673003888684,
+      "avaliacoes": 150,
+      "convergiu": false,
+      "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+    }
+  ],
+  "score_otimizacao": -0.030313673003888684,
+  "energia_esperada": 30.227852449244406,
+  "logico": {
+    "qubits": 11,
+    "profundidade": 24,
+    "gates": 110,
+    "gates_2q": 55
+  },
+  "transpilado": {
+    "qubits": 11,
+    "profundidade": 148,
+    "gates": 373,
+    "gates_2q": 219
+  },
+  "Popt_inicial": 0.014831542968749991,
+  "Pfeas_inicial": 0.5784301757812496,
+  "warm_probabilidades": [
+    0.75,
+    0.75,
+    0.25,
+    0.25,
+    0.25,
+    0.75,
+    0.25,
+    0.25,
+    0.75,
+    0.25,
+    0.25
+  ],
+  "Popt": 0.01720759165456552,
+  "Pground": 0.0011605255411093673,
+  "Pfeas": 0.7140769048313381,
+  "Paceitavel": 0.06651925849721549,
+  "Popt_shots": 0.01220703125,
+  "Pfeas_shots": 0.71337890625,
+  "valor_otimo": 1.8556756683234625,
+  "valor_greedy": 1.7610234147366501,
+  "valor_condicional_factivel": 1.4179216243280337,
+  "valor_melhor_medido": 1.8556756683234625,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "00001000011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-10: Defesa contra malware"
+  ],
+  "aceitabilidade_possivel": true,
+  "ruido": {
+    "Popt": 0.0185546875,
+    "Pground": 0.001953125,
+    "Pfeas": 0.5654296875,
+    "Paceitavel": 0.0673828125,
+    "shots": 2048,
+    "modelo": "SX/X:0.001;CX:0.01;leitura:0.02;sem T1/T2"
+  },
+  "P90": 0.3780892701509378,
+  "P95": 0.1348352038927775,
+  "shots_para_95pct_otimo_ideal": 173
+}

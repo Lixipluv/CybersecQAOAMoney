@@ -1,0 +1,84 @@
+{
+  "metodo": "cvar_escala",
+  "controles": 6,
+  "qubits": 9,
+  "p": 1,
+  "seed": 42,
+  "shots": 2048,
+  "orcamento": 7,
+  "rho": 0.656279144343115,
+  "escala": 11.813024598176069,
+  "alpha": 0.2,
+  "epsilon": null,
+  "otimizacao_s": 0.12609041898394935,
+  "avaliacoes": 112,
+  "otimizacoes": [
+    {
+      "iniciais": [
+        4.862909272689599,
+        1.378777282143998
+      ],
+      "finais": [
+        4.341475855999538,
+        1.9797700264777618
+      ],
+      "score": -0.08570341288451507,
+      "avaliacoes": 46,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    },
+    {
+      "iniciais": [
+        5.3947298351621535,
+        2.190846276941291
+      ],
+      "finais": [
+        4.877825771999452,
+        1.738688730682831
+      ],
+      "score": -0.08347031682469956,
+      "avaliacoes": 66,
+      "convergiu": true,
+      "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+    }
+  ],
+  "score_otimizacao": -0.08570341288451507,
+  "energia_esperada": 25.16917663180936,
+  "logico": {
+    "qubits": 9,
+    "profundidade": 18,
+    "gates": 63,
+    "gates_2q": 36
+  },
+  "transpilado": {
+    "qubits": 9,
+    "profundidade": 131,
+    "gates": 273,
+    "gates_2q": 165
+  },
+  "Popt_inicial": 0.015624999999999997,
+  "Pfeas_inicial": 0.45312499999999994,
+  "warm_probabilidades": null,
+  "Popt": 0.008732962106280254,
+  "Pground": 0.002517881306141146,
+  "Pfeas": 0.4685802551361904,
+  "Paceitavel": 0.01745359863064397,
+  "Popt_shots": 0.0107421875,
+  "Pfeas_shots": 0.47607421875,
+  "valor_otimo": 1.7730653742058156,
+  "valor_greedy": 1.7610234147366501,
+  "valor_condicional_factivel": 1.0831975908289997,
+  "valor_melhor_medido": 1.7730653742058156,
+  "gap_melhor_medido": 0.0,
+  "bitstring_melhor_medido": "000001011",
+  "otimo_medido": true,
+  "controles_melhor_medido": [
+    "CIS-1: Inventário de hardware",
+    "CIS-2: Inventário de software",
+    "CIS-5: Gestão de contas"
+  ],
+  "aceitabilidade_possivel": true,
+  "P90": 0.09216889331374647,
+  "P95": 0.09216889331374647,
+  "shots_para_95pct_otimo_ideal": 342
+}

@@ -1,0 +1,20 @@
+{
+  "dados": "/home/lix/Documentos/ChatGPT/Mestrado/cyber_qaoa/instancia.json",
+  "saida": "/home/lix/Documentos/ChatGPT/Mestrado/cyber_qaoa/resultados_mixer",
+  "tamanho": 7,
+  "profundidades": [
+    1,
+    2,
+    3
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "shots": 2048,
+  "maxiter": 150,
+  "restarts": 2,
+  "alpha": 0.2,
+  "ruido": true
+}
