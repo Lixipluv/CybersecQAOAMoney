@@ -1,0 +1,544 @@
+{
+  "instancia": "sintetico_10",
+  "metodo": "presolve_qaoa",
+  "seed": 42,
+  "p": 1,
+  "shots": 2048,
+  "controles": 10,
+  "orcamento": 10,
+  "qubits_modelo_original": 14,
+  "qubits_pico": 0,
+  "qubits_final": 0,
+  "gates_2q_total_circuitos": 0,
+  "avaliacoes": 0,
+  "tempo_total_metodo_s": 0.005332924978574738,
+  "tempo_otimizacao_s": 0.0,
+  "tempo_referencia_classica_s": 0.00016842901823110878,
+  "execucao_quantica": false,
+  "reducao_preserva_otimo": true,
+  "solucao_obtida": {
+    "bits": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "custo": 10,
+    "valor": 3.3042305712167894,
+    "valor_racional": {
+      "numerador": 59523726277112539,
+      "denominador": 18014398509481984,
+      "decimal": 3.3042305712167894
+    },
+    "factivel": true,
+    "cobertura": 0.8676470588235293,
+    "aceitavel": true,
+    "controles": [
+      "Controle sintético 2 (n=10)",
+      "Controle sintético 3 (n=10)",
+      "Controle sintético 6 (n=10)",
+      "Controle sintético 7 (n=10)",
+      "Controle sintético 9 (n=10)",
+      "Controle sintético 10 (n=10)"
+    ]
+  },
+  "otima_verificada": true,
+  "gap_relativo": 0.0,
+  "referencia": {
+    "bits": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "custo": 10,
+    "valor": 3.3042305712167894,
+    "valor_racional": {
+      "numerador": 59523726277112539,
+      "denominador": 18014398509481984,
+      "decimal": 3.3042305712167894
+    },
+    "factivel": true,
+    "cobertura": 0.8676470588235293,
+    "aceitavel": true,
+    "controles": [
+      "Controle sintético 2 (n=10)",
+      "Controle sintético 3 (n=10)",
+      "Controle sintético 6 (n=10)",
+      "Controle sintético 7 (n=10)",
+      "Controle sintético 9 (n=10)",
+      "Controle sintético 10 (n=10)"
+    ]
+  },
+  "reducao": {
+    "fixed": {
+      "0": 0,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "6": 1,
+      "8": 1,
+      "9": 1,
+      "5": 1,
+      "1": 1,
+      "7": 0
+    },
+    "free": [],
+    "certificados": [
+      {
+        "variavel": 0,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {},
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 57106819990926687,
+          "denominador": 18014398509481984,
+          "decimal": 3.170065320852549
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 2,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 58580438860447289,
+          "denominador": 18014398509481984,
+          "decimal": 3.2518676007757423
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 3,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 56738525912584907,
+          "denominador": 18014398509481984,
+          "decimal": 3.1496208925721416
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 4,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 57057148672152877,
+          "denominador": 18014398509481984,
+          "decimal": 3.1673080087642402
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 6,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 55909716362224731,
+          "denominador": 18014398509481984,
+          "decimal": 3.103612720280187
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 8,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "6": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 28714087748893739,
+          "denominador": 9007199254740992,
+          "decimal": 3.187904134992896
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 9,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "6": 1,
+          "8": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "limite_superior_ramo": {
+          "numerador": 55474195105295963,
+          "denominador": 18014398509481984,
+          "decimal": 3.0794364339223868
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 5,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "6": 1,
+          "8": 1,
+          "9": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59523726277112539,
+          "denominador": 18014398509481984,
+          "decimal": 3.3042305712167894
+        },
+        "limite_superior_ramo": {
+          "numerador": 59496943511508659,
+          "denominador": 18014398509481984,
+          "decimal": 3.302743829064961
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 1,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "6": 1,
+          "8": 1,
+          "9": 1,
+          "5": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59523726277112539,
+          "denominador": 18014398509481984,
+          "decimal": 3.3042305712167894
+        },
+        "limite_superior_ramo": {
+          "numerador": 175811256558801353,
+          "denominador": 54043195528445952,
+          "decimal": 3.2531617503310306
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 7,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "6": 1,
+          "8": 1,
+          "9": 1,
+          "5": 1,
+          "1": 1
+        },
+        "incumbente_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 59523726277112539,
+          "denominador": 18014398509481984,
+          "decimal": 3.3042305712167894
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      }
+    ],
+    "chamadas_limite": 40,
+    "incumbente_inicial": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "incumbente_final": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "preserva_todos_otimos": true
+  },
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "free": [],
+    "fixed": {
+      "0": 0,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "6": 1,
+      "8": 1,
+      "9": 1,
+      "5": 1,
+      "1": 1,
+      "7": 0
+    },
+    "gcd_custos": 1,
+    "orcamento_nucleo": 0,
+    "offset_valor": 3.3042305712167894,
+    "bits": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "qubits": 0,
+    "avaliacoes": 0,
+    "tempo_otimizacao_s": 0.0,
+    "execucao_quantica": false,
+    "distribuicao": [
+      {
+        "bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "prob": 1.0,
+        "shots": 2048
+      }
+    ],
+    "logico": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "transpilado": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "tempo_presolve_s": 0.004402262973599136
+  },
+  "probabilidades_ideais": {
+    "Popt": 1.0,
+    "Pfeas": 1.0,
+    "P95": 1.0,
+    "Paceitavel": 1.0,
+    "Popt_shots": 1.0,
+    "Pfeas_shots": 1.0
+  },
+  "auditoria_integridade": "verificada",
+  "origem_probabilidades": "classica_deterministica_sem_circuito"
+}

@@ -1,0 +1,328 @@
+{
+  "instancia": "prefixo_6",
+  "metodo": "presolve_qaoa",
+  "seed": 43,
+  "p": 1,
+  "shots": 2048,
+  "controles": 6,
+  "orcamento": 7,
+  "qubits_modelo_original": 9,
+  "qubits_pico": 0,
+  "qubits_final": 0,
+  "gates_2q_total_circuitos": 0,
+  "avaliacoes": 0,
+  "tempo_total_metodo_s": 0.001790814014384523,
+  "tempo_otimizacao_s": 0.0,
+  "tempo_referencia_classica_s": 6.700999801978469e-05,
+  "execucao_quantica": false,
+  "reducao_preserva_otimo": true,
+  "solucao_obtida": {
+    "bits": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "custo": 7,
+    "valor": 1.7730653742058156,
+    "valor_racional": {
+      "numerador": 15970353117153679,
+      "denominador": 9007199254740992,
+      "decimal": 1.7730653742058156
+    },
+    "factivel": true,
+    "cobertura": 0.6911764705882352,
+    "aceitavel": true,
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-5: Gestão de contas"
+    ]
+  },
+  "otima_verificada": true,
+  "gap_relativo": 0.0,
+  "referencia": {
+    "bits": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "custo": 7,
+    "valor": 1.7730653742058156,
+    "valor_racional": {
+      "numerador": 15970353117153679,
+      "denominador": 9007199254740992,
+      "decimal": 1.7730653742058156
+    },
+    "factivel": true,
+    "cobertura": 0.6911764705882352,
+    "aceitavel": true,
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-5: Gestão de contas"
+    ]
+  },
+  "reducao": {
+    "fixed": {
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "4": 0,
+      "3": 1,
+      "5": 0
+    },
+    "free": [],
+    "certificados": [
+      {
+        "variavel": 0,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {},
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 15861888788797391,
+          "denominador": 9007199254740992,
+          "decimal": 1.7610234147366501
+        },
+        "limite_superior_ramo": {
+          "numerador": 243169734678457,
+          "denominador": 140737488355328,
+          "decimal": 1.7278248853248854
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 1,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 1
+        },
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "limite_inferior": {
+          "numerador": 15861888788797391,
+          "denominador": 9007199254740992,
+          "decimal": 1.7610234147366501
+        },
+        "limite_superior_ramo": {
+          "numerador": 15676115304168359,
+          "denominador": 9007199254740992,
+          "decimal": 1.7403984147366502
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 2,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 1,
+          "1": 1
+        },
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 15970353117153679,
+          "denominador": 9007199254740992,
+          "decimal": 1.7730653742058156
+        },
+        "limite_superior_ramo": {
+          "numerador": 7971765103804155,
+          "denominador": 4503599627370496,
+          "decimal": 1.7700874330293448
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 4,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 1,
+          "1": 1,
+          "2": 0
+        },
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 15970353117153679,
+          "denominador": 9007199254740992,
+          "decimal": 1.7730653742058156
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 3,
+        "fixada_em": 1,
+        "ramo_excluido": 0,
+        "fixacoes_anteriores": {
+          "0": 1,
+          "1": 1,
+          "2": 0,
+          "4": 0
+        },
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 15970353117153679,
+          "denominador": 9007199254740992,
+          "decimal": 1.7730653742058156
+        },
+        "limite_superior_ramo": {
+          "numerador": 15861888788797391,
+          "denominador": 9007199254740992,
+          "decimal": 1.7610234147366501
+        },
+        "motivo": "UB_estritamente_menor_que_LB"
+      },
+      {
+        "variavel": 5,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 1,
+          "1": 1,
+          "2": 0,
+          "4": 0,
+          "3": 1
+        },
+        "incumbente_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 15970353117153679,
+          "denominador": 9007199254740992,
+          "decimal": 1.7730653742058156
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      }
+    ],
+    "chamadas_limite": 11,
+    "incumbente_inicial": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "incumbente_final": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "preserva_todos_otimos": true
+  },
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "free": [],
+    "fixed": {
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "4": 0,
+      "3": 1,
+      "5": 0
+    },
+    "gcd_custos": 1,
+    "orcamento_nucleo": 0,
+    "offset_valor": 1.7730653742058156,
+    "bits": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "qubits": 0,
+    "avaliacoes": 0,
+    "tempo_otimizacao_s": 0.0,
+    "execucao_quantica": false,
+    "distribuicao": [
+      {
+        "bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "prob": 1.0,
+        "shots": 2048
+      }
+    ],
+    "logico": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "transpilado": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "tempo_presolve_s": 0.0014036900247447193
+  },
+  "probabilidades_ideais": {
+    "Popt": 1.0,
+    "Pfeas": 1.0,
+    "P95": 1.0,
+    "Paceitavel": 1.0,
+    "Popt_shots": 1.0,
+    "Pfeas_shots": 1.0
+  },
+  "auditoria_integridade": "verificada",
+  "origem_probabilidades": "classica_deterministica_sem_circuito"
+}

@@ -1,0 +1,97 @@
+{
+  "instancia": "prefixo_3",
+  "metodo": "qiro",
+  "seed": 42,
+  "p": 1,
+  "shots": 2048,
+  "controles": 3,
+  "orcamento": 3,
+  "qubits_modelo_original": 5,
+  "qubits_pico": 0,
+  "qubits_final": 3,
+  "gates_2q_total_circuitos": 0,
+  "avaliacoes": 0,
+  "tempo_total_metodo_s": 7.391299004666507e-05,
+  "tempo_otimizacao_s": 0.0,
+  "tempo_referencia_classica_s": 2.1610991097986698e-05,
+  "execucao_quantica": false,
+  "reducao_preserva_otimo": false,
+  "solucao_obtida": {
+    "bits": [
+      1,
+      0,
+      0
+    ],
+    "custo": 2,
+    "valor": 0.6062791443431149,
+    "valor_racional": {
+      "numerador": 5460877057092311,
+      "denominador": 9007199254740992,
+      "decimal": 0.6062791443431149
+    },
+    "factivel": true,
+    "cobertura": 0.2205882352941176,
+    "aceitavel": false,
+    "controles": [
+      "CIS-1: Inventário de hardware"
+    ]
+  },
+  "otima_verificada": true,
+  "gap_relativo": 0.0,
+  "referencia": {
+    "bits": [
+      1,
+      0,
+      0
+    ],
+    "custo": 2,
+    "valor": 0.6062791443431149,
+    "valor_racional": {
+      "numerador": 5460877057092311,
+      "denominador": 9007199254740992,
+      "decimal": 0.6062791443431149
+    },
+    "factivel": true,
+    "cobertura": 0.2205882352941176,
+    "aceitavel": false,
+    "controles": [
+      "CIS-1: Inventário de hardware"
+    ]
+  },
+  "reducao": null,
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "bits": [
+      1,
+      0,
+      0
+    ],
+    "factivel": true,
+    "preserva_otimo": false,
+    "estagios": [],
+    "folhas": [
+      {
+        "bits": [
+          1,
+          0,
+          0
+        ],
+        "valor": {
+          "numerador": 5460877057092311,
+          "denominador": 9007199254740992,
+          "decimal": 0.6062791443431149
+        },
+        "fixacoes": {}
+      }
+    ],
+    "qubits_pico": 0,
+    "qubits_final_classico": 3,
+    "avaliacoes": 0,
+    "tempo_otimizacao_s": 0.0,
+    "nos_explorados": 1,
+    "limite_nos_atingido": false,
+    "backtracking": 1,
+    "fallback_classico": false
+  },
+  "auditoria_integridade": "verificada"
+}

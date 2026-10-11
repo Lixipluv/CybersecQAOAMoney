@@ -73,3 +73,24 @@ python classico.py
 `classico.py` resolve a mochila exatamente por programação dinâmica. `resultados_melhorias`, `resultados_mixer` e `resultados_analise` preservam parâmetros, distribuições, métricas e circuitos. As probabilidades ideais são exatas; as de ruído são frequências de shots. As análises mantêm o ótimo clássico fora da otimização variacional.
 
 A função `modelo` também admite `rho > max(R)` para custos inteiros positivos e valores não negativos; a prova específica desta mochila está no relatório. O padrão `rho=1+sum(R)` foi preservado para reproduzir os resultados originais. O código de melhorias usa `rho=max(R)+0.05` nas variantes.
+
+## Redução de decisões — caminho recomendado
+
+A entrada `otimizar.py` usa **presolve certificado → QAOA no núcleo → reconstrução → verificação exata**. O orçamento utilizado é o do arquivo de dados, sem recalculá-lo automaticamente.
+
+```bash
+python otimizar.py --ruido
+python otimizar.py --dados instancia.json --metodo rqaoa
+python otimizar.py --dados instancia.json --metodo qiro
+python otimizar.py --dados instancia.json --metodo agrupamento_qaoa --grupos 3
+python experimentos_reducao.py --ruido
+python auditar_reducao.py
+```
+
+Métodos disponíveis: `qaoa_completo`, `presolve_qaoa` (padrão), `agrupamento_qaoa`, `rqaoa`, `qiro`. `solucao_reduzida/resultado.json` contém a solução de exemplo; [relatório de redução](resultados_reducao/RELATORIO_REDUCAO.md) e [comparação](resultados_reducao/comparacao.png) documentam 150 execuções em dez cenários, com três sementes.
+
+O presolve verifica desigualdades entre limites fracionários e portfólios factíveis usando aritmética racional. A redução preserva todos os ótimos da mochila valor/orçamento, inclusive empates. O núcleo mantém mapa de controles, offset do valor e orçamento residual; custos são simplificados pelo MDC. Se não restar nenhuma decisão, a solução é clássica, com zero qubits. O fato de o presolve preservar o ótimo não garante que a amostragem QAOA o encontre; o campo `otima_verificada` é uma comparação posterior com DP racional no modelo original.
+
+RQAOA e QIRO usam correlações estimadas por shots ideais para reduções heurísticas, com cauda clássica exata. QIRO é uma adaptação para mochila com guarda de orçamento e backtracking limitado, sem garantia global. O agrupamento escolhe representantes por valor/custo e pode eliminar controles necessários ao ótimo. Esses três métodos são experimentais: as perdas observadas ficam explícitas no relatório. Não se aplica dominância simples entre controles que podem ser selecionados juntos.
+
+Validação: 22 testes, incluindo 120 mochilas aleatórias com empates, verificação de limites, energia/reconstrução Ising, orçamento zero, certificados adulterados e ruído no núcleo. A auditoria das 150 execuções confirmou 138 fixações certificadas e 30 reconstruções RQAOA. Nessa amostra, o pipeline certificado obteve o ótimo em 30/30 execuções, sendo 21 resolvidas classicamente pelo presolve. Dados sintéticos; sem alegação de vantagem quântica.

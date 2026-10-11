@@ -1,0 +1,1278 @@
+{
+  "instancia": "sintetico_8",
+  "metodo": "qiro",
+  "seed": 43,
+  "p": 1,
+  "shots": 2048,
+  "controles": 8,
+  "orcamento": 4,
+  "qubits_modelo_original": 11,
+  "qubits_pico": 11,
+  "qubits_final": 3,
+  "gates_2q_total_circuitos": 1174,
+  "avaliacoes": 1263,
+  "tempo_total_metodo_s": 1.619653676985763,
+  "tempo_otimizacao_s": 1.5200932280276902,
+  "tempo_referencia_classica_s": 0.00020362701616249979,
+  "execucao_quantica": true,
+  "reducao_preserva_otimo": false,
+  "solucao_obtida": {
+    "bits": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "custo": 4,
+    "valor": 1.80940184115743,
+    "valor_racional": {
+      "numerador": 8148821457600091,
+      "denominador": 4503599627370496,
+      "decimal": 1.80940184115743
+    },
+    "factivel": true,
+    "cobertura": 0.9999999999999999,
+    "aceitavel": true,
+    "controles": [
+      "Controle sintético 3 (n=8)",
+      "Controle sintético 4 (n=8)",
+      "Controle sintético 6 (n=8)"
+    ]
+  },
+  "otima_verificada": false,
+  "gap_relativo": 0.26522895996196905,
+  "referencia": {
+    "bits": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "custo": 4,
+    "valor": 2.462538318145714,
+    "valor_racional": {
+      "numerador": 5545143325993303,
+      "denominador": 2251799813685248,
+      "decimal": 2.462538318145714
+    },
+    "factivel": true,
+    "cobertura": 0.9999999999999999,
+    "aceitavel": true,
+    "controles": [
+      "Controle sintético 2 (n=8)",
+      "Controle sintético 4 (n=8)",
+      "Controle sintético 6 (n=8)",
+      "Controle sintético 8 (n=8)"
+    ]
+  },
+  "reducao": null,
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "bits": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "factivel": true,
+    "preserva_otimo": false,
+    "estagios": [
+      {
+        "node": 1,
+        "profundidade_busca": 0,
+        "qubits": 11,
+        "mapa_original": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {},
+        "variavel": 2,
+        "bit_preferido": 0,
+        "confianca": 0.5087890625,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.4716796875,
+          0.296875,
+          0.5087890625,
+          0.224609375,
+          0.4990234375,
+          0.25390625,
+          0.48046875,
+          0.28125
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.1181640625,
+            0.203125,
+            0.0673828125,
+            0.220703125,
+            0.1005859375,
+            0.1865234375,
+            0.1279296875
+          ],
+          [
+            0.1181640625,
+            1.0,
+            0.1376953125,
+            0.060546875,
+            0.1611328125,
+            0.064453125,
+            0.126953125,
+            0.0703125
+          ],
+          [
+            0.203125,
+            0.1376953125,
+            1.0,
+            0.1376953125,
+            0.224609375,
+            0.1357421875,
+            0.2177734375,
+            0.1279296875
+          ],
+          [
+            0.0673828125,
+            0.060546875,
+            0.1376953125,
+            1.0,
+            0.1103515625,
+            0.091796875,
+            0.08203125,
+            0.080078125
+          ],
+          [
+            0.220703125,
+            0.1611328125,
+            0.224609375,
+            0.1103515625,
+            1.0,
+            0.1162109375,
+            0.2216796875,
+            0.1279296875
+          ],
+          [
+            0.1005859375,
+            0.064453125,
+            0.1357421875,
+            0.091796875,
+            0.1162109375,
+            1.0,
+            0.126953125,
+            0.068359375
+          ],
+          [
+            0.1865234375,
+            0.126953125,
+            0.2177734375,
+            0.08203125,
+            0.2216796875,
+            0.126953125,
+            1.0,
+            0.119140625
+          ],
+          [
+            0.1279296875,
+            0.0703125,
+            0.1279296875,
+            0.080078125,
+            0.1279296875,
+            0.068359375,
+            0.119140625,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              0.7701018095498474,
+              0.8108861395016167
+            ],
+            "finais": [
+              0.7546194613015186,
+              2.6482796534734834
+            ],
+            "energia_final": 2.5940926190308593,
+            "avaliacoes": 57,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              2.549532675129298,
+              3.044781171467667
+            ],
+            "finais": [
+              0.754629095468938,
+              2.648276059798106
+            ],
+            "energia_final": 2.5940926211242603,
+            "avaliacoes": 74,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 131,
+        "tempo_otimizacao_s": 0.18998975501745008,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 11,
+          "profundidade": 22,
+          "gates": 88,
+          "gates_2q": 55
+        },
+        "transpilado": {
+          "qubits": 11,
+          "profundidade": 159,
+          "gates": 404,
+          "gates_2q": 261
+        }
+      },
+      {
+        "node": 2,
+        "profundidade_busca": 1,
+        "qubits": 10,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 0
+        },
+        "variavel": 4,
+        "bit_preferido": 0,
+        "confianca": 0.474609375,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.4462890625,
+          0.2568359375,
+          0.2353515625,
+          0.474609375,
+          0.2421875,
+          0.4208984375,
+          0.240234375
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.06640625,
+            0.09765625,
+            0.2021484375,
+            0.0986328125,
+            0.140625,
+            0.0771484375
+          ],
+          [
+            0.06640625,
+            1.0,
+            0.052734375,
+            0.1201171875,
+            0.0400390625,
+            0.119140625,
+            0.0498046875
+          ],
+          [
+            0.09765625,
+            0.052734375,
+            1.0,
+            0.0634765625,
+            0.0517578125,
+            0.115234375,
+            0.0634765625
+          ],
+          [
+            0.2021484375,
+            0.1201171875,
+            0.0634765625,
+            1.0,
+            0.111328125,
+            0.1689453125,
+            0.09765625
+          ],
+          [
+            0.0986328125,
+            0.0400390625,
+            0.0517578125,
+            0.111328125,
+            1.0,
+            0.0986328125,
+            0.05859375
+          ],
+          [
+            0.140625,
+            0.119140625,
+            0.115234375,
+            0.1689453125,
+            0.0986328125,
+            1.0,
+            0.0830078125
+          ],
+          [
+            0.0771484375,
+            0.0498046875,
+            0.0634765625,
+            0.09765625,
+            0.05859375,
+            0.0830078125,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              3.6010861228267514,
+              1.660303899153966
+            ],
+            "finais": [
+              0.6856536228565923,
+              2.672693316505785
+            ],
+            "energia_final": 2.1248843238997956,
+            "avaliacoes": 75,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              4.798155966547629,
+              2.550008033809353
+            ],
+            "finais": [
+              0.6856360259359576,
+              2.6726942308421746
+            ],
+            "energia_final": 2.124884321611025,
+            "avaliacoes": 92,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 167,
+        "tempo_otimizacao_s": 0.2077316869981587,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 10,
+          "profundidade": 20,
+          "gates": 75,
+          "gates_2q": 45
+        },
+        "transpilado": {
+          "qubits": 10,
+          "profundidade": 145,
+          "gates": 324,
+          "gates_2q": 199
+        }
+      },
+      {
+        "node": 3,
+        "profundidade_busca": 2,
+        "qubits": 9,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 0,
+          "4": 0
+        },
+        "variavel": 0,
+        "bit_preferido": 0,
+        "confianca": 0.365234375,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.365234375,
+          0.2158203125,
+          0.1904296875,
+          0.2001953125,
+          0.35546875,
+          0.171875
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.0576171875,
+            0.0224609375,
+            0.0205078125,
+            0.05859375,
+            0.03515625
+          ],
+          [
+            0.0576171875,
+            1.0,
+            0.0546875,
+            0.037109375,
+            0.0439453125,
+            0.0302734375
+          ],
+          [
+            0.0224609375,
+            0.0546875,
+            1.0,
+            0.025390625,
+            0.0771484375,
+            -0.0068359375
+          ],
+          [
+            0.0205078125,
+            0.037109375,
+            0.025390625,
+            1.0,
+            0.0498046875,
+            0.0205078125
+          ],
+          [
+            0.05859375,
+            0.0439453125,
+            0.0771484375,
+            0.0498046875,
+            1.0,
+            0.052734375
+          ],
+          [
+            0.03515625,
+            0.0302734375,
+            -0.0068359375,
+            0.0205078125,
+            0.052734375,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              5.690079485419566,
+              0.24261512621431053
+            ],
+            "finais": [
+              5.226751501830168,
+              0.09805207828384141
+            ],
+            "energia_final": 12.909344178985217,
+            "avaliacoes": 100,
+            "convergiu": false,
+            "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+          },
+          {
+            "iniciais": [
+              1.7126062855695108,
+              1.9536009066557216
+            ],
+            "finais": [
+              0.6100069917310701,
+              2.7019147597626123
+            ],
+            "energia_final": 1.609898126799618,
+            "avaliacoes": 60,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 160,
+        "tempo_otimizacao_s": 0.1850502800079994,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 9,
+          "profundidade": 18,
+          "gates": 63,
+          "gates_2q": 36
+        },
+        "transpilado": {
+          "qubits": 9,
+          "profundidade": 130,
+          "gates": 273,
+          "gates_2q": 165
+        }
+      },
+      {
+        "node": 4,
+        "profundidade_busca": 3,
+        "qubits": 8,
+        "mapa_original": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 0,
+          "4": 0,
+          "0": 0
+        },
+        "variavel": 5,
+        "bit_preferido": 0,
+        "confianca": 0.080078125,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.056640625,
+          0.0390625,
+          0.080078125,
+          -0.0126953125,
+          0.05078125
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.46484375,
+            0.47265625,
+            0.0908203125,
+            0.46875
+          ],
+          [
+            0.46484375,
+            1.0,
+            0.45703125,
+            0.0595703125,
+            0.474609375
+          ],
+          [
+            0.47265625,
+            0.45703125,
+            1.0,
+            0.0634765625,
+            0.46875
+          ],
+          [
+            0.0908203125,
+            0.0595703125,
+            0.0634765625,
+            1.0,
+            0.0634765625
+          ],
+          [
+            0.46875,
+            0.474609375,
+            0.46875,
+            0.0634765625,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              4.660879393574647,
+              2.3677204191026693
+            ],
+            "finais": [
+              5.333566984851432,
+              4.019031860469094
+            ],
+            "energia_final": 7.216798539828185,
+            "avaliacoes": 55,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              2.9228155229893824,
+              0.325861791135201
+            ],
+            "finais": [
+              5.333559805804349,
+              0.8774362295565761
+            ],
+            "energia_final": 7.21679854046578,
+            "avaliacoes": 55,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 110,
+        "tempo_otimizacao_s": 0.12710454600164667,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 8,
+          "profundidade": 16,
+          "gates": 52,
+          "gates_2q": 28
+        },
+        "transpilado": {
+          "qubits": 8,
+          "profundidade": 105,
+          "gates": 207,
+          "gates_2q": 115
+        }
+      },
+      {
+        "node": 5,
+        "profundidade_busca": 4,
+        "qubits": 7,
+        "mapa_original": [
+          1,
+          3,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 0,
+          "4": 0,
+          "0": 0,
+          "5": 0
+        },
+        "variavel": 3,
+        "bit_preferido": 0,
+        "confianca": 0.1015625,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.0927734375,
+          0.1015625,
+          0.0263671875,
+          0.0986328125
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.4990234375,
+            0.046875,
+            0.509765625
+          ],
+          [
+            0.4990234375,
+            1.0,
+            0.0068359375,
+            0.5126953125
+          ],
+          [
+            0.046875,
+            0.0068359375,
+            1.0,
+            0.068359375
+          ],
+          [
+            0.509765625,
+            0.5126953125,
+            0.068359375,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              2.4359901411402496,
+              1.8716776194797264
+            ],
+            "finais": [
+              4.253507513324379,
+              3.909175405308788
+            ],
+            "energia_final": 4.885498945145796,
+            "avaliacoes": 48,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              3.228304035504219,
+              2.1818106636072434
+            ],
+            "finais": [
+              4.258614071185741,
+              2.332868071408277
+            ],
+            "energia_final": 5.559834178713086,
+            "avaliacoes": 48,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 96,
+        "tempo_otimizacao_s": 0.10840123900561593,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 7,
+          "profundidade": 14,
+          "gates": 42,
+          "gates_2q": 21
+        },
+        "transpilado": {
+          "qubits": 7,
+          "profundidade": 86,
+          "gates": 161,
+          "gates_2q": 84
+        }
+      },
+      {
+        "node": 7,
+        "profundidade_busca": 1,
+        "qubits": 9,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 1
+        },
+        "variavel": 5,
+        "bit_preferido": 1,
+        "confianca": 0.0380859375,
+        "ramos_factiveis": [
+          1,
+          0
+        ],
+        "medias_Z": [
+          -0.0224609375,
+          -0.001953125,
+          -0.0048828125,
+          0.03515625,
+          -0.0380859375,
+          -0.021484375,
+          0.01171875
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            -0.1240234375,
+            -0.095703125,
+            0.0615234375,
+            -0.072265625,
+            0.0654296875,
+            -0.0869140625
+          ],
+          [
+            -0.1240234375,
+            1.0,
+            0.0087890625,
+            -0.076171875,
+            0.0185546875,
+            -0.08203125,
+            0.0078125
+          ],
+          [
+            -0.095703125,
+            0.0087890625,
+            1.0,
+            -0.0712890625,
+            -0.021484375,
+            -0.0576171875,
+            0.0068359375
+          ],
+          [
+            0.0615234375,
+            -0.076171875,
+            -0.0712890625,
+            1.0,
+            -0.0595703125,
+            0.033203125,
+            -0.076171875
+          ],
+          [
+            -0.072265625,
+            0.0185546875,
+            -0.021484375,
+            -0.0595703125,
+            1.0,
+            -0.0458984375,
+            -0.0126953125
+          ],
+          [
+            0.0654296875,
+            -0.08203125,
+            -0.0576171875,
+            0.033203125,
+            -0.0458984375,
+            1.0,
+            -0.103515625
+          ],
+          [
+            -0.0869140625,
+            0.0078125,
+            0.0068359375,
+            -0.076171875,
+            -0.0126953125,
+            -0.103515625,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              4.947522688201832,
+              2.619049457050874
+            ],
+            "finais": [
+              5.913353581985511,
+              3.1393965481191937
+            ],
+            "energia_final": 16.013752351771558,
+            "avaliacoes": 100,
+            "convergiu": false,
+            "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+          },
+          {
+            "iniciais": [
+              3.4425852539676853,
+              3.058180529077403
+            ],
+            "finais": [
+              3.4334384514028327,
+              3.317338678740185
+            ],
+            "energia_final": 15.379612014096557,
+            "avaliacoes": 100,
+            "convergiu": false,
+            "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+          }
+        ],
+        "avaliacoes": 200,
+        "tempo_otimizacao_s": 0.2429930669895839,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 9,
+          "profundidade": 18,
+          "gates": 63,
+          "gates_2q": 36
+        },
+        "transpilado": {
+          "qubits": 9,
+          "profundidade": 130,
+          "gates": 273,
+          "gates_2q": 165
+        }
+      },
+      {
+        "node": 8,
+        "profundidade_busca": 2,
+        "qubits": 7,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 1,
+          "5": 1
+        },
+        "variavel": 4,
+        "bit_preferido": 0,
+        "confianca": 0.7265625,
+        "ramos_factiveis": [
+          0
+        ],
+        "medias_Z": [
+          0.7109375,
+          0.498046875,
+          0.505859375,
+          0.7265625,
+          0.712890625,
+          0.4482421875
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.345703125,
+            0.33984375,
+            0.548828125,
+            0.51171875,
+            0.3037109375
+          ],
+          [
+            0.345703125,
+            1.0,
+            0.23828125,
+            0.345703125,
+            0.345703125,
+            0.2197265625
+          ],
+          [
+            0.33984375,
+            0.23828125,
+            1.0,
+            0.345703125,
+            0.34765625,
+            0.2294921875
+          ],
+          [
+            0.548828125,
+            0.345703125,
+            0.345703125,
+            1.0,
+            0.53515625,
+            0.2939453125
+          ],
+          [
+            0.51171875,
+            0.345703125,
+            0.34765625,
+            0.53515625,
+            1.0,
+            0.2900390625
+          ],
+          [
+            0.3037109375,
+            0.2197265625,
+            0.2294921875,
+            0.2939453125,
+            0.2900390625,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              5.921532677287035,
+              0.9649036178895174
+            ],
+            "finais": [
+              3.845903112146441,
+              3.336974211300596
+            ],
+            "energia_final": 10.796667684074354,
+            "avaliacoes": 100,
+            "convergiu": false,
+            "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+          },
+          {
+            "iniciais": [
+              1.601625620054892,
+              0.6993767226622739
+            ],
+            "finais": [
+              0.620646357484814,
+              2.5680287633203673
+            ],
+            "energia_final": -0.008735267644522593,
+            "avaliacoes": 50,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 150,
+        "tempo_otimizacao_s": 0.16633593701408245,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 7,
+          "profundidade": 14,
+          "gates": 42,
+          "gates_2q": 21
+        },
+        "transpilado": {
+          "qubits": 7,
+          "profundidade": 86,
+          "gates": 161,
+          "gates_2q": 84
+        }
+      },
+      {
+        "node": 9,
+        "profundidade_busca": 3,
+        "qubits": 6,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 1,
+          "5": 1,
+          "4": 0
+        },
+        "variavel": 6,
+        "bit_preferido": 1,
+        "confianca": 0.0400390625,
+        "ramos_factiveis": [
+          0
+        ],
+        "medias_Z": [
+          0.021484375,
+          -0.013671875,
+          -0.0126953125,
+          -0.0400390625,
+          -0.0234375
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            -0.14453125,
+            -0.1767578125,
+            0.1689453125,
+            -0.166015625
+          ],
+          [
+            -0.14453125,
+            1.0,
+            0.0400390625,
+            -0.1845703125,
+            0.052734375
+          ],
+          [
+            -0.1767578125,
+            0.0400390625,
+            1.0,
+            -0.158203125,
+            0.0849609375
+          ],
+          [
+            0.1689453125,
+            -0.1845703125,
+            -0.158203125,
+            1.0,
+            -0.1376953125
+          ],
+          [
+            -0.166015625,
+            0.052734375,
+            0.0849609375,
+            -0.1376953125,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              3.8689527503201333,
+              1.8039851118659138
+            ],
+            "finais": [
+              4.839369048429555,
+              1.558248782100401
+            ],
+            "energia_final": 5.70976626235687,
+            "avaliacoes": 100,
+            "convergiu": false,
+            "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+          },
+          {
+            "iniciais": [
+              3.264388583205653,
+              0.020073336646114173
+            ],
+            "finais": [
+              3.1528560378406554,
+              0.2744914772086228
+            ],
+            "energia_final": 5.203829167833337,
+            "avaliacoes": 54,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 154,
+        "tempo_otimizacao_s": 0.1631706840125844,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 6,
+          "profundidade": 12,
+          "gates": 33,
+          "gates_2q": 15
+        },
+        "transpilado": {
+          "qubits": 6,
+          "profundidade": 68,
+          "gates": 126,
+          "gates_2q": 63
+        }
+      },
+      {
+        "node": 10,
+        "profundidade_busca": 4,
+        "qubits": 5,
+        "mapa_original": [
+          0,
+          1,
+          3,
+          7
+        ],
+        "fixacoes_anteriores": {
+          "2": 1,
+          "5": 1,
+          "4": 0,
+          "6": 0
+        },
+        "variavel": 0,
+        "bit_preferido": 0,
+        "confianca": 0.595703125,
+        "ramos_factiveis": [
+          0
+        ],
+        "medias_Z": [
+          0.595703125,
+          0.3876953125,
+          0.38671875,
+          0.3681640625
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.1435546875,
+            0.095703125,
+            0.0986328125
+          ],
+          [
+            0.1435546875,
+            1.0,
+            0.0888671875,
+            0.083984375
+          ],
+          [
+            0.095703125,
+            0.0888671875,
+            1.0,
+            0.1220703125
+          ],
+          [
+            0.0986328125,
+            0.083984375,
+            0.1220703125,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              0.0699129687592648,
+              2.2585244284640447
+            ],
+            "finais": [
+              0.6083961356243567,
+              2.6603517295269525
+            ],
+            "energia_final": -0.9545857910457403,
+            "avaliacoes": 46,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              2.0805335022475795,
+              2.9313844907765927
+            ],
+            "finais": [
+              0.6083951346070614,
+              2.6603548056367816
+            ],
+            "energia_final": -0.9545857911276134,
+            "avaliacoes": 49,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 95,
+        "tempo_otimizacao_s": 0.1293160329805687,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 5,
+          "profundidade": 10,
+          "gates": 25,
+          "gates_2q": 10
+        },
+        "transpilado": {
+          "qubits": 5,
+          "profundidade": 54,
+          "gates": 88,
+          "gates_2q": 38
+        }
+      }
+    ],
+    "folhas": [
+      {
+        "bits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "valor": {
+          "numerador": 7785918966528539,
+          "denominador": 4503599627370496,
+          "decimal": 1.7288213009011375
+        },
+        "fixacoes": {
+          "2": 0,
+          "4": 0,
+          "0": 0,
+          "5": 0,
+          "3": 0
+        }
+      },
+      {
+        "bits": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "valor": {
+          "numerador": 8148821457600091,
+          "denominador": 4503599627370496,
+          "decimal": 1.80940184115743
+        },
+        "fixacoes": {
+          "2": 1,
+          "5": 1,
+          "4": 0,
+          "6": 0,
+          "0": 0
+        }
+      }
+    ],
+    "qubits_pico": 11,
+    "qubits_final_classico": 3,
+    "avaliacoes": 1263,
+    "tempo_otimizacao_s": 1.5200932280276902,
+    "nos_explorados": 11,
+    "limite_nos_atingido": false,
+    "backtracking": 1,
+    "fallback_classico": false
+  },
+  "auditoria_integridade": "verificada"
+}

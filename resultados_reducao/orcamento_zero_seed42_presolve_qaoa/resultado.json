@@ -1,0 +1,347 @@
+{
+  "instancia": "orcamento_zero",
+  "metodo": "presolve_qaoa",
+  "seed": 42,
+  "p": 1,
+  "shots": 2048,
+  "controles": 7,
+  "orcamento": 0,
+  "qubits_modelo_original": 7,
+  "qubits_pico": 0,
+  "qubits_final": 0,
+  "gates_2q_total_circuitos": 0,
+  "avaliacoes": 0,
+  "tempo_total_metodo_s": 0.0036162210162729025,
+  "tempo_otimizacao_s": 0.0,
+  "tempo_referencia_classica_s": 4.0498998714610934e-05,
+  "execucao_quantica": false,
+  "reducao_preserva_otimo": true,
+  "solucao_obtida": {
+    "bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "custo": 0,
+    "valor": 0.0,
+    "valor_racional": {
+      "numerador": 0,
+      "denominador": 1,
+      "decimal": 0.0
+    },
+    "factivel": true,
+    "cobertura": 0.0,
+    "aceitavel": false,
+    "controles": []
+  },
+  "otima_verificada": true,
+  "gap_relativo": 0.0,
+  "referencia": {
+    "bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "custo": 0,
+    "valor": 0.0,
+    "valor_racional": {
+      "numerador": 0,
+      "denominador": 1,
+      "decimal": 0.0
+    },
+    "factivel": true,
+    "cobertura": 0.0,
+    "aceitavel": false,
+    "controles": []
+  },
+  "reducao": {
+    "fixed": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    "free": [],
+    "certificados": [
+      {
+        "variavel": 0,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {},
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 1,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 2,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "1": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 3,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "1": 0,
+          "2": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 4,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 5,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      },
+      {
+        "variavel": 6,
+        "fixada_em": 0,
+        "ramo_excluido": 1,
+        "fixacoes_anteriores": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "incumbente_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "limite_inferior": {
+          "numerador": 0,
+          "denominador": 1,
+          "decimal": 0.0
+        },
+        "limite_superior_ramo": null,
+        "motivo": "ramo_inviavel"
+      }
+    ],
+    "chamadas_limite": 7,
+    "incumbente_inicial": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "incumbente_final": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "preserva_todos_otimos": true
+  },
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "free": [],
+    "fixed": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    "gcd_custos": 1,
+    "orcamento_nucleo": 0,
+    "offset_valor": 0.0,
+    "bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "qubits": 0,
+    "avaliacoes": 0,
+    "tempo_otimizacao_s": 0.0,
+    "execucao_quantica": false,
+    "distribuicao": [
+      {
+        "bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "prob": 1.0,
+        "shots": 2048
+      }
+    ],
+    "logico": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "transpilado": {
+      "qubits": 0,
+      "profundidade": 0,
+      "gates": 0,
+      "gates_2q": 0
+    },
+    "tempo_presolve_s": 0.0029107920126989484
+  },
+  "probabilidades_ideais": {
+    "Popt": 1.0,
+    "Pfeas": 1.0,
+    "P95": 1.0,
+    "Paceitavel": 0.0,
+    "Popt_shots": 1.0,
+    "Pfeas_shots": 1.0
+  },
+  "auditoria_integridade": "verificada",
+  "origem_probabilidades": "classica_deterministica_sem_circuito"
+}

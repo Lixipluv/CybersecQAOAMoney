@@ -1,0 +1,26 @@
+{
+  "dados": "/home/lix/Documentos/ChatGPT/Mestrado/cyber_qaoa/instancia.json",
+  "saida": "/home/lix/Documentos/ChatGPT/Mestrado/cyber_qaoa/resultados_reducao",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "metodos": [
+    "qaoa_completo",
+    "presolve_qaoa",
+    "agrupamento_qaoa",
+    "rqaoa",
+    "qiro"
+  ],
+  "p": 1,
+  "shots": 2048,
+  "maxiter": 100,
+  "restarts": 2,
+  "cutoff": 3,
+  "grupos": 3,
+  "backtracking": 1,
+  "max_nodes": 32,
+  "ruido": true,
+  "so_prefixos": false
+}

@@ -1,0 +1,218 @@
+{
+  "instancia": "prefixo_4",
+  "metodo": "qiro",
+  "seed": 43,
+  "p": 1,
+  "shots": 2048,
+  "controles": 4,
+  "orcamento": 4,
+  "qubits_modelo_original": 7,
+  "qubits_pico": 7,
+  "qubits_final": 3,
+  "gates_2q_total_circuitos": 84,
+  "avaliacoes": 119,
+  "tempo_total_metodo_s": 0.16952134101302363,
+  "tempo_otimizacao_s": 0.1605826570012141,
+  "tempo_referencia_classica_s": 2.7811998734250665e-05,
+  "execucao_quantica": true,
+  "reducao_preserva_otimo": false,
+  "solucao_obtida": {
+    "bits": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "custo": 4,
+    "valor": 1.1999847592744652,
+    "valor_racional": {
+      "numerador": 10808501829437511,
+      "denominador": 9007199254740992,
+      "decimal": 1.1999847592744652
+    },
+    "factivel": true,
+    "cobertura": 0.45588235294117635,
+    "aceitavel": false,
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software"
+    ]
+  },
+  "otima_verificada": true,
+  "gap_relativo": 0.0,
+  "referencia": {
+    "bits": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "custo": 4,
+    "valor": 1.1999847592744652,
+    "valor_racional": {
+      "numerador": 10808501829437511,
+      "denominador": 9007199254740992,
+      "decimal": 1.1999847592744652
+    },
+    "factivel": true,
+    "cobertura": 0.45588235294117635,
+    "aceitavel": false,
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software"
+    ]
+  },
+  "reducao": null,
+  "certificacao_final": "DP racional posterior no modelo original",
+  "resultado_metodo": {
+    "bits": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "factivel": true,
+    "preserva_otimo": false,
+    "estagios": [
+      {
+        "node": 1,
+        "profundidade_busca": 0,
+        "qubits": 7,
+        "mapa_original": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "fixacoes_anteriores": {},
+        "variavel": 3,
+        "bit_preferido": 0,
+        "confianca": 0.46875,
+        "ramos_factiveis": [
+          0,
+          1
+        ],
+        "medias_Z": [
+          0.330078125,
+          0.3427734375,
+          0.4248046875,
+          0.46875
+        ],
+        "correlacoes_ZZ": [
+          [
+            1.0,
+            0.0751953125,
+            0.0654296875,
+            0.115234375
+          ],
+          [
+            0.0751953125,
+            1.0,
+            0.083984375,
+            0.1142578125
+          ],
+          [
+            0.0654296875,
+            0.083984375,
+            1.0,
+            0.0732421875
+          ],
+          [
+            0.115234375,
+            0.1142578125,
+            0.0732421875,
+            1.0
+          ]
+        ],
+        "otimizacoes": [
+          {
+            "iniciais": [
+              0.7701018095498474,
+              0.8108861395016167
+            ],
+            "finais": [
+              0.5530399258192461,
+              2.70857092907474
+            ],
+            "energia_final": 3.055338217060106,
+            "avaliacoes": 52,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          },
+          {
+            "iniciais": [
+              2.549532675129298,
+              3.044781171467667
+            ],
+            "finais": [
+              3.889465580905528,
+              3.0406643967906644
+            ],
+            "energia_final": 19.78123307328506,
+            "avaliacoes": 67,
+            "convergiu": true,
+            "mensagem": "Return from COBYLA because the trust region radius reaches its lower bound."
+          }
+        ],
+        "avaliacoes": 119,
+        "tempo_otimizacao_s": 0.1605826570012141,
+        "shots_correlacao": 2048,
+        "logico": {
+          "qubits": 7,
+          "profundidade": 14,
+          "gates": 42,
+          "gates_2q": 21
+        },
+        "transpilado": {
+          "qubits": 7,
+          "profundidade": 86,
+          "gates": 161,
+          "gates_2q": 84
+        }
+      }
+    ],
+    "folhas": [
+      {
+        "bits": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "valor": {
+          "numerador": 10808501829437511,
+          "denominador": 9007199254740992,
+          "decimal": 1.1999847592744652
+        },
+        "fixacoes": {
+          "3": 0
+        }
+      },
+      {
+        "bits": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "valor": {
+          "numerador": 645231410964521,
+          "denominador": 1125899906842624,
+          "decimal": 0.5730806149313503
+        },
+        "fixacoes": {
+          "3": 1
+        }
+      }
+    ],
+    "qubits_pico": 7,
+    "qubits_final_classico": 3,
+    "avaliacoes": 119,
+    "tempo_otimizacao_s": 0.1605826570012141,
+    "nos_explorados": 3,
+    "limite_nos_atingido": false,
+    "backtracking": 1,
+    "fallback_classico": false
+  },
+  "auditoria_integridade": "verificada"
+}

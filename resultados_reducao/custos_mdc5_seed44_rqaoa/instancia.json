@@ -1,0 +1,266 @@
+{
+  "descricao": "Dados sintéticos ilustrativos; custos em unidades discretas, sem calibração organizacional.",
+  "orcamento": 42,
+  "fracao_orcamento": 0.45,
+  "pesos_valor": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "pesos_impactos": [
+    0.2,
+    0.3,
+    0.15,
+    0.15,
+    0.2
+  ],
+  "eta": 0.4,
+  "lambda_prioridade": 0.5,
+  "valor_minimo": 1.0,
+  "cobertura_minima": 0.6,
+  "relevancia_taticas": [
+    0.5,
+    1.0,
+    0.9,
+    0.7,
+    0.7,
+    0.8,
+    0.8,
+    0.5,
+    0.9
+  ],
+  "nomes_taticas": [
+    "Reconnaissance",
+    "Initial Access",
+    "Execution",
+    "Persistence",
+    "Defense Evasion",
+    "Privilege Escalation",
+    "Lateral Movement",
+    "Collection",
+    "Exfiltration"
+  ],
+  "ativos": [
+    {
+      "nome": "Portal de serviços públicos",
+      "impactos": [
+        0.6,
+        0.9,
+        0.7,
+        0.8,
+        0.8
+      ],
+      "exposicao": 0.9
+    },
+    {
+      "nome": "Base de dados de cidadãos",
+      "impactos": [
+        0.8,
+        0.8,
+        1.0,
+        0.9,
+        0.9
+      ],
+      "exposicao": 0.7
+    },
+    {
+      "nome": "Estações de atendimento",
+      "impactos": [
+        0.4,
+        0.7,
+        0.5,
+        0.5,
+        0.6
+      ],
+      "exposicao": 0.8
+    }
+  ],
+  "dependencias": [
+    [
+      0,
+      0.8,
+      0.4
+    ],
+    [
+      0.9,
+      0,
+      0.5
+    ],
+    [
+      0.4,
+      0.6,
+      0
+    ]
+  ],
+  "controles": [
+    {
+      "nome": "CIS-1: Inventário de hardware",
+      "custo": 10,
+      "eficacia": 0.65,
+      "adesao": 0.9,
+      "prioridade": 0.95,
+      "impacto": 0.15,
+      "ativos": [
+        1,
+        1,
+        1
+      ],
+      "taticas": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-2: Inventário de software",
+      "custo": 10,
+      "eficacia": 0.7,
+      "adesao": 0.85,
+      "prioridade": 0.9,
+      "impacto": 0.2,
+      "ativos": [
+        1,
+        1,
+        1
+      ],
+      "taticas": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-4: Configuração segura",
+      "custo": 15,
+      "eficacia": 0.85,
+      "adesao": 0.8,
+      "prioridade": 0.9,
+      "impacto": 0.35,
+      "ativos": [
+        1,
+        1,
+        1
+      ],
+      "taticas": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-5: Gestão de contas",
+      "custo": 15,
+      "eficacia": 0.85,
+      "adesao": 0.75,
+      "prioridade": 0.85,
+      "impacto": 0.3,
+      "ativos": [
+        1,
+        1,
+        1
+      ],
+      "taticas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-7: Gestão de vulnerabilidades",
+      "custo": 20,
+      "eficacia": 0.9,
+      "adesao": 0.85,
+      "prioridade": 0.9,
+      "impacto": 0.4,
+      "ativos": [
+        1,
+        1,
+        0
+      ],
+      "taticas": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-9: Proteção de e-mail e navegador",
+      "custo": 10,
+      "eficacia": 0.8,
+      "adesao": 0.7,
+      "prioridade": 0.8,
+      "impacto": 0.25,
+      "ativos": [
+        0,
+        0,
+        1
+      ],
+      "taticas": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "nome": "CIS-10: Defesa contra malware",
+      "custo": 15,
+      "eficacia": 0.85,
+      "adesao": 0.9,
+      "prioridade": 0.85,
+      "impacto": 0.2,
+      "ativos": [
+        1,
+        1,
+        1
+      ],
+      "taticas": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}
