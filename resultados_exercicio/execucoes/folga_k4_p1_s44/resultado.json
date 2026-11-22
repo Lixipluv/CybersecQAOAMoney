@@ -1,0 +1,366 @@
+{
+  "ods": {
+    "numero": 16,
+    "nome": "Paz, Justiça e Instituições Eficazes",
+    "metas": [
+      "16.6: instituições eficazes, responsáveis e transparentes",
+      "16.10: acesso público à informação e proteção das liberdades fundamentais"
+    ]
+  },
+  "problema": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+  "instancia": "cis_prefixo_4",
+  "codificacao": "folga",
+  "k": 4,
+  "n": 7,
+  "p": 1,
+  "seed": 44,
+  "E_otima": -1.1999847592744652,
+  "valor_otimo": 1.1999847592744652,
+  "escala_hamiltoniano": 562.6522320573968,
+  "classico": {
+    "bitstring": "0000011",
+    "decisao": "1100",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software"
+    ],
+    "custo": 4.0,
+    "valor": 1.1999847592744652,
+    "cobertura": 0.45588235294117635,
+    "factivel": true,
+    "otimo": true,
+    "aceitavel": false,
+    "energia": -1.1999847592744652
+  },
+  "otimizacao": {
+    "escolhido": 0,
+    "inicios": [
+      {
+        "origem": "aleatorio",
+        "iniciais": [
+          0.7701018095498474,
+          0.8108861395016167
+        ],
+        "finais": [
+          4.837388266158199,
+          2.7021604940265536
+        ],
+        "avaliacoes": 150,
+        "energia_inicial": 137.05999949306357,
+        "energia_final": 18.323492015083897,
+        "convergiu": false,
+        "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "tempo_s": 0.10624524700006077
+      },
+      {
+        "origem": "aleatorio",
+        "iniciais": [
+          2.549532675129298,
+          3.044781171467667
+        ],
+        "finais": [
+          4.808156757107629,
+          2.6994213808502696
+        ],
+        "avaliacoes": 150,
+        "energia_inicial": 82.43700390695122,
+        "energia_final": 18.35915330201675,
+        "convergiu": false,
+        "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "tempo_s": 0.10312678400009645
+      }
+    ],
+    "tempo_s": 0.20937203100015722,
+    "avaliacoes_total": 300
+  },
+  "recursos": {
+    "logico": {
+      "qubits": 7,
+      "profundidade": 14,
+      "gates": 42,
+      "gates_2q": 21,
+      "por_tipo": {
+        "h": 7,
+        "rz": 7,
+        "rzz": 21,
+        "rx": 7
+      }
+    },
+    "base_nativa_sem_roteamento": {
+      "qubits": 7,
+      "profundidade": 78,
+      "gates": 219,
+      "gates_2q": 42,
+      "por_tipo": {
+        "rz": 85,
+        "sx": 83,
+        "cz": 42,
+        "x": 9
+      }
+    },
+    "fake_kingston": {
+      "qubits": 7,
+      "profundidade": 144,
+      "gates": 313,
+      "gates_2q": 63,
+      "por_tipo": {
+        "rz": 112,
+        "sx": 136,
+        "cz": 63,
+        "x": 2
+      }
+    }
+  },
+  "tempo_transpilacao_s": 0.017638659999875017,
+  "E1": {
+    "reprodutibilidade": {
+      "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+      "problem": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+      "instance": "cis_prefixo_4",
+      "encoding": "folga",
+      "number_of_variables": 7,
+      "number_of_decision_variables": 4,
+      "number_of_auxiliary_variables": 3,
+      "number_of_qubits": 7,
+      "penalty_lambda": {
+        "rho": 3.3431680479606953
+      },
+      "p": 1,
+      "gamma": [
+        4.837388266158199
+      ],
+      "beta": [
+        2.7021604940265536
+      ],
+      "optimizer": "COBYLA",
+      "optimizer_iterations": 300,
+      "shots": 2048,
+      "backend": "statevector_numpy_ideal",
+      "seed": 44,
+      "optimization_level": null
+    },
+    "exata": {
+      "Popt": 0.06457793168092588,
+      "Pfeas": 0.7349659917125854,
+      "Pqubo": 0.022471255630942953,
+      "P95": 0.06457793168092588,
+      "Paceitavel": 0.0,
+      "energia_esperada": 18.323492015083897,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.1999847592744652,
+      "melhor_energia": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "melhor_factivel": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "mais_frequente": {
+        "bitstring": "1000000",
+        "decisao": "0000",
+        "controles": [],
+        "custo": 0.0,
+        "valor": 0.0,
+        "cobertura": 0.0,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 0.0
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 1.033246906894814,
+      "ganho_opt_vs_uniforme": 1.033246906894814,
+      "P95_limite_inferior_95": 0.05472714144005692,
+      "shots_para_95pct_de_obter_95": 45,
+      "decisao_util": true,
+      "util": false,
+      "fonte": "probabilidade_exata",
+      "shots": 2048
+    },
+    "shots": {
+      "Popt": 0.05517578125,
+      "Pfeas": 0.72607421875,
+      "Pqubo": 0.02197265625,
+      "P95": 0.05517578125,
+      "Paceitavel": 0.0,
+      "energia_esperada": 17.404571884912784,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.1999847592744652,
+      "melhor_energia": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "melhor_factivel": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "mais_frequente": {
+        "bitstring": "1000000",
+        "decisao": "0000",
+        "controles": [],
+        "custo": 0.0,
+        "valor": 0.0,
+        "cobertura": 0.0,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 0.0
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 0.8828125,
+      "ganho_opt_vs_uniforme": 0.8828125,
+      "P95_limite_inferior_95": 0.04609409469245396,
+      "shots_para_95pct_de_obter_95": 53,
+      "decisao_util": true,
+      "util": false,
+      "fonte": "frequencia_shots",
+      "shots": 2048
+    },
+    "tempo_execucao_s": 0.00019187399993825238
+  },
+  "E2": {
+    "reprodutibilidade": {
+      "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+      "problem": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+      "instance": "cis_prefixo_4",
+      "encoding": "folga",
+      "number_of_variables": 7,
+      "number_of_decision_variables": 4,
+      "number_of_auxiliary_variables": 3,
+      "number_of_qubits": 7,
+      "penalty_lambda": {
+        "rho": 3.3431680479606953
+      },
+      "p": 1,
+      "gamma": [
+        4.837388266158199
+      ],
+      "beta": [
+        2.7021604940265536
+      ],
+      "optimizer": "COBYLA",
+      "optimizer_iterations": 300,
+      "shots": 2048,
+      "backend": "aer_from_backend_fake_kingston",
+      "seed": 44,
+      "optimization_level": 2
+    },
+    "shots": {
+      "Popt": 0.0673828125,
+      "Pfeas": 0.7158203125,
+      "Pqubo": 0.0205078125,
+      "P95": 0.0673828125,
+      "Paceitavel": 0.0,
+      "energia_esperada": 20.92843845953525,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.1999847592744652,
+      "melhor_energia": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "melhor_factivel": {
+        "bitstring": "0000011",
+        "decisao": "1100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software"
+        ],
+        "custo": 4.0,
+        "valor": 1.1999847592744652,
+        "cobertura": 0.45588235294117635,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": false,
+        "energia": -1.1999847592744652
+      },
+      "mais_frequente": {
+        "bitstring": "1000000",
+        "decisao": "0000",
+        "controles": [],
+        "custo": 0.0,
+        "valor": 0.0,
+        "cobertura": 0.0,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 0.0
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 1.078125,
+      "ganho_opt_vs_uniforme": 1.078125,
+      "P95_limite_inferior_95": 0.057315569141443146,
+      "shots_para_95pct_de_obter_95": 43,
+      "decisao_util": true,
+      "util": false,
+      "fonte": "frequencia_shots",
+      "shots": 2048
+    },
+    "tempo_execucao_s": 2.331913560999965
+  },
+  "delta_ruido": {
+    "Popt": -0.0028048808190741237,
+    "Pfeas": 0.019145679212585365,
+    "P95": -0.0028048808190741237,
+    "Pqubo": 0.001963443130942953
+  },
+  "tempo_total_s": 2.569994028999872
+}

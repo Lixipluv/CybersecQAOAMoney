@@ -1,0 +1,19 @@
+qubit,variavel,h_i
+0,CIS-1: Inventário de hardware,-304.80955484451886
+1,CIS-2: Inventário de software,-304.8158416092249
+2,CIS-4: Configuração segura,-457.3839902881583
+3,CIS-5: Gestão de contas,-457.3825013175701
+4,CIS-7: Gestão de vulnerabilidades,-609.9242847272244
+5,CIS-9: Proteção de e-mail e navegador,-304.83217508895945
+6,CIS-10: Defesa contra malware,-457.34119617051124
+7,S8: controle sintético,-609.9357594817977
+8,S9: controle sintético,-304.8165660504012
+9,S10: controle sintético,-304.8445593748083
+10,S11: controle sintético,-304.80586475624546
+11,S12: controle sintético,-457.34904094081463
+12,S13: controle sintético,-609.9284120728125
+13,folga_2^0,-152.55634720834522
+14,folga_2^1,-305.11269441669043
+15,folga_2^2,-610.2253888333809
+16,folga_2^3,-1220.4507776667615
+17,folga_2^4,-2440.9015553335234
