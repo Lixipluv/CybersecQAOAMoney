@@ -670,7 +670,7 @@ Versões usadas: Python 3.13, NumPy 2.5.4, SciPy 1.18.1, Qiskit 2.5.2, Qiskit Ae
 | 17. Comparação entre ambientes | Seção 13; Tabelas 13.1–13.3 |
 | 18. Avaliação quantitativa relacionada ao ODS | Seção 14 |
 | 19. Relatório técnico | Este documento |
-| 20. Apresentação dos resultados | Deck de slides publicado com o relatório (ver README) |
+| 20. Apresentação dos resultados | Deck de 15 slides (link no README) |
 
 ## Referências
 

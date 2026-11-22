@@ -4,7 +4,7 @@ Implementação da formulação do artigo fornecido e dos experimentos do exerc�
 
 ## Entrega do exercício OQA
 
-O **relatório técnico** completo (16 capítulos obrigatórios e respostas Q1–Q22) está em [RELATORIO.md](RELATORIO.md). Ele usa os resultados de `exercicio.py`, que executa o protocolo inteiro do enunciado:
+O **relatório técnico** completo (16 capítulos obrigatórios e respostas Q1–Q22) está em [RELATORIO.md](RELATORIO.md). A **apresentação dos resultados** (15 slides, exportável em PPTX ou PDF) está em https://claude.ai/artifact/1ms4FbJUUFhPXjgysZ4HPQ; o link é privado até ser compartilhado pelo menu Share da página. Ele usa os resultados de `exercicio.py`, que executa o protocolo inteiro do enunciado:
 
 - E1: simulação ideal (statevector, probabilidades exatas e shots);
 - E2: **FakeKingston** (IBM Heron r2): transpilação ISA real (`cz`, `rz`, `sx`, `x`) e ruído de calibração (erros de porta, de leitura e relaxação T1/T2);
