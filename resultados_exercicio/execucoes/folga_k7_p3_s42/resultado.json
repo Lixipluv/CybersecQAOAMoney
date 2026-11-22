@@ -1,0 +1,404 @@
+{
+  "ods": {
+    "numero": 16,
+    "nome": "Paz, Justiça e Instituições Eficazes",
+    "metas": [
+      "16.6: instituições eficazes, responsáveis e transparentes",
+      "16.10: acesso público à informação e proteção das liberdades fundamentais"
+    ]
+  },
+  "problema": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+  "instancia": "cis_prefixo_7",
+  "codificacao": "folga",
+  "k": 7,
+  "n": 11,
+  "p": 3,
+  "seed": 42,
+  "E_otima": -1.8556756683234625,
+  "valor_otimo": 1.8556756683234625,
+  "escala_hamiltoniano": 3485.421431729787,
+  "classico": {
+    "bitstring": "00011000011",
+    "decisao": "1100001",
+    "controles": [
+      "CIS-1: Inventário de hardware",
+      "CIS-2: Inventário de software",
+      "CIS-10: Defesa contra malware"
+    ],
+    "custo": 7.0,
+    "valor": 1.8556756683234625,
+    "cobertura": 0.6617647058823529,
+    "factivel": true,
+    "otimo": true,
+    "aceitavel": true,
+    "energia": -1.8556756683234625
+  },
+  "otimizacao": {
+    "escolhido": 0,
+    "inicios": [
+      {
+        "origem": "interp",
+        "iniciais": [
+          6.187433121325172,
+          7.027394786577517,
+          7.8673564518298615,
+          2.7262665158792845,
+          2.8480350817129994,
+          2.9698036475467147
+        ],
+        "finais": [
+          5.469796634858655,
+          8.030381824818791,
+          9.25116334042886,
+          2.441758726847828,
+          2.8591539359917513,
+          2.976272940832264
+        ],
+        "avaliacoes": 450,
+        "energia_inicial": 74.88650348017832,
+        "energia_final": 46.16806456992403,
+        "convergiu": false,
+        "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "tempo_s": 0.5824617690000196
+      },
+      {
+        "origem": "aleatorio",
+        "iniciais": [
+          4.862909272689599,
+          2.757554564287996,
+          5.3947298351621535,
+          2.190846276941291,
+          0.29586686425840997,
+          3.06500801258003
+        ],
+        "finais": [
+          5.207496910293276,
+          2.9578737708429714,
+          6.605528950211952,
+          2.3899761751443975,
+          0.02702061391906782,
+          2.7913112912133973
+        ],
+        "avaliacoes": 450,
+        "energia_inicial": 196.10402325567813,
+        "energia_final": 63.90448023766023,
+        "convergiu": false,
+        "mensagem": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+        "tempo_s": 0.5822649589999855
+      }
+    ],
+    "tempo_s": 1.164726728000005,
+    "avaliacoes_total": 900
+  },
+  "recursos": {
+    "logico": {
+      "qubits": 11,
+      "profundidade": 48,
+      "gates": 242,
+      "gates_2q": 165,
+      "por_tipo": {
+        "h": 11,
+        "rz": 33,
+        "rzz": 165,
+        "rx": 33
+      }
+    },
+    "base_nativa_sem_roteamento": {
+      "qubits": 11,
+      "profundidade": 300,
+      "gates": 1319,
+      "gates_2q": 330,
+      "por_tipo": {
+        "rz": 479,
+        "sx": 487,
+        "cz": 330,
+        "x": 23
+      }
+    },
+    "fake_kingston": {
+      "qubits": 11,
+      "profundidade": 951,
+      "gates": 2740,
+      "gates_2q": 668,
+      "por_tipo": {
+        "rz": 799,
+        "sx": 1260,
+        "cz": 668,
+        "x": 13
+      }
+    }
+  },
+  "tempo_transpilacao_s": 0.03629724000006718,
+  "E1": {
+    "reprodutibilidade": {
+      "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+      "problem": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+      "instance": "cis_prefixo_7",
+      "encoding": "folga",
+      "number_of_variables": 11,
+      "number_of_decision_variables": 7,
+      "number_of_auxiliary_variables": 4,
+      "number_of_qubits": 11,
+      "penalty_lambda": {
+        "rho": 5.162105824784869
+      },
+      "p": 3,
+      "gamma": [
+        5.469796634858655,
+        8.030381824818791,
+        9.25116334042886
+      ],
+      "beta": [
+        2.441758726847828,
+        2.8591539359917513,
+        2.976272940832264
+      ],
+      "optimizer": "COBYLA",
+      "optimizer_iterations": 900,
+      "shots": 2048,
+      "backend": "statevector_numpy_ideal",
+      "seed": 42,
+      "optimization_level": null
+    },
+    "exata": {
+      "Popt": 0.012280607384005398,
+      "Pfeas": 0.8233195117430161,
+      "Pqubo": 0.0028706369511726157,
+      "P95": 0.13211119628381887,
+      "Paceitavel": 0.09880005536845117,
+      "energia_esperada": 46.16806456992403,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.8556756683234625,
+      "melhor_energia": {
+        "bitstring": "00011000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": -1.8556756683234625
+      },
+      "melhor_factivel": {
+        "bitstring": "00001000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": 3.3064301564614067
+      },
+      "mais_frequente": {
+        "bitstring": "01010000001",
+        "decisao": "1000000",
+        "controles": [
+          "CIS-1: Inventário de hardware"
+        ],
+        "custo": 2.0,
+        "valor": 0.6062791443431149,
+        "cobertura": 0.2205882352941176,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 4.555826680441754
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 1.3007871634099089,
+      "ganho_opt_vs_uniforme": 1.571917745152691,
+      "P95_limite_inferior_95": 0.13211119628381887,
+      "shots_para_95pct_de_obter_95": 22,
+      "decisao_util": true,
+      "util": true,
+      "fonte": "probabilidade_exata",
+      "shots": 2048
+    },
+    "shots": {
+      "Popt": 0.0166015625,
+      "Pfeas": 0.8349609375,
+      "Pqubo": 0.00390625,
+      "P95": 0.13623046875,
+      "Paceitavel": 0.1025390625,
+      "energia_esperada": 44.04556378288723,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.8556756683234625,
+      "melhor_energia": {
+        "bitstring": "00011000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": -1.8556756683234625
+      },
+      "melhor_factivel": {
+        "bitstring": "00001000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": 3.3064301564614067
+      },
+      "mais_frequente": {
+        "bitstring": "01010000001",
+        "decisao": "1000000",
+        "controles": [
+          "CIS-1: Inventário de hardware"
+        ],
+        "custo": 2.0,
+        "valor": 0.6062791443431149,
+        "cobertura": 0.2205882352941176,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 4.555826680441754
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 1.3413461538461537,
+      "ganho_opt_vs_uniforme": 2.125,
+      "P95_limite_inferior_95": 0.12205297589240713,
+      "shots_para_95pct_de_obter_95": 21,
+      "decisao_util": true,
+      "util": true,
+      "fonte": "frequencia_shots",
+      "shots": 2048
+    },
+    "tempo_execucao_s": 0.0007526339998094045
+  },
+  "E2": {
+    "reprodutibilidade": {
+      "ods": "ODS 16 – Paz, Justiça e Instituições Eficazes",
+      "problem": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+      "instance": "cis_prefixo_7",
+      "encoding": "folga",
+      "number_of_variables": 11,
+      "number_of_decision_variables": 7,
+      "number_of_auxiliary_variables": 4,
+      "number_of_qubits": 11,
+      "penalty_lambda": {
+        "rho": 5.162105824784869
+      },
+      "p": 3,
+      "gamma": [
+        5.469796634858655,
+        8.030381824818791,
+        9.25116334042886
+      ],
+      "beta": [
+        2.441758726847828,
+        2.8591539359917513,
+        2.976272940832264
+      ],
+      "optimizer": "COBYLA",
+      "optimizer_iterations": 900,
+      "shots": 2048,
+      "backend": "aer_from_backend_fake_kingston",
+      "seed": 42,
+      "optimization_level": 2
+    },
+    "shots": {
+      "Popt": 0.005859375,
+      "Pfeas": 0.7587890625,
+      "Pqubo": 0.00048828125,
+      "P95": 0.1181640625,
+      "Paceitavel": 0.09375,
+      "energia_esperada": 100.56251791395813,
+      "R_app": 1.0,
+      "otimo_observado": true,
+      "E_QAOA": -1.8556756683234625,
+      "melhor_energia": {
+        "bitstring": "00011000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": -1.8556756683234625
+      },
+      "melhor_factivel": {
+        "bitstring": "00001000011",
+        "decisao": "1100001",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-2: Inventário de software",
+          "CIS-10: Defesa contra malware"
+        ],
+        "custo": 7.0,
+        "valor": 1.8556756683234625,
+        "cobertura": 0.6617647058823529,
+        "factivel": true,
+        "otimo": true,
+        "aceitavel": true,
+        "energia": 3.3064301564614067
+      },
+      "mais_frequente": {
+        "bitstring": "00000010001",
+        "decisao": "1000100",
+        "controles": [
+          "CIS-1: Inventário de hardware",
+          "CIS-7: Gestão de vulnerabilidades"
+        ],
+        "custo": 6.0,
+        "valor": 1.2084873566561067,
+        "cobertura": 0.3529411764705882,
+        "factivel": true,
+        "otimo": false,
+        "aceitavel": false,
+        "energia": 19.43993594248337
+      },
+      "menor_energia_e_mais_frequente": false,
+      "ganho95_vs_uniforme": 1.1634615384615385,
+      "ganho_opt_vs_uniforme": 0.75,
+      "P95_limite_inferior_95": 0.10489311198057111,
+      "shots_para_95pct_de_obter_95": 24,
+      "decisao_util": true,
+      "util": true,
+      "fonte": "frequencia_shots",
+      "shots": 2048
+    },
+    "tempo_execucao_s": 23.31121973800009
+  },
+  "delta_ruido": {
+    "Popt": 0.006421232384005398,
+    "Pfeas": 0.0645304492430161,
+    "P95": 0.013947133783818871,
+    "Pqubo": 0.0023823557011726157
+  },
+  "tempo_total_s": 24.551516280999977
+}

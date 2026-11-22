@@ -2,14 +2,32 @@
 
 Implementação da formulação do artigo fornecido e dos experimentos do exercício OQA. Os PDFs são referências do problema; os dados numéricos em `instancia.json` são sintéticos e não foram extraídos de um levantamento real.
 
-## Executar
+## Entrega do exercício OQA
+
+O **relatório técnico** completo (16 capítulos obrigatórios e respostas Q1–Q22) está em [RELATORIO.md](RELATORIO.md). Ele usa os resultados de `exercicio.py`, que executa o protocolo inteiro do enunciado:
+
+- E1: simulação ideal (statevector, probabilidades exatas e shots);
+- E2: **FakeKingston** (IBM Heron r2): transpilação ISA real (`cz`, `rz`, `sx`, `x`) e ruído de calibração (erros de porta, de leitura e relaxação T1/T2);
+- nove tamanhos: 3–7 controles da base CIS e 9, 11, 13, 15 controles com extensão sintética aninhada (5–20 qubits);
+- p=1,2,3 em 7 controles; decomposição do ruído; níveis de transpilação 0–3; referência de amostragem uniforme; critério de utilidade; avaliação no contexto do ODS 16;
+- codificação padrão com folga e codificação alternativa sem folga (penalização desbalanceada).
 
 ```bash
 git clone https://github.com/Lixipluv/CybersecQAOAMoney.git
 cd CybersecQAOAMoney
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-lock.txt      # versões exatas usadas nos resultados
+python -m unittest discover -v            # 31 testes
+python exercicio.py                       # protocolo completo (~30 min em 4 núcleos)
+python exercicio.py --tamanhos 3 4 5 --tamanho-p 5 --seeds 42 --maxiter 40 --shots 512 --saida resultados_teste  # versão rápida
+```
+
+Saídas em `resultados_exercicio/`: `TABELAS.md` (todas as tabelas do relatório), `execucoes.csv`/`execucoes.json` (dados brutos com os campos de reprodutibilidade da seção 26: `ods`, `problem`, `instance`, `number_of_variables`, `number_of_qubits`, `penalty_lambda`, `p`, `gamma`, `beta`, `optimizer`, `optimizer_iterations`, `shots`, `backend`, `seed`, `optimization_level`), `resumo.json`, gráficos de escalabilidade, qualidade e profundidade, figuras dos circuitos lógico e transpilado, e uma pasta por execução com histogramas, curva Energia × Avaliação, medições de E1/E2 e circuito ISA em OpenQASM 3. Os coeficientes de Ising (h, J), a matriz Q e os 20 estados de menor energia de cada instância ficam em `resultados_exercicio/modelos/`.
+
+## Executar (estudo original)
+
+```bash
 python -m unittest -v test_modelo.py
 python projeto.py --ruido
 ```
