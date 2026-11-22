@@ -19,9 +19,12 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-lock.txt      # versões exatas usadas nos resultados
 python -m unittest discover -v            # 31 testes
-python exercicio.py                       # protocolo completo (~30 min em 4 núcleos)
+python exercicio.py                       # protocolo completo (~20 min em 4 núcleos)
+python exercicio.py --reanalisar          # refaz critérios, tabelas e figuras a partir dos dados salvos
 python exercicio.py --tamanhos 3 4 5 --tamanho-p 5 --seeds 42 --maxiter 40 --shots 512 --saida resultados_teste  # versão rápida
 ```
+
+Principais conclusões (detalhes e números no relatório): na codificação padrão com folga, o QAOA só supera de forma detectável a amostragem aleatória até 6–7 controles (9–11 qubits), e o limite aparece mesmo sem ruído, porque a penalidade domina a escala de energia. A codificação sem folga reduz qubits e portas de dois qubits, dobra o ganho sobre o acaso e estende a faixa útil a 11 controles no FakeKingston; dali em diante, o limite é o ruído das portas de dois qubits. Não há evidência de vantagem quântica: a programação dinâmica resolve todas as instâncias exatamente em menos de 0,2 ms.
 
 Saídas em `resultados_exercicio/`: `TABELAS.md` (todas as tabelas do relatório), `execucoes.csv`/`execucoes.json` (dados brutos com os campos de reprodutibilidade da seção 26: `ods`, `problem`, `instance`, `number_of_variables`, `number_of_qubits`, `penalty_lambda`, `p`, `gamma`, `beta`, `optimizer`, `optimizer_iterations`, `shots`, `backend`, `seed`, `optimization_level`), `resumo.json`, gráficos de escalabilidade, qualidade e profundidade, figuras dos circuitos lógico e transpilado, e uma pasta por execução com histogramas, curva Energia × Avaliação, medições de E1/E2 e circuito ISA em OpenQASM 3. Os coeficientes de Ising (h, J), a matriz Q e os 20 estados de menor energia de cada instância ficam em `resultados_exercicio/modelos/`.
 

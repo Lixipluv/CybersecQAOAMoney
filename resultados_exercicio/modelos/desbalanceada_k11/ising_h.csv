@@ -1,0 +1,12 @@
+qubit,variavel,h_i
+0,CIS-1: Inventário de hardware,-0.8668604278284437
+1,CIS-2: Inventário de software,-0.8731471925343257
+2,CIS-4: Configuração segura,-1.46994866312256
+3,CIS-5: Gestão de contas,-1.4684596925343243
+4,CIS-7: Gestão de vulnerabilidades,-2.0388958938435024
+5,CIS-9: Proteção de e-mail e navegador,-0.8894806722689088
+6,CIS-10: Defesa contra malware,-1.427154545475501
+7,S8: controle sintético,-2.0503706484166777
+8,S9: controle sintético,-0.8738716337107961
+9,S10: controle sintético,-0.9018649581178639
+10,S11: controle sintético,-0.8631703395550536

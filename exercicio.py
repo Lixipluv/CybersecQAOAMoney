@@ -300,7 +300,9 @@ def metricas(esp, prob=None, counts=None):
     u = esp['uniforme']['P95']
     m['ganho95_vs_uniforme'] = m['P95']/u if u > 0 else float('nan')
     m['ganho_opt_vs_uniforme'] = m['Popt']/esp['uniforme']['Popt']
-    lb = m['P95'] if prob is not None else wilson_inf(int(counts[esp['good']].sum()), shots)
+    # Mesmo critério nos dois ambientes: a vantagem precisa ser detectável com os shots usados.
+    # E1: proporção exata P95 com n = shots; E2: contagem observada. Limite inferior de Wilson 95%.
+    lb = wilson_inf(m['P95']*shots, shots) if prob is not None else wilson_inf(int(counts[esp['good']].sum()), shots)
     m['P95_limite_inferior_95'] = lb
     m['shots_para_95pct_de_obter_95'] = (math.ceil(math.log(.05)/math.log1p(-m['P95'])) if 0 < m['P95'] < 1
                                          else (1 if m['P95'] >= 1 else None))
@@ -698,6 +700,13 @@ def gerar_tabelas(resumo, out):
               '|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---|---:|---:|']
         for k, t in bloco['recursos'].items():
             L.append('| ' + ' | '.join(str(t[c]) for c in ['k', 'qubits', 'depth_log', 'depth_isa', 'gates_log', 'gates_isa', 'zz', 'cz_base', 'cz_isa', 'shots', 'g95_E1', 'g95_E2', 'rapp_E1', 'rapp_E2', 'util_E1', 'util_E2', 't_opt', 't_E2']) + ' |')
+        L += ['', '### Utilidade por tamanho (p=1; sementes que satisfazem / total)', '',
+              '| Controles | Qubits | P(uniforme obtém ≥95% em S shots) | A E1 | B E1 | A E2 | B E2 |', '|---:|---:|---:|---|---|---|---|']
+        for k in bloco['caracteristicas']:
+            u1 = bloco['utilidade']['E1'].get(k); u2 = bloco['utilidade']['E2'].get(k)
+            f = lambda u, a, b: (f"{u[a]}/{u['sementes']} {'✓' if u[b] else '✗'}" if u else '–')
+            L.append(f"| {k} | {bloco['caracteristicas'][k]['variaveis_total']} | {bloco['uniforme_obtem_95'][k]:.4f} | {f(u1,'sementes_decisao_util','decisao_util')} | {f(u1,'sementes_uteis','util')} | {f(u2,'sementes_decisao_util','decisao_util')} | {f(u2,'sementes_uteis','util')} |")
+        L += ['', f"Maior instância útil: {json.dumps({a: b['maior'] for a, b in bloco['maior_instancia_util'].items()}, ensure_ascii=False)}. A: R_app ≥ 0,95. B: A e vantagem sobre amostragem uniforme detectável com os shots (Wilson 95%).", '']
         if bloco.get('profundidades'):
             L += ['', f"### Influência de p ({bloco['profundidades']['k']} controles)", '',
                   '| p | Ambiente | ⟨H_C⟩ | Popt | Pfeas | P95 | Pqubo | Depth | Gates 2q | t otimização (s) | Avaliações |', '|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
@@ -794,11 +803,55 @@ def consolidar(cod, runs_cod, esps, ks, kp):
     for env in ('E1', 'E2'):
         for nivel, chave in (('A_decisao_util', 'decisao_util'), ('B_atribuivel_QAOA', 'util')):
             v = [k for k, u in bloco['utilidade'][env].items() if u[chave]]
-            bloco['maior_instancia_util'][f'{env}_{nivel}'] = max(v) if v else None
+            bloco['maior_instancia_util'][f'{env}_{nivel}'] = {'maior': max(v) if v else None, 'tamanhos_uteis': v,
+                                                                'testados': list(bloco['utilidade'][env])}
+    shots = p1[0]['E1']['shots']['shots']
+    bloco['uniforme_obtem_95'] = {k: 1-(1-esps[k]['uniforme']['P95'])**shots for k in ks}
     return bloco
 
 
 # ----------------------------------------------------------------------------- principal
+def reanalisar(args):
+    """Recalcula critérios, tabelas e figuras a partir de execucoes.json, sem nova execução quântica."""
+    runs = json.loads((args.saida/'execucoes.json').read_text())
+    resumo = json.loads((args.saida/'resumo.json').read_text())
+    base = json.loads(args.dados.read_text())
+    cfg = resumo['config']; ks = cfg['tamanhos']
+    controles = familia(base, max(ks))
+    todas = []
+    for cod in resumo['codificacoes']:
+        lam = None
+        if cod == 'desbalanceada':
+            e = resumo['calibracao_desbalanceada']['escolhido']; lam = (e['lambda1'], e['lambda2'])
+        esps = {k: codificar(instancia(base, controles, k), cod, lam) for k in ks}
+        rc = [r for r in runs if r['codificacao'] == cod]
+        for r in rc:
+            esp = esps[r['k']]; u = esp['uniforme']['P95']
+            for env, src in (('E1', 'exata'), ('E1', 'shots'), ('E2', 'shots')):
+                if env not in r: continue
+                m = r[env][src]
+                m['P95_limite_inferior_95'] = (wilson_inf(m['P95']*m['shots'], m['shots']) if src == 'exata'
+                                               else wilson_inf(round(m['P95']*m['shots']), m['shots']))
+                m['decisao_util'] = bool(m['R_app'] >= LIMIAR)
+                m['util'] = bool(m['decisao_util'] and m['P95_limite_inferior_95'] > u)
+        resumo['codificacoes'][cod] = consolidar(cod, rc, esps, ks, cfg['tamanho_p'])
+        figura_escalabilidade([r for r in rc if r['p'] == 1], esps, args.saida/f'escalabilidade_{cod}.png', f'Escalabilidade, codificação {cod}, p=1')
+        figura_p([r for r in rc if r['k'] == cfg['tamanho_p']], args.saida/f'profundidade_p_{cod}.png')
+        todas.append((cod, rc, esps))
+    figura_qualidade({c: [r for r in rs if r['p'] == 1] for c, rs, _ in todas}, {c: e for c, _, e in todas}, args.saida/'qualidade_e_utilidade.png')
+    linhas = [l for _, rs, _ in todas for l in linhas_csv(rs)]
+    with (args.saida/'execucoes.csv').open('w', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=list(linhas[0])); w.writeheader(); w.writerows(linhas)
+    (args.saida/'execucoes.json').write_text(json.dumps(runs, indent=1, ensure_ascii=False), encoding='utf-8')
+    for r in runs:
+        pasta = args.saida/'execucoes'/f"{r['codificacao']}_k{r['k']}_p{r['p']}_s{r['seed']}"
+        if pasta.exists():
+            (pasta/'resultado.json').write_text(json.dumps(r, indent=2, ensure_ascii=False), encoding='utf-8')
+    (args.saida/'resumo.json').write_text(json.dumps(resumo, indent=2, ensure_ascii=False, default=str), encoding='utf-8')
+    gerar_tabelas(resumo, args.saida)
+    print('maior instância útil:', {c: {a: b['maior'] for a, b in bl['maior_instancia_util'].items()} for c, bl in resumo['codificacoes'].items()})
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--dados', type=Path, default=ROOT/'instancia.json')
@@ -815,7 +868,10 @@ def main():
     ap.add_argument('--codificacoes', nargs='+', default=['folga', 'desbalanceada'], choices=['folga', 'desbalanceada'])
     ap.add_argument('--calibracao', type=int, nargs='+', default=[3, 4, 5], help='instâncias que calibram (l1,l2)')
     ap.add_argument('--sem-estudos', action='store_true', help='pula decomposição do ruído e níveis de transpilação')
+    ap.add_argument('--reanalisar', action='store_true', help='recalcula critérios, tabelas e figuras de execucoes.json')
     args = ap.parse_args()
+    if args.reanalisar:
+        return reanalisar(args)
     import qiskit, qiskit_aer, qiskit_ibm_runtime, scipy
     base = json.loads(args.dados.read_text())
     controles = familia(base, max(args.tamanhos))
@@ -828,7 +884,7 @@ def main():
                                         'portas': sorted(fake_kingston().operation_names)},
                          'limiar_qualidade': LIMIAR, 'ods': ODS, 'problema': PROBLEMA,
                          'criterio_util': {'A_decisao_util': 'R_app >= 0.95: o melhor portfólio factível amostrado atinge 95% do ótimo',
-                                           'B_atribuivel_QAOA': 'A e P95 do QAOA (exata em E1; limite inferior de Wilson 95% em E2) > P95 da amostragem uniforme',
+                                           'B_atribuivel_QAOA': 'A e limite inferior de Wilson 95% de P95 (com os shots usados; P95 exata em E1, frequência em E2) > P95 da amostragem uniforme',
                                            'instancia': 'útil no nível se a maioria das sementes satisfaz'}},
               'codificacoes': {}}
     (args.saida/'controles_familia.json').write_text(json.dumps(controles, indent=2, ensure_ascii=False), encoding='utf-8')
@@ -874,7 +930,7 @@ def main():
     (args.saida/'execucoes.json').write_text(json.dumps([r for _, rs, _ in todas for r in rs], indent=1, ensure_ascii=False), encoding='utf-8')
     (args.saida/'resumo.json').write_text(json.dumps(resumo, indent=2, ensure_ascii=False, default=str), encoding='utf-8')
     gerar_tabelas(resumo, args.saida)
-    print('maior instância útil:', {c: b['maior_instancia_util'] for c, b in resumo['codificacoes'].items()})
+    print('maior instância útil:', {c: {a: b['maior'] for a, b in bl['maior_instancia_util'].items()} for c, bl in resumo['codificacoes'].items()})
 
 
 if __name__ == '__main__':

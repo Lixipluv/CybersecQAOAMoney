@@ -194,10 +194,10 @@
       "menor_energia_e_mais_frequente": false,
       "ganho95_vs_uniforme": 1.033246906894814,
       "ganho_opt_vs_uniforme": 1.033246906894814,
-      "P95_limite_inferior_95": 0.06457793168092588,
+      "P95_limite_inferior_95": 0.05472714144005692,
       "shots_para_95pct_de_obter_95": 45,
       "decisao_util": true,
-      "util": true,
+      "util": false,
       "fonte": "probabilidade_exata",
       "shots": 2048
     },

@@ -1,0 +1,32 @@
+{
+  "controles": 9,
+  "variaveis_decisao": 9,
+  "variaveis_auxiliares": 0,
+  "variaveis_total": 9,
+  "restricoes": 1,
+  "orcamento": 11,
+  "termos_lineares": 9,
+  "termos_quadraticos": 36,
+  "interacoes_ZZ": 36,
+  "densidade_qubo": 1.0,
+  "estados": 512,
+  "portfolios_factiveis": 212,
+  "portfolios_totais": 512,
+  "escala_max_abs_E": 55.706378739470075,
+  "razao_escala_valor_otimo": 18.51343123479023,
+  "memoria_statevector_MB": 0.0078125,
+  "lambda1": 0.3,
+  "lambda2": 0.29,
+  "C_ising": 3.87318936973503,
+  "offset_qubo": 31.789999999999996,
+  "erro_max_ising_vs_qubo": 1.7763568394002505e-14,
+  "erro_max_matriz_vs_energia": 1.4210854715202004e-14,
+  "fundamental_e_otimo_original": true,
+  "uniforme": {
+    "Popt": 0.001953125,
+    "Pfeas": 0.4140625,
+    "P95": 0.005859375,
+    "Pqubo": 0.001953125,
+    "Paceitavel": 0.193359375
+  }
+}

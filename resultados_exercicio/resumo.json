@@ -1,0 +1,2450 @@
+{
+  "config": {
+    "dados": "/home/user/CybersecQAOAMoney/instancia.json",
+    "saida": "/home/user/CybersecQAOAMoney/resultados_exercicio",
+    "tamanhos": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "tamanho_p": 7,
+    "profundidades": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "shots": 2048,
+    "maxiter": 150,
+    "restarts": 2,
+    "nivel": 2,
+    "max_qubits_e2": 17,
+    "codificacoes": [
+      "folga",
+      "desbalanceada"
+    ],
+    "calibracao": [
+      3,
+      4,
+      5
+    ],
+    "sem_estudos": false,
+    "versoes": {
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "qiskit": "2.5.2",
+      "qiskit_aer": "0.17.2",
+      "qiskit_ibm_runtime": "0.52.1"
+    },
+    "backend_E2": {
+      "nome": "fake_kingston",
+      "qubits": 156,
+      "portas": [
+        "cz",
+        "delay",
+        "id",
+        "if_else",
+        "measure",
+        "measure_2",
+        "reset",
+        "rz",
+        "sx",
+        "x"
+      ]
+    },
+    "limiar_qualidade": 0.95,
+    "ods": {
+      "numero": 16,
+      "nome": "Paz, Justiça e Instituições Eficazes",
+      "metas": [
+        "16.6: instituições eficazes, responsáveis e transparentes",
+        "16.10: acesso público à informação e proteção das liberdades fundamentais"
+      ]
+    },
+    "problema": "Alocação de recursos de cibersegurança: seleção de controles CIS sob orçamento (mochila 0-1)",
+    "criterio_util": {
+      "A_decisao_util": "R_app >= 0.95: o melhor portfólio factível amostrado atinge 95% do ótimo",
+      "B_atribuivel_QAOA": "A e P95 do QAOA (exata em E1; limite inferior de Wilson 95% em E2) > P95 da amostragem uniforme",
+      "instancia": "útil no nível se a maioria das sementes satisfaz"
+    }
+  },
+  "codificacoes": {
+    "folga": {
+      "caracteristicas": {
+        "3": {
+          "controles": 3,
+          "variaveis_decisao": 3,
+          "variaveis_auxiliares": 2,
+          "variaveis_total": 5,
+          "restricoes": 1,
+          "orcamento": 3,
+          "termos_lineares": 5,
+          "termos_quadraticos": 10,
+          "interacoes_ZZ": 10,
+          "densidade_qubo": 1.0,
+          "estados": 32,
+          "portfolios_factiveis": 4,
+          "portfolios_totais": 8,
+          "escala_max_abs_E": 133.96419678540855,
+          "razao_escala_valor_otimo": 220.96124868447305,
+          "memoria_statevector_MB": 0.00048828125,
+          "rho": 2.770087433029345
+        },
+        "4": {
+          "controles": 4,
+          "variaveis_decisao": 4,
+          "variaveis_auxiliares": 3,
+          "variaveis_total": 7,
+          "restricoes": 1,
+          "orcamento": 4,
+          "termos_lineares": 7,
+          "termos_quadraticos": 21,
+          "interacoes_ZZ": 21,
+          "densidade_qubo": 1.0,
+          "estados": 128,
+          "portfolios_factiveis": 6,
+          "portfolios_totais": 16,
+          "escala_max_abs_E": 562.6522320573968,
+          "razao_escala_valor_otimo": 468.8828151430753,
+          "memoria_statevector_MB": 0.001953125,
+          "rho": 3.3431680479606953
+        },
+        "5": {
+          "controles": 5,
+          "variaveis_decisao": 5,
+          "variaveis_auxiliares": 3,
+          "variaveis_total": 8,
+          "restricoes": 1,
+          "orcamento": 6,
+          "termos_lineares": 8,
+          "termos_quadraticos": 28,
+          "interacoes_ZZ": 28,
+          "densidade_qubo": 1.0,
+          "estados": 256,
+          "portfolios_factiveis": 14,
+          "portfolios_totais": 32,
+          "escala_max_abs_E": 884.7642823013059,
+          "razao_escala_valor_otimo": 732.1253941368944,
+          "memoria_statevector_MB": 0.00390625,
+          "rho": 3.945376260273687
+        },
+        "6": {
+          "controles": 6,
+          "variaveis_decisao": 6,
+          "variaveis_auxiliares": 3,
+          "variaveis_total": 9,
+          "restricoes": 1,
+          "orcamento": 7,
+          "termos_lineares": 9,
+          "termos_quadraticos": 36,
+          "interacoes_ZZ": 36,
+          "densidade_qubo": 1.0,
+          "estados": 512,
+          "portfolios_factiveis": 29,
+          "portfolios_totais": 64,
+          "escala_max_abs_E": 1150.1358035126475,
+          "razao_escala_valor_otimo": 648.6708387883396,
+          "memoria_statevector_MB": 0.0078125,
+          "rho": 4.506414915735872
+        },
+        "7": {
+          "controles": 7,
+          "variaveis_decisao": 7,
+          "variaveis_auxiliares": 4,
+          "variaveis_total": 11,
+          "restricoes": 1,
+          "orcamento": 8,
+          "termos_lineares": 11,
+          "termos_quadraticos": 55,
+          "interacoes_ZZ": 55,
+          "densidade_qubo": 1.0,
+          "estados": 2048,
+          "portfolios_factiveis": 51,
+          "portfolios_totais": 128,
+          "escala_max_abs_E": 3485.421431729787,
+          "razao_escala_valor_otimo": 1878.2492497079202,
+          "memoria_statevector_MB": 0.03125,
+          "rho": 5.162105824784869
+        },
+        "9": {
+          "controles": 9,
+          "variaveis_decisao": 9,
+          "variaveis_auxiliares": 4,
+          "variaveis_total": 13,
+          "restricoes": 1,
+          "orcamento": 11,
+          "termos_lineares": 13,
+          "termos_quadraticos": 78,
+          "interacoes_ZZ": 78,
+          "densidade_qubo": 1.0,
+          "estados": 8192,
+          "portfolios_factiveis": 212,
+          "portfolios_totais": 512,
+          "escala_max_abs_E": 5321.2418588451355,
+          "razao_escala_valor_otimo": 1768.4589712455236,
+          "memoria_statevector_MB": 0.125,
+          "rho": 6.333621260529923
+        },
+        "11": {
+          "controles": 11,
+          "variaveis_decisao": 11,
+          "variaveis_auxiliares": 4,
+          "variaveis_total": 15,
+          "restricoes": 1,
+          "orcamento": 13,
+          "termos_lineares": 15,
+          "termos_quadraticos": 105,
+          "interacoes_ZZ": 105,
+          "densidade_qubo": 1.0,
+          "estados": 32768,
+          "portfolios_factiveis": 854,
+          "portfolios_totais": 2048,
+          "escala_max_abs_E": 7185.208638576728,
+          "razao_escala_valor_otimo": 1983.4230628914743,
+          "memoria_statevector_MB": 0.5,
+          "rho": 7.483550665184092
+        },
+        "13": {
+          "controles": 13,
+          "variaveis_decisao": 13,
+          "variaveis_auxiliares": 5,
+          "variaveis_total": 18,
+          "restricoes": 1,
+          "orcamento": 16,
+          "termos_lineares": 18,
+          "termos_quadraticos": 153,
+          "interacoes_ZZ": 153,
+          "densidade_qubo": 1.0,
+          "estados": 262144,
+          "portfolios_factiveis": 3194,
+          "portfolios_totais": 8192,
+          "escala_max_abs_E": 22666.514442382722,
+          "razao_escala_valor_otimo": 5317.492993681574,
+          "memoria_statevector_MB": 4.0,
+          "rho": 8.717505554762585
+        },
+        "15": {
+          "controles": 15,
+          "variaveis_decisao": 15,
+          "variaveis_auxiliares": 5,
+          "variaveis_total": 20,
+          "restricoes": 1,
+          "orcamento": 19,
+          "termos_lineares": 20,
+          "termos_quadraticos": 190,
+          "interacoes_ZZ": 190,
+          "densidade_qubo": 1.0,
+          "estados": 1048576,
+          "portfolios_factiveis": 12014,
+          "portfolios_totais": 32768,
+          "escala_max_abs_E": 29865.390298148955,
+          "razao_escala_valor_otimo": 6175.287583444546,
+          "memoria_statevector_MB": 16.0,
+          "rho": 9.875790442509576
+        }
+      },
+      "tabela2": {
+        "3": {
+          "qubits": 5,
+          "classico": "100",
+          "qaoa_E1": "`100` ✓ (3)",
+          "qaoa_E2": "`100` ✓ (3)",
+          "E_star": -0.6062791443431149,
+          "E_QAOA_E1": "-0.6063 ± 0.0000",
+          "E_QAOA_E2": "-0.6063 ± 0.0000",
+          "Popt_E1": "0.2037 ± 0.0004",
+          "Popt_E2": "0.1997 ± 0.0086",
+          "Pfeas_E1": "0.7978 ± 0.0038",
+          "Pfeas_E2": "0.7786 ± 0.0063",
+          "Popt_unif": 0.125,
+          "Pfeas_unif": 0.5
+        },
+        "4": {
+          "qubits": 7,
+          "classico": "1100",
+          "qaoa_E1": "`1100` ✓ (3)",
+          "qaoa_E2": "`1100` ✓ (3)",
+          "E_star": -1.1999847592744652,
+          "E_QAOA_E1": "-1.2000 ± 0.0000",
+          "E_QAOA_E2": "-1.2000 ± 0.0000",
+          "Popt_E1": "0.0637 ± 0.0010",
+          "Popt_E2": "0.0677 ± 0.0036",
+          "Pfeas_E1": "0.7400 ± 0.0060",
+          "Pfeas_E2": "0.7161 ± 0.0072",
+          "Popt_unif": 0.0625,
+          "Pfeas_unif": 0.375
+        },
+        "5": {
+          "qubits": 8,
+          "classico": "10001",
+          "qaoa_E1": "`10001` ✓ (3)",
+          "qaoa_E2": "`10001` ✓ (3)",
+          "E_star": -1.2084873566561067,
+          "E_QAOA_E1": "-1.2085 ± 0.0000",
+          "E_QAOA_E2": "-1.2085 ± 0.0000",
+          "Popt_E1": "0.0404 ± 0.0000",
+          "Popt_E2": "0.0425 ± 0.0038",
+          "Pfeas_E1": "0.7761 ± 0.0092",
+          "Pfeas_E2": "0.7461 ± 0.0086",
+          "Popt_unif": 0.03125,
+          "Pfeas_unif": 0.4375
+        },
+        "6": {
+          "qubits": 9,
+          "classico": "110100",
+          "qaoa_E1": "`110100` ✓ (3)",
+          "qaoa_E2": "`110100` ✓ (3)",
+          "E_star": -1.7730653742058156,
+          "E_QAOA_E1": "-1.7731 ± 0.0000",
+          "E_QAOA_E2": "-1.7731 ± 0.0000",
+          "Popt_E1": "0.0172 ± 0.0003",
+          "Popt_E2": "0.0181 ± 0.0032",
+          "Pfeas_E1": "0.7902 ± 0.0079",
+          "Pfeas_E2": "0.7586 ± 0.0134",
+          "Popt_unif": 0.015625,
+          "Pfeas_unif": 0.453125
+        },
+        "7": {
+          "qubits": 11,
+          "classico": "1100001",
+          "qaoa_E1": "`1100001` ✓ (3)",
+          "qaoa_E2": "`1100001` ✓ (3)",
+          "E_star": -1.8556756683234625,
+          "E_QAOA_E1": "-1.8557 ± 0.0000",
+          "E_QAOA_E2": "-1.8557 ± 0.0000",
+          "Popt_E1": "0.0097 ± 0.0002",
+          "Popt_E2": "0.0104 ± 0.0015",
+          "Pfeas_E1": "0.7734 ± 0.0128",
+          "Pfeas_E2": "0.7256 ± 0.0166",
+          "Popt_unif": 0.0078125,
+          "Pfeas_unif": 0.3984375
+        },
+        "9": {
+          "qubits": 13,
+          "classico": "110001101",
+          "qaoa_E1": "`110001101` ✓ (3)",
+          "qaoa_E2": "`110001101` ✓ (3)",
+          "E_star": -3.0089710563640564,
+          "E_QAOA_E1": "-2.9529 ± 0.0397",
+          "E_QAOA_E2": "-2.7967 ± 0.2421",
+          "Popt_E1": "0.0019 ± 0.0000",
+          "Popt_E2": "0.0023 ± 0.0005",
+          "Pfeas_E1": "0.7649 ± 0.0108",
+          "Pfeas_E2": "0.7104 ± 0.0134",
+          "Popt_unif": 0.001953125,
+          "Pfeas_unif": 0.4140625
+        },
+        "11": {
+          "qubits": 15,
+          "classico": "11000110101",
+          "qaoa_E1": "`10000110111` (1), `11000110101` ✓ (1), `11000010111` (1)",
+          "qaoa_E2": "`11000110101` ✓ (2), `11000010111` (1)",
+          "E_star": -3.6226303772539508,
+          "E_QAOA_E1": "-3.5952 ± 0.0235",
+          "E_QAOA_E2": "-3.5573 ± 0.0066",
+          "Popt_E1": "0.0005 ± 0.0000",
+          "Popt_E2": "0.0003 ± 0.0002",
+          "Pfeas_E1": "0.7617 ± 0.0097",
+          "Pfeas_E2": "0.6960 ± 0.0115",
+          "Popt_unif": 0.00048828125,
+          "Pfeas_unif": 0.4169921875
+        },
+        "13": {
+          "qubits": 18,
+          "classico": "1100011010110",
+          "qaoa_E1": "`1000011011110` (1), `1100011001110` (1), `1110010010110` (1)",
+          "qaoa_E2": "–",
+          "E_star": -4.262631745695922,
+          "E_QAOA_E1": "-3.9811 ± 0.2113",
+          "E_QAOA_E2": "–",
+          "Popt_E1": "0.0001 ± 0.0000",
+          "Popt_E2": "–",
+          "Pfeas_E1": "0.7168 ± 0.0058",
+          "Pfeas_E2": "–",
+          "Popt_unif": 0.0001220703125,
+          "Pfeas_unif": 0.389892578125
+        },
+        "15": {
+          "qubits": 20,
+          "classico": "110001101011010",
+          "qaoa_E1": "`111001101010010` (1), `110001001111100` (1), `110100101111000` (1)",
+          "qaoa_E2": "–",
+          "E_star": -4.83627521707907,
+          "E_QAOA_E1": "-4.7347 ± 0.0632",
+          "E_QAOA_E2": "–",
+          "Popt_E1": "0.0000 ± 0.0000",
+          "Popt_E2": "–",
+          "Pfeas_E1": "0.7058 ± 0.0126",
+          "Pfeas_E2": "–",
+          "Popt_unif": 3.0517578125e-05,
+          "Pfeas_unif": 0.36663818359375
+        }
+      },
+      "recursos": {
+        "3": {
+          "k": 3,
+          "qubits": 5,
+          "depth_log": "10",
+          "depth_isa": "87",
+          "gates_log": "25",
+          "gates_isa": "145",
+          "zz": "10",
+          "cz_base": "20",
+          "cz_isa": "29",
+          "shots": 2048,
+          "g95_E1": "1.63 ± 0.00",
+          "g95_E2": "1.60 ± 0.03",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.20",
+          "t_E2": "3.5"
+        },
+        "4": {
+          "k": 4,
+          "qubits": 7,
+          "depth_log": "14",
+          "depth_isa": "147",
+          "gates_log": "42",
+          "gates_isa": "319",
+          "zz": "21",
+          "cz_base": "42",
+          "cz_isa": "67",
+          "shots": 2048,
+          "g95_E1": "1.02 ± 0.02",
+          "g95_E2": "1.08 ± 0.06",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "A 3/3, B 0/3",
+          "t_opt": "0.20",
+          "t_E2": "2.3"
+        },
+        "5": {
+          "k": 5,
+          "qubits": 8,
+          "depth_log": "16",
+          "depth_isa": "191",
+          "gates_log": "52",
+          "gates_isa": "431",
+          "zz": "28",
+          "cz_base": "56",
+          "cz_isa": "92",
+          "shots": 2048,
+          "g95_E1": "1.45 ± 0.00",
+          "g95_E2": "1.46 ± 0.05",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.30",
+          "t_E2": "2.5"
+        },
+        "6": {
+          "k": 6,
+          "qubits": 9,
+          "depth_log": "18",
+          "depth_isa": "226",
+          "gates_log": "63",
+          "gates_isa": "563",
+          "zz": "36",
+          "cz_base": "72",
+          "cz_isa": "117",
+          "shots": 2048,
+          "g95_E1": "1.14 ± 0.02",
+          "g95_E2": "1.15 ± 0.05",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 2/3",
+          "util_E2": "A 3/3, B 2/3",
+          "t_opt": "0.21",
+          "t_E2": "2.3"
+        },
+        "7": {
+          "k": 7,
+          "qubits": 11,
+          "depth_log": "22",
+          "depth_isa": "327",
+          "gates_log": "88",
+          "gates_isa": "907",
+          "zz": "55",
+          "cz_base": "110",
+          "cz_isa": "218",
+          "shots": 2048,
+          "g95_E1": "1.08 ± 0.02",
+          "g95_E2": "1.15 ± 0.01",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.28",
+          "t_E2": "9.9"
+        },
+        "9": {
+          "k": 9,
+          "qubits": 13,
+          "depth_log": "26",
+          "depth_isa": "372",
+          "gates_log": "117",
+          "gates_isa": "1315",
+          "zz": "78",
+          "cz_base": "156",
+          "cz_isa": "292",
+          "shots": 2048,
+          "g95_E1": "0.97 ± 0.02",
+          "g95_E2": "1.33 ± 0.30",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "A 3/3, B 1/3",
+          "t_opt": "0.41",
+          "t_E2": "42.2"
+        },
+        "11": {
+          "k": 11,
+          "qubits": 15,
+          "depth_log": "30",
+          "depth_isa": "525",
+          "gates_log": "150",
+          "gates_isa": "1716",
+          "zz": "105",
+          "cz_base": "210",
+          "cz_isa": "393",
+          "shots": 2048,
+          "g95_E1": "0.99 ± 0.02",
+          "g95_E2": "1.19 ± 0.14",
+          "rapp_E1": "0.992 ± 0.006",
+          "rapp_E2": "0.998 ± 0.003",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "A 3/3, B 0/3",
+          "t_opt": "1.00",
+          "t_E2": "30.5"
+        },
+        "13": {
+          "k": 13,
+          "qubits": 18,
+          "depth_log": "36",
+          "depth_isa": "629",
+          "gates_log": "207",
+          "gates_isa": "2589",
+          "zz": "153",
+          "cz_base": "306",
+          "cz_isa": "589",
+          "shots": 2048,
+          "g95_E1": "0.96 ± 0.01",
+          "g95_E2": "–",
+          "rapp_E1": "0.984 ± 0.003",
+          "rapp_E2": "–",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "não executado",
+          "t_opt": "13.86",
+          "t_E2": "–"
+        },
+        "15": {
+          "k": 15,
+          "qubits": 20,
+          "depth_log": "40",
+          "depth_isa": "641",
+          "gates_log": "250",
+          "gates_isa": "3071",
+          "zz": "190",
+          "cz_base": "380",
+          "cz_isa": "675",
+          "shots": 2048,
+          "g95_E1": "1.00 ± 0.02",
+          "g95_E2": "–",
+          "rapp_E1": "0.987 ± 0.006",
+          "rapp_E2": "–",
+          "util_E1": "A 3/3, B 0/3",
+          "util_E2": "não executado",
+          "t_opt": "71.78",
+          "t_E2": "–"
+        }
+      },
+      "ruido": [
+        [
+          3,
+          "0.2037 ± 0.0004",
+          "0.1997 ± 0.0086",
+          "0.7978 ± 0.0038",
+          "0.7786 ± 0.0063",
+          "0.4073 ± 0.0008",
+          "0.3996 ± 0.0080",
+          "0.0040 ± 0.0089",
+          "0.0192 ± 0.0040",
+          "29"
+        ],
+        [
+          4,
+          "0.0637 ± 0.0010",
+          "0.0677 ± 0.0036",
+          "0.7400 ± 0.0060",
+          "0.7161 ± 0.0072",
+          "0.0637 ± 0.0010",
+          "0.0677 ± 0.0036",
+          "-0.0040 ± 0.0029",
+          "0.0239 ± 0.0041",
+          "67"
+        ],
+        [
+          5,
+          "0.0404 ± 0.0000",
+          "0.0425 ± 0.0038",
+          "0.7761 ± 0.0092",
+          "0.7461 ± 0.0086",
+          "0.3167 ± 0.0009",
+          "0.3184 ± 0.0111",
+          "-0.0021 ± 0.0038",
+          "0.0300 ± 0.0052",
+          "92"
+        ],
+        [
+          6,
+          "0.0172 ± 0.0003",
+          "0.0181 ± 0.0032",
+          "0.7902 ± 0.0079",
+          "0.7586 ± 0.0134",
+          "0.1248 ± 0.0020",
+          "0.1261 ± 0.0050",
+          "-0.0008 ± 0.0031",
+          "0.0316 ± 0.0057",
+          "117"
+        ],
+        [
+          7,
+          "0.0097 ± 0.0002",
+          "0.0104 ± 0.0015",
+          "0.7734 ± 0.0128",
+          "0.7256 ± 0.0166",
+          "0.1093 ± 0.0024",
+          "0.1167 ± 0.0014",
+          "-0.0007 ± 0.0014",
+          "0.0478 ± 0.0054",
+          "218"
+        ],
+        [
+          9,
+          "0.0019 ± 0.0000",
+          "0.0023 ± 0.0005",
+          "0.7649 ± 0.0108",
+          "0.7104 ± 0.0134",
+          "0.0057 ± 0.0001",
+          "0.0078 ± 0.0017",
+          "-0.0004 ± 0.0004",
+          "0.0544 ± 0.0027",
+          "292"
+        ],
+        [
+          11,
+          "0.0005 ± 0.0000",
+          "0.0003 ± 0.0002",
+          "0.7617 ± 0.0097",
+          "0.6960 ± 0.0115",
+          "0.0092 ± 0.0002",
+          "0.0111 ± 0.0013",
+          "0.0002 ± 0.0002",
+          "0.0657 ± 0.0049",
+          "393"
+        ]
+      ],
+      "beneficio": {
+        "7": {
+          "referencia_ordem_CIS": {
+            "decisao": "1110000",
+            "custo": 7.0,
+            "valor": 1.770087433029345,
+            "cobertura": 0.5588235294117646,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-4: Configuração segura"
+            ],
+            "delta_valor_pct_vs_ref": 0.0,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 0.9538775893033918
+          },
+          "gulosa_valor_custo": {
+            "decisao": "1100010",
+            "custo": 6.0,
+            "valor": 1.7610234147366501,
+            "cobertura": 0.45588235294117635,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador"
+            ],
+            "delta_valor_pct_vs_ref": -0.5120661343368008,
+            "delta_cobertura_pp_vs_ref": -10.294117647058826,
+            "fracao_do_otimo": 0.9489931052055409
+          },
+          "aleatoria_factivel_media": {
+            "valor": 1.3385002777821546,
+            "cobertura": 0.4769319492502883,
+            "custo": 5.8431372549019605,
+            "delta_valor_pct_vs_ref": -24.382250683999708,
+            "delta_cobertura_pp_vs_ref": -8.18915801614763,
+            "fracao_do_otimo": 0.7213007642609457
+          },
+          "otimo_classico": {
+            "decisao": "1100001",
+            "custo": 7.0,
+            "valor": 1.8556756683234625,
+            "cobertura": 0.6617647058823529,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-10: Defesa contra malware"
+            ],
+            "delta_valor_pct_vs_ref": 4.835254671439646,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0
+          },
+          "QAOA_E1_melhor_amostra_media": {
+            "valor": 1.8556756683234628,
+            "cobertura": 0.6617647058823529,
+            "custo": 7.0,
+            "delta_valor_pct_vs_ref": 4.835254671439659,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0000000000000002
+          },
+          "QAOA_E1_mais_frequente_media": {
+            "valor": 0.3889287432875668,
+            "cobertura": 0.1568627450980392,
+            "custo": 1.6666666666666667,
+            "delta_valor_pct_vs_ref": -78.0277100424384,
+            "delta_cobertura_pp_vs_ref": -40.19607843137254,
+            "fracao_do_otimo": 0.20958874976193992
+          },
+          "QAOA_E2_melhor_amostra_media": {
+            "valor": 1.8556756683234628,
+            "cobertura": 0.6617647058823529,
+            "custo": 7.0,
+            "delta_valor_pct_vs_ref": 4.835254671439659,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0000000000000002
+          },
+          "QAOA_E2_mais_frequente_media": {
+            "valor": 0.18701288515406164,
+            "cobertura": 0.09313725490196077,
+            "custo": 0.6666666666666666,
+            "delta_valor_pct_vs_ref": -89.43482216389697,
+            "delta_cobertura_pp_vs_ref": -46.56862745098038,
+            "fracao_do_otimo": 0.10077886364863596
+          }
+        },
+        "11": {
+          "referencia_ordem_CIS": {
+            "decisao": "11110100000",
+            "custo": 12.0,
+            "valor": 2.9042067034228802,
+            "cobertura": 0.7941176470588234,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-4: Configuração segura",
+              "CIS-5: Gestão de contas",
+              "CIS-9: Proteção de e-mail e navegador"
+            ],
+            "delta_valor_pct_vs_ref": 0.0,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 0.801684522290222
+          },
+          "gulosa_valor_custo": {
+            "decisao": "11000100111",
+            "custo": 12.0,
+            "valor": 3.5032095519692286,
+            "cobertura": 0.8823529411764705,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador",
+              "S9: controle sintético",
+              "S10: controle sintético",
+              "S11: controle sintético"
+            ],
+            "delta_valor_pct_vs_ref": 20.625351764403245,
+            "delta_cobertura_pp_vs_ref": 8.823529411764708,
+            "fracao_do_otimo": 0.967034775053356
+          },
+          "aleatoria_factivel_media": {
+            "valor": 2.356879366692789,
+            "cobertura": 0.6921235707397714,
+            "custo": 10.185011709601874,
+            "delta_valor_pct_vs_ref": -18.846018642027595,
+            "delta_cobertura_pp_vs_ref": -10.1994076319052,
+            "fracao_do_otimo": 0.6505989077691569
+          },
+          "otimo_classico": {
+            "decisao": "11000110101",
+            "custo": 13.0,
+            "valor": 3.6226303772539508,
+            "cobertura": 0.8823529411764705,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador",
+              "CIS-10: Defesa contra malware",
+              "S9: controle sintético",
+              "S11: controle sintético"
+            ],
+            "delta_valor_pct_vs_ref": 24.737346449353648,
+            "delta_cobertura_pp_vs_ref": 8.823529411764708,
+            "fracao_do_otimo": 1.0
+          },
+          "QAOA_E1_melhor_amostra_media": {
+            "valor": 3.5952290096322894,
+            "cobertura": 0.8480392156862746,
+            "custo": 13.0,
+            "delta_valor_pct_vs_ref": 23.793840341838425,
+            "delta_cobertura_pp_vs_ref": 5.392156862745123,
+            "fracao_do_otimo": 0.9924360575691875
+          },
+          "QAOA_E1_mais_frequente_media": {
+            "valor": 1.549796129427909,
+            "cobertura": 0.4362745098039216,
+            "custo": 7.0,
+            "delta_valor_pct_vs_ref": -46.63616306644672,
+            "delta_cobertura_pp_vs_ref": -35.78431372549018,
+            "fracao_do_otimo": 0.42780962119648963
+          },
+          "QAOA_E2_melhor_amostra_media": {
+            "valor": 3.614374186687981,
+            "cobertura": 0.8823529411764707,
+            "custo": 13.0,
+            "delta_valor_pct_vs_ref": 24.453062601504964,
+            "delta_cobertura_pp_vs_ref": 8.82352941176473,
+            "fracao_do_otimo": 0.997720940392426
+          },
+          "QAOA_E2_mais_frequente_media": {
+            "valor": 1.9972390406248202,
+            "cobertura": 0.6029411764705882,
+            "custo": 8.333333333333334,
+            "delta_valor_pct_vs_ref": -31.229445952628428,
+            "delta_cobertura_pp_vs_ref": -19.11764705882352,
+            "fracao_do_otimo": 0.5513228876910098
+          }
+        }
+      },
+      "utilidade": {
+        "E1": {
+          "3": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "4": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "5": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "6": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 2,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "7": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "9": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "11": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "13": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "15": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          }
+        },
+        "E2": {
+          "3": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "4": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "5": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "6": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 2,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "7": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "9": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 1,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "11": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          }
+        }
+      },
+      "profundidades": {
+        "k": 7,
+        "linhas": [
+          [
+            1,
+            "E1",
+            "93.8 ± 2.2",
+            "0.0097 ± 0.0002",
+            "0.7734 ± 0.0128",
+            "0.1093 ± 0.0024",
+            "0.0017 ± 0.0000",
+            "22",
+            "55",
+            "0.28",
+            "300"
+          ],
+          [
+            1,
+            "E2",
+            "140.6 ± 5.5",
+            "0.0104 ± 0.0015",
+            "0.7256 ± 0.0166",
+            "0.1167 ± 0.0014",
+            "0.0020 ± 0.0008",
+            "327",
+            "218",
+            "0.28",
+            "300"
+          ],
+          [
+            2,
+            "E1",
+            "63.4 ± 0.9",
+            "0.0096 ± 0.0004",
+            "0.8332 ± 0.0065",
+            "0.1034 ± 0.0039",
+            "0.0021 ± 0.0001",
+            "35",
+            "110",
+            "0.68",
+            "600"
+          ],
+          [
+            2,
+            "E2",
+            "126.8 ± 14.0",
+            "0.0085 ± 0.0008",
+            "0.7596 ± 0.0038",
+            "0.1134 ± 0.0010",
+            "0.0021 ± 0.0012",
+            "584",
+            "429",
+            "0.68",
+            "600"
+          ],
+          [
+            3,
+            "E1",
+            "52.9 ± 8.7",
+            "0.0114 ± 0.0012",
+            "0.8261 ± 0.0126",
+            "0.1222 ± 0.0138",
+            "0.0026 ± 0.0003",
+            "48",
+            "165",
+            "1.21",
+            "900"
+          ],
+          [
+            3,
+            "E2",
+            "110.7 ± 9.8",
+            "0.0086 ± 0.0020",
+            "0.7407 ± 0.0129",
+            "0.1214 ± 0.0098",
+            "0.0011 ± 0.0006",
+            "864",
+            "640",
+            "1.21",
+            "900"
+          ]
+        ]
+      },
+      "maior_instancia_util": {
+        "E1_A_decisao_util": {
+          "maior": 15,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        "E1_B_atribuivel_QAOA": {
+          "maior": 6,
+          "tamanhos_uteis": [
+            3,
+            5,
+            6
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        "E2_A_decisao_util": {
+          "maior": 11,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11
+          ]
+        },
+        "E2_B_atribuivel_QAOA": {
+          "maior": 7,
+          "tamanhos_uteis": [
+            3,
+            5,
+            6,
+            7
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11
+          ]
+        }
+      },
+      "uniforme_obtem_95": {
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "9": 0.9999940688603846,
+        "11": 0.9999999948726849,
+        "13": 0.9999655408478321,
+        "15": 0.9964212401014265
+      }
+    },
+    "desbalanceada": {
+      "caracteristicas": {
+        "3": {
+          "controles": 3,
+          "variaveis_decisao": 3,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 3,
+          "restricoes": 1,
+          "orcamento": 3,
+          "termos_lineares": 3,
+          "termos_quadraticos": 3,
+          "interacoes_ZZ": 3,
+          "densidade_qubo": 1.0,
+          "estados": 8,
+          "portfolios_factiveis": 4,
+          "portfolios_totais": 8,
+          "escala_max_abs_E": 4.069912566970655,
+          "razao_escala_valor_otimo": 6.712935130533447,
+          "memoria_statevector_MB": 0.0001220703125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "4": {
+          "controles": 4,
+          "variaveis_decisao": 4,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 4,
+          "restricoes": 1,
+          "orcamento": 4,
+          "termos_lineares": 4,
+          "termos_quadraticos": 6,
+          "interacoes_ZZ": 6,
+          "densidade_qubo": 1.0,
+          "estados": 16,
+          "portfolios_factiveis": 6,
+          "portfolios_totais": 16,
+          "escala_max_abs_E": 9.896831952039303,
+          "razao_escala_valor_otimo": 8.247464707821061,
+          "memoria_statevector_MB": 0.000244140625,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "5": {
+          "controles": 5,
+          "variaveis_decisao": 5,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 5,
+          "restricoes": 1,
+          "orcamento": 6,
+          "termos_lineares": 5,
+          "termos_quadraticos": 10,
+          "interacoes_ZZ": 10,
+          "densidade_qubo": 1.0,
+          "estados": 32,
+          "portfolios_factiveis": 14,
+          "portfolios_totais": 32,
+          "escala_max_abs_E": 18.01462373972631,
+          "razao_escala_valor_otimo": 14.90675400160818,
+          "memoria_statevector_MB": 0.00048828125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "6": {
+          "controles": 6,
+          "variaveis_decisao": 6,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 6,
+          "restricoes": 1,
+          "orcamento": 7,
+          "termos_lineares": 6,
+          "termos_quadraticos": 15,
+          "interacoes_ZZ": 15,
+          "densidade_qubo": 1.0,
+          "estados": 64,
+          "portfolios_factiveis": 29,
+          "portfolios_totais": 64,
+          "escala_max_abs_E": 22.683585084264127,
+          "razao_escala_valor_otimo": 12.793428496354496,
+          "memoria_statevector_MB": 0.0009765625,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "7": {
+          "controles": 7,
+          "variaveis_decisao": 7,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 7,
+          "restricoes": 1,
+          "orcamento": 8,
+          "termos_lineares": 7,
+          "termos_quadraticos": 21,
+          "interacoes_ZZ": 21,
+          "densidade_qubo": 1.0,
+          "estados": 128,
+          "portfolios_factiveis": 51,
+          "portfolios_totais": 128,
+          "escala_max_abs_E": 34.22789417521513,
+          "razao_escala_valor_otimo": 18.444976543847677,
+          "memoria_statevector_MB": 0.001953125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "9": {
+          "controles": 9,
+          "variaveis_decisao": 9,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 9,
+          "restricoes": 1,
+          "orcamento": 11,
+          "termos_lineares": 9,
+          "termos_quadraticos": 36,
+          "interacoes_ZZ": 36,
+          "densidade_qubo": 1.0,
+          "estados": 512,
+          "portfolios_factiveis": 212,
+          "portfolios_totais": 512,
+          "escala_max_abs_E": 55.706378739470075,
+          "razao_escala_valor_otimo": 18.51343123479023,
+          "memoria_statevector_MB": 0.0078125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "11": {
+          "controles": 11,
+          "variaveis_decisao": 11,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 11,
+          "restricoes": 1,
+          "orcamento": 13,
+          "termos_lineares": 11,
+          "termos_quadraticos": 55,
+          "interacoes_ZZ": 55,
+          "densidade_qubo": 1.0,
+          "estados": 2048,
+          "portfolios_factiveis": 854,
+          "portfolios_totais": 2048,
+          "escala_max_abs_E": 72.55644933481591,
+          "razao_escala_valor_otimo": 20.028664748793833,
+          "memoria_statevector_MB": 0.03125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "13": {
+          "controles": 13,
+          "variaveis_decisao": 13,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 13,
+          "restricoes": 1,
+          "orcamento": 16,
+          "termos_lineares": 13,
+          "termos_quadraticos": 78,
+          "interacoes_ZZ": 78,
+          "densidade_qubo": 1.0,
+          "estados": 8192,
+          "portfolios_factiveis": 3194,
+          "portfolios_totais": 8192,
+          "escala_max_abs_E": 114.2824944452374,
+          "razao_escala_valor_otimo": 26.810313736491803,
+          "memoria_statevector_MB": 0.125,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        },
+        "15": {
+          "controles": 15,
+          "variaveis_decisao": 15,
+          "variaveis_auxiliares": 0,
+          "variaveis_total": 15,
+          "restricoes": 1,
+          "orcamento": 19,
+          "termos_lineares": 15,
+          "termos_quadraticos": 105,
+          "interacoes_ZZ": 105,
+          "densidade_qubo": 1.0,
+          "estados": 32768,
+          "portfolios_factiveis": 12014,
+          "portfolios_totais": 32768,
+          "escala_max_abs_E": 165.36420955749043,
+          "razao_escala_valor_otimo": 34.1924729538788,
+          "memoria_statevector_MB": 0.5,
+          "lambda1": 0.3,
+          "lambda2": 0.29
+        }
+      },
+      "tabela2": {
+        "3": {
+          "qubits": 3,
+          "classico": "100",
+          "qaoa_E1": "`100` ✓ (3)",
+          "qaoa_E2": "`100` ✓ (3)",
+          "E_star": -0.6162791443431148,
+          "E_QAOA_E1": "-0.6163 ± 0.0000",
+          "E_QAOA_E2": "-0.6163 ± 0.0000",
+          "Popt_E1": "0.2406 ± 0.0483",
+          "Popt_E2": "0.2378 ± 0.0464",
+          "Pfeas_E1": "0.7229 ± 0.0795",
+          "Pfeas_E2": "0.7135 ± 0.0817",
+          "Popt_unif": 0.125,
+          "Pfeas_unif": 0.5
+        },
+        "4": {
+          "qubits": 4,
+          "classico": "1100",
+          "qaoa_E1": "`1100` ✓ (3)",
+          "qaoa_E2": "`1100` ✓ (3)",
+          "E_star": -1.1999847592744652,
+          "E_QAOA_E1": "-1.2000 ± 0.0000",
+          "E_QAOA_E2": "-1.2000 ± 0.0000",
+          "Popt_E1": "0.1203 ± 0.0019",
+          "Popt_E2": "0.1157 ± 0.0018",
+          "Pfeas_E1": "0.4892 ± 0.0027",
+          "Pfeas_E2": "0.4914 ± 0.0076",
+          "Popt_unif": 0.0625,
+          "Pfeas_unif": 0.375
+        },
+        "5": {
+          "qubits": 5,
+          "classico": "10001",
+          "qaoa_E1": "`10001` ✓ (3)",
+          "qaoa_E2": "`10001` ✓ (3)",
+          "E_star": -1.2084873566561067,
+          "E_QAOA_E1": "-1.2085 ± 0.0000",
+          "E_QAOA_E2": "-1.2085 ± 0.0000",
+          "Popt_E1": "0.0671 ± 0.0039",
+          "Popt_E2": "0.0625 ± 0.0076",
+          "Pfeas_E1": "0.5863 ± 0.0071",
+          "Pfeas_E2": "0.5744 ± 0.0117",
+          "Popt_unif": 0.03125,
+          "Pfeas_unif": 0.4375
+        },
+        "6": {
+          "qubits": 6,
+          "classico": "110100",
+          "qaoa_E1": "`110100` ✓ (3)",
+          "qaoa_E2": "`110100` ✓ (3)",
+          "E_star": -1.7730653742058156,
+          "E_QAOA_E1": "-1.7731 ± 0.0000",
+          "E_QAOA_E2": "-1.7731 ± 0.0000",
+          "Popt_E1": "0.0322 ± 0.0017",
+          "Popt_E2": "0.0334 ± 0.0040",
+          "Pfeas_E1": "0.6054 ± 0.0132",
+          "Pfeas_E2": "0.5944 ± 0.0082",
+          "Popt_unif": 0.015625,
+          "Pfeas_unif": 0.453125
+        },
+        "7": {
+          "qubits": 7,
+          "classico": "1100001",
+          "qaoa_E1": "`1100001` ✓ (3)",
+          "qaoa_E2": "`1100001` ✓ (3)",
+          "E_star": -1.8656756683234623,
+          "E_QAOA_E1": "-1.8657 ± 0.0000",
+          "E_QAOA_E2": "-1.8657 ± 0.0000",
+          "Popt_E1": "0.0158 ± 0.0005",
+          "Popt_E2": "0.0137 ± 0.0045",
+          "Pfeas_E1": "0.5540 ± 0.0075",
+          "Pfeas_E2": "0.5407 ± 0.0113",
+          "Popt_unif": 0.0078125,
+          "Pfeas_unif": 0.3984375
+        },
+        "9": {
+          "qubits": 9,
+          "classico": "110001101",
+          "qaoa_E1": "`110001101` ✓ (3)",
+          "qaoa_E2": "`110001101` ✓ (3)",
+          "E_star": -3.0089710563640564,
+          "E_QAOA_E1": "-3.0090 ± 0.0000",
+          "E_QAOA_E2": "-3.0090 ± 0.0000",
+          "Popt_E1": "0.0039 ± 0.0002",
+          "Popt_E2": "0.0034 ± 0.0004",
+          "Pfeas_E1": "0.5407 ± 0.0123",
+          "Pfeas_E2": "0.5311 ± 0.0061",
+          "Popt_unif": 0.001953125,
+          "Pfeas_unif": 0.4140625
+        },
+        "11": {
+          "qubits": 11,
+          "classico": "11000110101",
+          "qaoa_E1": "`11000110101` ✓ (3)",
+          "qaoa_E2": "`11000110101` ✓ (3)",
+          "E_star": -3.6226303772539508,
+          "E_QAOA_E1": "-3.6226 ± 0.0000",
+          "E_QAOA_E2": "-3.6226 ± 0.0000",
+          "Popt_E1": "0.0010 ± 0.0000",
+          "Popt_E2": "0.0010 ± 0.0004",
+          "Pfeas_E1": "0.5276 ± 0.0079",
+          "Pfeas_E2": "0.5150 ± 0.0107",
+          "Popt_unif": 0.00048828125,
+          "Pfeas_unif": 0.4169921875
+        },
+        "13": {
+          "qubits": 13,
+          "classico": "1100011010110",
+          "qaoa_E1": "`1100001011110` (1), `1100011001110` (1), `1100011010110` ✓ (1)",
+          "qaoa_E2": "`1100011010110` ✓ (1), `1101011010100` (1), `1100001011110` (1)",
+          "E_star": -4.262631745695922,
+          "E_QAOA_E1": "-4.2357 ± 0.0229",
+          "E_QAOA_E2": "-4.2321 ± 0.0276",
+          "Popt_E1": "0.0002 ± 0.0000",
+          "Popt_E2": "0.0002 ± 0.0002",
+          "Pfeas_E1": "0.4929 ± 0.0121",
+          "Pfeas_E2": "0.4671 ± 0.0179",
+          "Popt_unif": 0.0001220703125,
+          "Pfeas_unif": 0.389892578125
+        },
+        "15": {
+          "qubits": 15,
+          "classico": "110001101011010",
+          "qaoa_E1": "`100001101111010` (1), `110101001011010` (1), `110101101011000` (1)",
+          "qaoa_E2": "`101001101111000` (1), `110001101111000` (1), `111001101011000` (1)",
+          "E_star": -4.83627521707907,
+          "E_QAOA_E1": "-4.7894 ± 0.0343",
+          "E_QAOA_E2": "-4.8056 ± 0.0236",
+          "Popt_E1": "0.0001 ± 0.0000",
+          "Popt_E2": "0.0000 ± 0.0000",
+          "Pfeas_E1": "0.4586 ± 0.0135",
+          "Pfeas_E2": "0.4347 ± 0.0057",
+          "Popt_unif": 3.0517578125e-05,
+          "Pfeas_unif": 0.36663818359375
+        }
+      },
+      "recursos": {
+        "3": {
+          "k": 3,
+          "qubits": 3,
+          "depth_log": "6",
+          "depth_isa": "36",
+          "gates_log": "12",
+          "gates_isa": "52",
+          "zz": "3",
+          "cz_base": "6",
+          "cz_isa": "9",
+          "shots": 2048,
+          "g95_E1": "1.92 ± 0.39",
+          "g95_E2": "1.89 ± 0.39",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.20",
+          "t_E2": "2.3"
+        },
+        "4": {
+          "k": 4,
+          "qubits": 4,
+          "depth_log": "8",
+          "depth_isa": "61",
+          "gates_log": "18",
+          "gates_isa": "93",
+          "zz": "6",
+          "cz_base": "12",
+          "cz_isa": "18",
+          "shots": 2048,
+          "g95_E1": "1.93 ± 0.03",
+          "g95_E2": "1.85 ± 0.03",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.20",
+          "t_E2": "2.2"
+        },
+        "5": {
+          "k": 5,
+          "qubits": 5,
+          "depth_log": "10",
+          "depth_isa": "87",
+          "gates_log": "25",
+          "gates_isa": "146",
+          "zz": "10",
+          "cz_base": "20",
+          "cz_isa": "29",
+          "shots": 2048,
+          "g95_E1": "1.95 ± 0.09",
+          "g95_E2": "1.85 ± 0.10",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.20",
+          "t_E2": "2.3"
+        },
+        "6": {
+          "k": 6,
+          "qubits": 6,
+          "depth_log": "12",
+          "depth_isa": "130",
+          "gates_log": "33",
+          "gates_isa": "230",
+          "zz": "15",
+          "cz_base": "30",
+          "cz_isa": "51",
+          "shots": 2048,
+          "g95_E1": "2.06 ± 0.12",
+          "g95_E2": "1.97 ± 0.11",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.21",
+          "t_E2": "2.4"
+        },
+        "7": {
+          "k": 7,
+          "qubits": 7,
+          "depth_log": "14",
+          "depth_isa": "148",
+          "gates_log": "42",
+          "gates_isa": "318",
+          "zz": "21",
+          "cz_base": "42",
+          "cz_isa": "67",
+          "shots": 2048,
+          "g95_E1": "2.07 ± 0.07",
+          "g95_E2": "1.99 ± 0.08",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.20",
+          "t_E2": "2.3"
+        },
+        "9": {
+          "k": 9,
+          "qubits": 9,
+          "depth_log": "18",
+          "depth_isa": "226",
+          "gates_log": "63",
+          "gates_isa": "560",
+          "zz": "36",
+          "cz_base": "72",
+          "cz_isa": "117",
+          "shots": 2048,
+          "g95_E1": "1.99 ± 0.10",
+          "g95_E2": "1.50 ± 0.25",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 2/3",
+          "t_opt": "0.21",
+          "t_E2": "2.4"
+        },
+        "11": {
+          "k": 11,
+          "qubits": 11,
+          "depth_log": "22",
+          "depth_isa": "328",
+          "gates_log": "88",
+          "gates_isa": "909",
+          "zz": "55",
+          "cz_base": "110",
+          "cz_isa": "218",
+          "shots": 2048,
+          "g95_E1": "1.94 ± 0.08",
+          "g95_E2": "1.96 ± 0.25",
+          "rapp_E1": "1.000 ± 0.000",
+          "rapp_E2": "1.000 ± 0.000",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 3/3",
+          "t_opt": "0.26",
+          "t_E2": "9.0"
+        },
+        "13": {
+          "k": 13,
+          "qubits": 13,
+          "depth_log": "26",
+          "depth_isa": "370",
+          "gates_log": "117",
+          "gates_isa": "1312",
+          "zz": "78",
+          "cz_base": "156",
+          "cz_isa": "292",
+          "shots": 2048,
+          "g95_E1": "1.86 ± 0.09",
+          "g95_E2": "1.63 ± 0.24",
+          "rapp_E1": "0.994 ± 0.005",
+          "rapp_E2": "0.993 ± 0.006",
+          "util_E1": "A 3/3, B 3/3",
+          "util_E2": "A 3/3, B 1/3",
+          "t_opt": "0.39",
+          "t_E2": "39.9"
+        },
+        "15": {
+          "k": 15,
+          "qubits": 15,
+          "depth_log": "30",
+          "depth_isa": "525",
+          "gates_log": "150",
+          "gates_isa": "1719",
+          "zz": "105",
+          "cz_base": "210",
+          "cz_isa": "393",
+          "shots": 2048,
+          "g95_E1": "1.77 ± 0.10",
+          "g95_E2": "1.13 ± 0.37",
+          "rapp_E1": "0.990 ± 0.007",
+          "rapp_E2": "0.993 ± 0.005",
+          "util_E1": "A 3/3, B 1/3",
+          "util_E2": "A 3/3, B 0/3",
+          "t_opt": "0.97",
+          "t_E2": "29.4"
+        }
+      },
+      "ruido": [
+        [
+          3,
+          "0.2406 ± 0.0483",
+          "0.2378 ± 0.0464",
+          "0.7229 ± 0.0795",
+          "0.7135 ± 0.0817",
+          "0.4805 ± 0.0966",
+          "0.4715 ± 0.0964",
+          "0.0028 ± 0.0038",
+          "0.0093 ± 0.0072",
+          "9"
+        ],
+        [
+          4,
+          "0.1203 ± 0.0019",
+          "0.1157 ± 0.0018",
+          "0.4892 ± 0.0027",
+          "0.4914 ± 0.0076",
+          "0.1203 ± 0.0019",
+          "0.1157 ± 0.0018",
+          "0.0046 ± 0.0008",
+          "-0.0021 ± 0.0075",
+          "18"
+        ],
+        [
+          5,
+          "0.0671 ± 0.0039",
+          "0.0625 ± 0.0076",
+          "0.5863 ± 0.0071",
+          "0.5744 ± 0.0117",
+          "0.4274 ± 0.0194",
+          "0.4049 ± 0.0215",
+          "0.0046 ± 0.0039",
+          "0.0119 ± 0.0117",
+          "29"
+        ],
+        [
+          6,
+          "0.0322 ± 0.0017",
+          "0.0334 ± 0.0040",
+          "0.6054 ± 0.0132",
+          "0.5944 ± 0.0082",
+          "0.2258 ± 0.0131",
+          "0.2160 ± 0.0121",
+          "-0.0012 ± 0.0039",
+          "0.0110 ± 0.0074",
+          "51"
+        ],
+        [
+          7,
+          "0.0158 ± 0.0005",
+          "0.0137 ± 0.0045",
+          "0.5540 ± 0.0075",
+          "0.5407 ± 0.0113",
+          "0.2098 ± 0.0069",
+          "0.2017 ± 0.0083",
+          "0.0021 ± 0.0046",
+          "0.0133 ± 0.0085",
+          "67"
+        ],
+        [
+          9,
+          "0.0039 ± 0.0002",
+          "0.0034 ± 0.0004",
+          "0.5407 ± 0.0123",
+          "0.5311 ± 0.0061",
+          "0.0117 ± 0.0006",
+          "0.0088 ± 0.0014",
+          "0.0005 ± 0.0005",
+          "0.0096 ± 0.0071",
+          "117"
+        ],
+        [
+          11,
+          "0.0010 ± 0.0000",
+          "0.0010 ± 0.0004",
+          "0.5276 ± 0.0079",
+          "0.5150 ± 0.0107",
+          "0.0180 ± 0.0007",
+          "0.0182 ± 0.0023",
+          "-0.0000 ± 0.0004",
+          "0.0126 ± 0.0041",
+          "218"
+        ],
+        [
+          13,
+          "0.0002 ± 0.0000",
+          "0.0002 ± 0.0002",
+          "0.4929 ± 0.0121",
+          "0.4671 ± 0.0179",
+          "0.0093 ± 0.0004",
+          "0.0081 ± 0.0012",
+          "0.0001 ± 0.0002",
+          "0.0258 ± 0.0114",
+          "292"
+        ],
+        [
+          15,
+          "0.0001 ± 0.0000",
+          "0.0000 ± 0.0000",
+          "0.4586 ± 0.0135",
+          "0.4347 ± 0.0057",
+          "0.0049 ± 0.0003",
+          "0.0031 ± 0.0010",
+          "0.0001 ± 0.0000",
+          "0.0239 ± 0.0078",
+          "393"
+        ]
+      ],
+      "beneficio": {
+        "7": {
+          "referencia_ordem_CIS": {
+            "decisao": "1110000",
+            "custo": 7.0,
+            "valor": 1.770087433029345,
+            "cobertura": 0.5588235294117646,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-4: Configuração segura"
+            ],
+            "delta_valor_pct_vs_ref": 0.0,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 0.9538775893033918
+          },
+          "gulosa_valor_custo": {
+            "decisao": "1100010",
+            "custo": 6.0,
+            "valor": 1.7610234147366501,
+            "cobertura": 0.45588235294117635,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador"
+            ],
+            "delta_valor_pct_vs_ref": -0.5120661343368008,
+            "delta_cobertura_pp_vs_ref": -10.294117647058826,
+            "fracao_do_otimo": 0.9489931052055409
+          },
+          "aleatoria_factivel_media": {
+            "valor": 1.3385002777821546,
+            "cobertura": 0.4769319492502883,
+            "custo": 5.8431372549019605,
+            "delta_valor_pct_vs_ref": -24.382250683999708,
+            "delta_cobertura_pp_vs_ref": -8.18915801614763,
+            "fracao_do_otimo": 0.7213007642609457
+          },
+          "otimo_classico": {
+            "decisao": "1100001",
+            "custo": 7.0,
+            "valor": 1.8556756683234625,
+            "cobertura": 0.6617647058823529,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-10: Defesa contra malware"
+            ],
+            "delta_valor_pct_vs_ref": 4.835254671439646,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0
+          },
+          "QAOA_E1_melhor_amostra_media": {
+            "valor": 1.8556756683234628,
+            "cobertura": 0.6617647058823529,
+            "custo": 7.0,
+            "delta_valor_pct_vs_ref": 4.835254671439659,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0000000000000002
+          },
+          "QAOA_E1_mais_frequente_media": {
+            "valor": 0.9709031002681737,
+            "cobertura": 0.35784313725490186,
+            "custo": 7.666666666666667,
+            "delta_valor_pct_vs_ref": -45.1494269632455,
+            "delta_cobertura_pp_vs_ref": -20.098039215686274,
+            "fracao_do_otimo": 0.52320732380209
+          },
+          "QAOA_E2_melhor_amostra_media": {
+            "valor": 1.8556756683234628,
+            "cobertura": 0.6617647058823529,
+            "custo": 7.0,
+            "delta_valor_pct_vs_ref": 4.835254671439659,
+            "delta_cobertura_pp_vs_ref": 10.294117647058831,
+            "fracao_do_otimo": 1.0000000000000002
+          },
+          "QAOA_E2_mais_frequente_media": {
+            "valor": 1.180863795441369,
+            "cobertura": 0.34803921568627444,
+            "custo": 8.0,
+            "delta_valor_pct_vs_ref": -33.287826725009445,
+            "delta_cobertura_pp_vs_ref": -21.078431372549016,
+            "fracao_do_otimo": 0.6363524702073815
+          }
+        },
+        "15": {
+          "referencia_ordem_CIS": {
+            "decisao": "111111100000000",
+            "custo": 19.0,
+            "valor": 4.162105824784869,
+            "cobertura": 0.9999999999999999,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-4: Configuração segura",
+              "CIS-5: Gestão de contas",
+              "CIS-7: Gestão de vulnerabilidades",
+              "CIS-9: Proteção de e-mail e navegador",
+              "CIS-10: Defesa contra malware"
+            ],
+            "delta_valor_pct_vs_ref": 0.0,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 0.8606015245134511
+          },
+          "gulosa_valor_custo": {
+            "decisao": "110001101111000",
+            "custo": 18.0,
+            "valor": 4.798901829460197,
+            "cobertura": 0.9999999999999999,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador",
+              "CIS-10: Defesa contra malware",
+              "S9: controle sintético",
+              "S10: controle sintético",
+              "S11: controle sintético",
+              "S12: controle sintético"
+            ],
+            "delta_valor_pct_vs_ref": 15.299851360897167,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 0.9922722785736241
+          },
+          "aleatoria_factivel_media": {
+            "valor": 3.2983773476119342,
+            "cobertura": 0.8180370450161085,
+            "custo": 15.533627434659564,
+            "delta_valor_pct_vs_ref": -20.752198851589252,
+            "delta_cobertura_pp_vs_ref": -18.196295498389137,
+            "fracao_do_otimo": 0.6820077848266111
+          },
+          "otimo_classico": {
+            "decisao": "110001101011010",
+            "custo": 19.0,
+            "valor": 4.83627521707907,
+            "cobertura": 0.9999999999999999,
+            "controles": [
+              "CIS-1: Inventário de hardware",
+              "CIS-2: Inventário de software",
+              "CIS-9: Proteção de e-mail e navegador",
+              "CIS-10: Defesa contra malware",
+              "S9: controle sintético",
+              "S11: controle sintético",
+              "S12: controle sintético",
+              "S14: controle sintético"
+            ],
+            "delta_valor_pct_vs_ref": 16.19779555530756,
+            "delta_cobertura_pp_vs_ref": 0.0,
+            "fracao_do_otimo": 1.0
+          },
+          "QAOA_E1_melhor_amostra_media": {
+            "valor": 4.7894056565002305,
+            "cobertura": 1.0,
+            "custo": 19.0,
+            "delta_valor_pct_vs_ref": 15.071693467760042,
+            "delta_cobertura_pp_vs_ref": 1.1102230246251565e-14,
+            "fracao_do_otimo": 0.9903087482669882
+          },
+          "QAOA_E1_mais_frequente_media": {
+            "valor": 3.754314150637386,
+            "cobertura": 0.9068627450980392,
+            "custo": 18.666666666666668,
+            "delta_valor_pct_vs_ref": -9.797724789195168,
+            "delta_cobertura_pp_vs_ref": -9.313725490196067,
+            "fracao_do_otimo": 0.7762821556100051
+          },
+          "QAOA_E2_melhor_amostra_media": {
+            "valor": 4.802311712398242,
+            "cobertura": 1.0,
+            "custo": 18.666666666666668,
+            "delta_valor_pct_vs_ref": 15.381778228727855,
+            "delta_cobertura_pp_vs_ref": 1.1102230246251565e-14,
+            "fracao_do_otimo": 0.9929773424471612
+          },
+          "QAOA_E2_mais_frequente_media": {
+            "valor": 1.019897817709759,
+            "cobertura": 0.29901960784313725,
+            "custo": 20.333333333333332,
+            "delta_valor_pct_vs_ref": -75.49562984111594,
+            "delta_cobertura_pp_vs_ref": -70.09803921568627,
+            "fracao_do_otimo": 0.21088498315977547
+          }
+        }
+      },
+      "utilidade": {
+        "E1": {
+          "3": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "4": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "5": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "6": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "7": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "9": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "11": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "13": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "15": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 1,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          }
+        },
+        "E2": {
+          "3": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "4": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "5": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "6": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "7": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "9": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 2,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "11": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 3,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": true
+          },
+          "13": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 1,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          },
+          "15": {
+            "sementes_decisao_util": 3,
+            "sementes_uteis": 0,
+            "sementes": 3,
+            "decisao_util": true,
+            "util": false
+          }
+        }
+      },
+      "profundidades": {
+        "k": 7,
+        "linhas": [
+          [
+            1,
+            "E1",
+            "-0.6 ± 0.0",
+            "0.0158 ± 0.0005",
+            "0.5540 ± 0.0075",
+            "0.2098 ± 0.0069",
+            "0.0158 ± 0.0005",
+            "14",
+            "21",
+            "0.20",
+            "300"
+          ],
+          [
+            1,
+            "E2",
+            "-0.4 ± 0.1",
+            "0.0137 ± 0.0045",
+            "0.5407 ± 0.0113",
+            "0.2017 ± 0.0083",
+            "0.0137 ± 0.0045",
+            "148",
+            "67",
+            "0.20",
+            "300"
+          ],
+          [
+            2,
+            "E1",
+            "-0.8 ± 0.0",
+            "0.0185 ± 0.0003",
+            "0.6087 ± 0.0043",
+            "0.2443 ± 0.0033",
+            "0.0185 ± 0.0003",
+            "23",
+            "42",
+            "0.46",
+            "600"
+          ],
+          [
+            2,
+            "E2",
+            "-0.4 ± 0.0",
+            "0.0160 ± 0.0022",
+            "0.5690 ± 0.0086",
+            "0.2020 ± 0.0032",
+            "0.0160 ± 0.0022",
+            "294",
+            "150",
+            "0.46",
+            "600"
+          ],
+          [
+            3,
+            "E1",
+            "-1.1 ± 0.0",
+            "0.0218 ± 0.0005",
+            "0.6813 ± 0.0074",
+            "0.2784 ± 0.0057",
+            "0.0218 ± 0.0005",
+            "32",
+            "63",
+            "0.77",
+            "900"
+          ],
+          [
+            3,
+            "E2",
+            "-0.4 ± 0.0",
+            "0.0158 ± 0.0009",
+            "0.6104 ± 0.0008",
+            "0.2274 ± 0.0094",
+            "0.0158 ± 0.0009",
+            "429",
+            "227",
+            "0.77",
+            "900"
+          ]
+        ]
+      },
+      "maior_instancia_util": {
+        "E1_A_decisao_util": {
+          "maior": 15,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        "E1_B_atribuivel_QAOA": {
+          "maior": 13,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        "E2_A_decisao_util": {
+          "maior": 15,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        "E2_B_atribuivel_QAOA": {
+          "maior": 11,
+          "tamanhos_uteis": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11
+          ],
+          "testados": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        }
+      },
+      "uniforme_obtem_95": {
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "9": 0.9999940688603846,
+        "11": 0.9999999948726849,
+        "13": 0.9999655408478321,
+        "15": 0.9964212401014265
+      }
+    }
+  },
+  "estudo_ruido": {
+    "ISA_sem_ruido": {
+      "Popt": 0.0078125,
+      "Pfeas": 0.7744140625,
+      "P95": 0.115234375,
+      "Pqubo": 0.00146484375,
+      "R_app": 1.0,
+      "energia_esperada": 88.85326385842788,
+      "tempo_s": 0.03157176499985326
+    },
+    "so_leitura": {
+      "Popt": 0.0087890625,
+      "Pfeas": 0.765625,
+      "P95": 0.1162109375,
+      "Pqubo": 0.0009765625,
+      "R_app": 1.0,
+      "energia_esperada": 97.07124387757419,
+      "tempo_s": 0.029620164000107252
+    },
+    "so_decoerencia_T1T2": {
+      "Popt": 0.00927734375,
+      "Pfeas": 0.783203125,
+      "P95": 0.107421875,
+      "Pqubo": 0.001953125,
+      "R_app": 1.0,
+      "energia_esperada": 103.68217729721388,
+      "tempo_s": 6.402071388999957
+    },
+    "so_erro_porta_despolarizante": {
+      "Popt": 0.009765625,
+      "Pfeas": 0.74658203125,
+      "P95": 0.1181640625,
+      "Pqubo": 0.00244140625,
+      "R_app": 1.0,
+      "energia_esperada": 133.64540215895994,
+      "tempo_s": 16.523753751999948
+    },
+    "completo_FakeKingston": {
+      "Popt": 0.00830078125,
+      "Pfeas": 0.7451171875,
+      "P95": 0.115234375,
+      "Pqubo": 0.0029296875,
+      "R_app": 1.0,
+      "energia_esperada": 134.10895588008387,
+      "tempo_s": 10.586247504999847
+    },
+    "E1_ideal_exata": {
+      "Popt": 0.00953726738330641,
+      "Pfeas": 0.7905084743228429,
+      "P95": 0.10625506415546326,
+      "Pqubo": 0.001759444795293981
+    }
+  },
+  "estudo_transpilacao": {
+    "logico": {
+      "qubits": 11,
+      "profundidade": 22,
+      "gates": 88,
+      "gates_2q": 55,
+      "por_tipo": {
+        "h": 11,
+        "rz": 11,
+        "rzz": 55,
+        "rx": 11
+      }
+    },
+    "sem_roteamento_nivel0": {
+      "qubits": 11,
+      "profundidade": 240,
+      "gates": 924,
+      "gates_2q": 110,
+      "por_tipo": {
+        "rz": 561,
+        "sx": 253,
+        "cz": 110
+      }
+    },
+    "fake_kingston_nivel0": {
+      "qubits": 11,
+      "profundidade": 550,
+      "gates": 1500,
+      "gates_2q": 302,
+      "por_tipo": {
+        "rz": 561,
+        "sx": 637,
+        "cz": 302
+      },
+      "tempo_transpilacao_s": 0.007081303000177286,
+      "Popt": 0.013671875,
+      "Pfeas": 0.7109375,
+      "P95": 0.1181640625
+    },
+    "sem_roteamento_nivel1": {
+      "qubits": 11,
+      "profundidade": 143,
+      "gates": 518,
+      "gates_2q": 110,
+      "por_tipo": {
+        "rz": 247,
+        "sx": 161,
+        "cz": 110
+      }
+    },
+    "fake_kingston_nivel1": {
+      "qubits": 11,
+      "profundidade": 356,
+      "gates": 1157,
+      "gates_2q": 263,
+      "por_tipo": {
+        "rz": 404,
+        "sx": 490,
+        "cz": 263
+      },
+      "tempo_transpilacao_s": 0.016630006000013964,
+      "Popt": 0.00927734375,
+      "Pfeas": 0.74072265625,
+      "P95": 0.1123046875
+    },
+    "sem_roteamento_nivel2": {
+      "qubits": 11,
+      "profundidade": 125,
+      "gates": 481,
+      "gates_2q": 110,
+      "por_tipo": {
+        "rz": 179,
+        "sx": 179,
+        "cz": 110,
+        "x": 13
+      }
+    },
+    "fake_kingston_nivel2": {
+      "qubits": 11,
+      "profundidade": 321,
+      "gates": 868,
+      "gates_2q": 204,
+      "por_tipo": {
+        "rz": 260,
+        "sx": 401,
+        "cz": 204,
+        "x": 3
+      },
+      "tempo_transpilacao_s": 0.015075662000072043,
+      "Popt": 0.00830078125,
+      "Pfeas": 0.7451171875,
+      "P95": 0.115234375
+    },
+    "sem_roteamento_nivel3": {
+      "qubits": 11,
+      "profundidade": 125,
+      "gates": 481,
+      "gates_2q": 110,
+      "por_tipo": {
+        "rz": 179,
+        "sx": 179,
+        "cz": 110,
+        "x": 13
+      }
+    },
+    "fake_kingston_nivel3": {
+      "qubits": 11,
+      "profundidade": 321,
+      "gates": 863,
+      "gates_2q": 204,
+      "por_tipo": {
+        "rz": 258,
+        "sx": 397,
+        "cz": 204,
+        "x": 4
+      },
+      "tempo_transpilacao_s": 0.01913887499995326,
+      "Popt": 0.0126953125,
+      "Pfeas": 0.74267578125,
+      "P95": 0.111328125
+    }
+  },
+  "calibracao_desbalanceada": {
+    "instancias_calibracao": [
+      3,
+      4,
+      5
+    ],
+    "pontos_validos": 27,
+    "pontos_grade": 1000,
+    "escolhido": {
+      "lambda1": 0.3,
+      "lambda2": 0.29,
+      "gap_relativo_min": 0.0006540840006970058
+    }
+  }
+}
